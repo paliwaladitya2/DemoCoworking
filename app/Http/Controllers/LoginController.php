@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Session\Session;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
@@ -25,20 +26,12 @@ class LoginController extends Controller
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->save();
-        $credentials = [
-            'email' => $request->email,
-            'password' => $request->password,
-        ];
-        // 
-        Auth::attempt($credentials);
-        $user = Auth::user();
-        if($user->role('admin')){
-             return redirect()->route('index',compact('user'))->with('success', 'Registered and Logged In Successfully!!');
-            }
-        elseif($user->role('user')){
-            return redirect()->route('index',compact('user'))->with('success', 'Registered and Logged In Successfully');
+        $u = User::where('email',$user->email)->first();
+        if($u->role == 'user')
+        {
+            return redirect()->route('index');
         }
-        return redirect()->route('login');
+        return redirect()->route('dashboard');
     }
 
     public function login(){
@@ -58,6 +51,7 @@ class LoginController extends Controller
     }
 
     public function dashboard(){
+        
         return view('index');
     }
 }
