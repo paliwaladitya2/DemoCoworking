@@ -140,18 +140,18 @@
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Manage Users</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href='#'>Dashboard</a></li>
+							<li><a href="{{ Route('manageuser_superadmin') }}">Dashboard</a></li>
 							
 						</ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Manage Property Admin</span>
 						</a>
                         <ul aria-expanded="false">
 							<li><a href='#'>Dashboard</a></li>
@@ -245,15 +245,7 @@
                     </li>
 						
 					@endif
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-						<i class="flaticon-381-networking"></i>
-						<span class="nav-text">Dashboard</span>
-					</a>
-					<ul aria-expanded="false">
-						<li><a href='#'>Dashboard</a></li>
-						
-					</ul>
-				</li>
+                    
                    
                     
                 </ul>
@@ -271,11 +263,15 @@
         <div class="content-body">
             <!-- row -->
 			<div class="container-fluid">
-				<div class="form-head d-flex mb-3 align-items-start">
+				<div class="form-head mb-3 align-items-start">
 					<div class="mr-auto d-none d-lg-block">
 						<h2 class="text-black font-w600 mb-0">Dashboard</h2>
 						<p class="mb-0">Welcome to ITS CoDesk</p>
 					</div>
+                    <br>
+                    <div class="mr-auto d-none d-lg-block">
+                        @yield('content')
+                    </div>
 					
 					
         <!--**********************************

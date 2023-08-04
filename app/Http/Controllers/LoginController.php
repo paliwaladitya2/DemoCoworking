@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
+
 class LoginController extends Controller
 {
     public function register(){
@@ -27,6 +28,7 @@ class LoginController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
         $u = User::where('email',$user->email)->first();
+        Session::put('user',$u);
         if($u->role == 'user')
         {
             return redirect()->route('index');
@@ -39,19 +41,22 @@ class LoginController extends Controller
     }
 
     public function logincheck(Request $request){
-        $credentials = [
-            'email' => $request->email,
-            'password' => $request->password,
-        ];
-        if(Auth::attempt($credentials)){;
-        $user = Auth::user();
-        return redirect()->route('index')->with('success', 'Logged In Successfully!!');
+        $user = User::where('email',$request->email)->first();
+        if($user){
+            Session::put('user',$user);
+            return redirect()->route('index')->with('success', 'Logged In Successfully!!');
+        }else{
+            return redirect()->route('login')->with('danger','Credentials are Wrong' );
         }
-        return redirect()->route('login')->with('danger','Credentials are Wrong' );
+        
     }
 
     public function dashboard(){
-        
-        return view('index');
+        return view('dashboard');
+    }
+
+    public function logout(){
+        Session::flush();
+        return redirect()->route('login');
     }
 }
