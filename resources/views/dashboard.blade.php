@@ -144,7 +144,7 @@
             <div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
 					@if (Session::get('user')->role=='superadmin')
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
@@ -162,7 +162,7 @@
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Manage Property Admin</span>
 						</a>
@@ -175,7 +175,7 @@
 					@endif
 
 					@if (Session::get('user')->role=='propertyadmin')
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
@@ -193,7 +193,7 @@
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
@@ -205,7 +205,7 @@
 						
 					@endif
 					@if (Session::get('user')->role=='itTeam')
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Active Queries</span>
 						</a>
@@ -214,7 +214,7 @@
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Resolved Queries</span>
 						</a>
@@ -226,7 +226,7 @@
 						
 					@endif
 					@if (Session::get('user')->role=='facilityTeam')
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Active Queries</span>
 						</a>
@@ -235,7 +235,7 @@
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Resolved Queries</span>
 						</a>
@@ -247,7 +247,7 @@
 						
 					@endif
 					@if (Session::get('user')->role=='client')
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
@@ -256,7 +256,7 @@
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
