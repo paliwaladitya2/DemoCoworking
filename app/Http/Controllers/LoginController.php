@@ -24,11 +24,13 @@ class LoginController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
             'confirm_password' => 'required|same:password|min:6',
+            'phone' => 'required|digits:10',
         ]);
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+        $user->phone = $request->phone;
         $user->save();
         $u = User::where('email',$user->email)->first();
         Session::put('user',$u);
