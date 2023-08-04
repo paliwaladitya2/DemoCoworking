@@ -2,6 +2,15 @@
 @section('csscontent')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<style>
+    div.dataTables_wrapper div.dataTables_length select {
+        width: 100%;
+        display:inline-block;
+    }
+    div.dataTables_wrapper div.dataTables_filter input{
+        height: auto;
+    }
+</style>
 @endsection
 @section('content')
 <div class="container">
@@ -41,7 +50,7 @@
             var table = $('.yajra_datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{  route('manageuser_superadmin') }}",
+                ajax: "{{  route('manageuser_propertyadmin') }}",
                 columns: [{
                     data: 'id',
                     name: 'id'
@@ -74,10 +83,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
     <script type="text/javascript">
-        $(document).on('click','.change',function(){
-            var row_id = $(this).attr('id');
-          
-            var url = "{{ route('changerole') }}";
+        $(document).on('change','.changerole',function(){
+            var role = $(this).val();
+            var user_id = $(this).closest('select').attr('data-id');
+            console.log(role);
+            console.log(user_id);
+            var url = "{{ route('changerole_propertyadmin') }}";
             swal.fire({
                 title: "Are you Sure?",
                 text: "You want to change the Role?",
@@ -92,8 +103,8 @@
                         type: 'GET',
                         url: url,
                         data: {
-                            id: row_id,
-                            role: 'propertyadmin',
+                            id: user_id,
+                            role: role,
                         },
                         success: function(data){
                             swal.fire({
@@ -109,5 +120,6 @@
                 }
             })
         });
-    </script>
+    </script>
+   
 @endsection

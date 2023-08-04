@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PropertyAdminController;
+
 use App\Http\Controllers\SuperAdminController;
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,7 @@ Route::get('dashboard',[LoginController::class,'dashboard'])->name('dashboard');
 Route::get('logout',[LoginController::class,'logout'])->name('logout');
 Route::get('manageuser',[SuperAdminController::class,'manageuser'])->name('manageuser_superadmin');
 Route::get('changerole',[SuperAdminController::class , 'changerole'])->name('changerole');
+
+// property admin 
+Route::get('manageuser_propertyadmin',[PropertyAdminController::class,'manageuser'])->name('manageuser_propertyadmin');
+Route::get('changerole_propertyadmin',[SuperAdminController::class , 'changerole'])->name('changerole_propertyadmin');

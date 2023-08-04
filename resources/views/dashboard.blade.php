@@ -27,7 +27,17 @@
   gtag('js', new Date());
 
   gtag('config', 'G-V469GS1LH2');
-</script></head>
+</script>
+<style>
+     div.dataTables_wrapper div.dataTables_length select {
+        width: 100%;
+        display:inline-block;
+    }
+    div.dataTables_wrapper div.dataTables_filter input{
+        height: auto;
+    }
+    </style>
+    </head>
 <body>
 
     <!--*******************
@@ -38,6 +48,7 @@
             <div class="sk-child sk-bounce1"></div>
             <div class="sk-child sk-bounce2"></div>
             <div class="sk-child sk-bounce3"></div>
+          
         </div>
     </div>
     <!--*******************
@@ -173,6 +184,15 @@
 							
 						</ul>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
+							<i class="flaticon-381-networking"></i>
+							<span class="nav-text">Manage Users</span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="{{ Route('manageuser_propertyadmin') }}">Dashboard</a></li>
+							
+						</ul>
+                    </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Dashboard</span>
@@ -187,7 +207,7 @@
 					@if (Session::get('user')->role=='itTeam')
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Active Queries</span>
 						</a>
                         <ul aria-expanded="false">
 							<li><a href='#'>Dashboard</a></li>
@@ -196,7 +216,7 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Resolved Queries</span>
 						</a>
                         <ul aria-expanded="false">
 							<li><a href='#'>Dashboard</a></li>
@@ -208,7 +228,7 @@
 					@if (Session::get('user')->role=='facilityTeam')
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Active Queries</span>
 						</a>
                         <ul aria-expanded="false">
 							<li><a href='#'>Dashboard</a></li>
@@ -217,7 +237,7 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Resolved Queries</span>
 						</a>
                         <ul aria-expanded="false">
 							<li><a href='#'>Dashboard</a></li>
@@ -293,6 +313,7 @@
     <script src="vendor/global/global.min.js"></script>
 	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <script src="js/custom.min.js"></script>
+    <script src="js/deznav-init.js"></script>
 	<!-- Dashboard 1 -->
 	<script src="js/dashboard/dashboard-1.js"></script>
 	@yield('jscontent')

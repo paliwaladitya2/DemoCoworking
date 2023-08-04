@@ -13,7 +13,7 @@ class SuperAdminController extends Controller
 {
     public function manageuser(Request $request){
         if($request->ajax()){
-            $data = User::get();
+            $data = User::where('role','!=','superadmin')->get();
             return Datatables::of($data)
             ->addIndexColumn()
             ->addColumn('action',function($row){
