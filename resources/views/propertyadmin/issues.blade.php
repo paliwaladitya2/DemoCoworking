@@ -7,14 +7,14 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="your-logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-            Your Logo Name
+            <img src="images/its.png" width="75" height="30" class="d-inline-block align-top" alt="Logo">
+            ITS CoDesk
         </a>
         
         <!-- Logout Option -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
+                <a class="nav-link" href="{{ Route('logout') }}">Logout</a>
             </li>
         </ul>
     </nav>
