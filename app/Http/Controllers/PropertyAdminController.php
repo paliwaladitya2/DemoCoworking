@@ -38,4 +38,8 @@ class PropertyAdminController extends Controller
         $user->save();
         return redirect()->back();
     }
+
+    public function issues(){
+        return view('propertyadmin.issues');
+    }
 }

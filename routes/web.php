@@ -30,4 +30,5 @@ Route::get('changerole',[SuperAdminController::class , 'changerole'])->name('cha
 
 // property admin 
 Route::get('manageuser_propertyadmin',[PropertyAdminController::class,'manageuser'])->name('manageuser_propertyadmin');
-Route::get('changerole_propertyadmin',[SuperAdminController::class , 'changerole'])->name('changerole_propertyadmin');
+Route::get('changerole_propertyadmin',[PropertyAdminController::class , 'changerole'])->name('changerole_propertyadmin');
+Route::get('issues',[PropertyAdminController::class, 'issues'])->name('issues');
