@@ -86,10 +86,18 @@
                 <input type="email" name="email" placeholder="Email Address" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <input oninput="validateInput(event)" type="text" name="phone" placeholder="Mobile No." required>
                 <button type="submit">Register</button>
             </form>
             <p>Already have an account? <a href="{{ Route('login') }}">Login here</a></p>
         </div>
     </div>
+<script>
+    function validateInput(event) {
+      const input = event.target;
+      const sanitizedValue = input.value.replace(/[^0-9]/g, ''); 
+      input.value = sanitizedValue;
+    }
+</script>
 </body>
 </html>
