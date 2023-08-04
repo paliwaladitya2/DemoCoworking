@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+// use DataTables;
+use Yajra\DataTables\DataTables as Datatables;
 
 
 class LoginController extends Controller
@@ -42,7 +45,7 @@ class LoginController extends Controller
 
     public function logincheck(Request $request){
         $user = User::where('email',$request->email)->first();
-        if($user){
+        if($user && Hash::check($request->password, $user->password) ){
             Session::put('user',$user);
             return redirect()->route('index')->with('success', 'Logged In Successfully!!');
         }else{

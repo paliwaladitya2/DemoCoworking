@@ -24,4 +24,4 @@ Route::post('logincheck',[LoginController::class,'logincheck'])->name('loginchec
 Route::get('dashboard',[LoginController::class,'dashboard'])->name('dashboard');
 Route::get('logout',[LoginController::class,'logout'])->name('logout');
 Route::get('manageuser',[SuperAdminController::class,'manageuser'])->name('manageuser_superadmin');
-
+Route::get('changerole',[SuperAdminController::class , 'changerole'])->name('changerole');

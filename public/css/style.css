@@ -26315,10 +26315,10 @@ table.dataTable thead .sorting {
     color: #2f4cdd;
     background: transparent !important; }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  border: 0 !important;
-  padding: 10px 20px;
-  background: #000;
+  border: 1px solid lightgray;
+ 
   border-radius: 6px;
+  box-shadow: 1rem 0.5rem 6rem rgba(0, 0, 0, 0.2 );
   color: #2f4cdd !important;
   font-size: 16px;
   display: inline-block; }
@@ -26328,9 +26328,10 @@ table.dataTable thead .sorting {
       font-size: 14px; } }
   .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current {
     color: #3e4954 !important; }
-  .dataTables_wrapper .dataTables_paginate .paginate_button.previous, .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+  /* .dataTables_wrapper .dataTables_paginate .paginate_button.previous, .dataTables_wrapper .dataTables_paginate .paginate_button.next {
     background: #969ba0;
-    color: #fff !important; }
+    color: #fff !important;
+  } */
     .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover {
       background: #2f4cdd;
       color: #fff !important; }
