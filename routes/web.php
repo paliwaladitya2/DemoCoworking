@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Homecontroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PropertyAdminController;
@@ -34,3 +35,7 @@ Route::get('changerole',[SuperAdminController::class , 'changerole'])->name('cha
 Route::get('manageuser_propertyadmin',[PropertyAdminController::class,'manageuser'])->name('manageuser_propertyadmin');
 Route::get('changerole_propertyadmin',[PropertyAdminController::class , 'changerole'])->name('changerole_propertyadmin');
 Route::get('issues',[PropertyAdminController::class, 'issues'])->name('issues');
+
+
+// home
+Route::get('add_properties',[Homecontroller::class,'add_properties'])->name('add_properties');
