@@ -38,7 +38,7 @@ class LoginController extends Controller
         {
             return redirect()->route('index');
         }
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard.dashboard');
     }
 
     public function login(){
@@ -59,7 +59,7 @@ class LoginController extends Controller
     public function dashboard(){
         if(Session::has('user'))
         {
-            return view('dashboard');
+            return view('dashboard.dashboard');
         }
         return redirect()->route('login');
     }

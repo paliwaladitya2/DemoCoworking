@@ -26,11 +26,8 @@ class PropertyAdminController extends Controller
             })
             ->rawColumns(['action'])
             ->make(true);
-
         }
-
-
-        return view('propertyadmin.manageuserpa');
+        return view('dashboard.propertyadmin.manageuserpa');
     }
 
     public function changerole(Request $request){
@@ -41,6 +38,6 @@ class PropertyAdminController extends Controller
     }
 
     public function issues(){
-        return view('propertyadmin.issues');
+        return view('dashboard.propertyadmin.issues');
     }
 }
