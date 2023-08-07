@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/change-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:52:47 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/{{Route('change-password')}} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:52:47 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,7 +49,7 @@
                         <div class="left-side">
                             <!-- Logo -->
                             <div id="logo">
-                                <a href="index-2.html"><img src="images/logo.svg" alt=""></a>
+                                <a href="{{ Route('index') }}"><img src="images/logo.svg" alt=""></a>
                             </div>
                             <!-- Mobile Navigation -->
                             <div class="mmenu-trigger">
@@ -66,46 +66,46 @@
                                     <ul>
                                         <li><a href="#">Home Map</a>
                                             <ul>
-                                                <li><a href="index-9.html">Home Map Style 1</a></li>
-                                                <li><a href="index-12.html">Home Map Style 2</a></li>
+                                                <li><a href="{{ Route('index') }}">Home Map Style 1</a></li>
+                                                <li><a href="{{ Route('index') }}">Home Map Style 2</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">Home Image</a>
                                             <ul>
-                                               <li><a href="index-2.html">Modern Home</a></li>
-                                                <li><a href="index-3.html">Home Boxed Image</a></li>
-                                                <li><a href="index-4.html">Home Modern Image</a></li>
-                                                <li><a href="index-5.html">Home Minimalist Style</a></li>
-                                                <li><a href="index-6.html">Home Parallax Image</a></li>
-                                                <li><a href="index-8.html">Home Search Form</a></li>
-                                                <li><a href="index-10.html">Modern Full Image</a></li>
-                                                <li><a href="index-15.html">Home Typed Image</a></li>
-                                                <li><a href="index-17.html">Modern Parallax Image</a></li>
-                                                <li><a href="index-18.html">Image Filter Search</a>
-                                                <li><a href="index-21.html">Parallax Image video</a></li>
-												<li><a href="index-23.html">Home Image</a></li>
-												<li><a href="index-24.html">Image and video</a></li>
+                                               <li><a href="{{ Route('index') }}">Modern Home</a></li>
+                                                <li><a href="{{ Route('index') }}">Home Boxed Image</a></li>
+                                                <li><a href="{{ Route('index') }}">Home Modern Image</a></li>
+                                                <li><a href="{{ Route('index') }}">Home Minimalist Style</a></li>
+                                                <li><a href="{{ Route('index') }}">Home Parallax Image</a></li>
+                                                <li><a href="{{ Route('index') }}">Home Search Form</a></li>
+                                                <li><a href="{{ Route('index') }}">Modern Full Image</a></li>
+                                                <li><a href="{{ Route('index') }}">Home Typed Image</a></li>
+                                                <li><a href="{{ Route('index') }}">Modern Parallax Image</a></li>
+                                                <li><a href="{{ Route('index') }}">Image Filter Search</a>
+                                                <li><a href="{{ Route('index') }}">Parallax Image video</a></li>
+												<li><a href="{{ Route('index') }}">Home Image</a></li>
+												<li><a href="{{ Route('index') }}">Image and video</a></li>
                                             </ul>
                                             </li>
                                             <li><a href="#">Home Video</a>
                                                 <ul>
-                                                    <li><a href="index-7.html">Home Video Image</a></li>
-                                                    <li><a href="index-11.html">Home Video</a></li>
-                                                    <li><a href="index-20.html">Home Modern Video</a></li>
+                                                    <li><a href="{{ Route('index') }}">Home Video Image</a></li>
+                                                    <li><a href="{{ Route('index') }}">Home Video</a></li>
+                                                    <li><a href="{{ Route('index') }}">Home Modern Video</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">Home Slider</a>
                                                 <ul>                                                    
-                                                    <li><a href="index-13.html">Slider Presentation 2</a></li>
-                                                    <li><a href="index-16.html">Slider Presentation 3</a></li>
-                                                    <li><a href="index-19.html">Home Modern Slider</a></li>
-                                                    <li><a href="index-22.html">Home Image Slider</a></li>
+                                                    <li><a href="{{ Route('index') }}">Slider Presentation 2</a></li>
+                                                    <li><a href="{{ Route('index') }}">Slider Presentation 3</a></li>
+                                                    <li><a href="{{ Route('index') }}">Home Modern Slider</a></li>
+                                                    <li><a href="{{ Route('index') }}">Home Image Slider</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">Home Styles</a>
                                                 <ul>
-                                                    <li><a href="index-14.html">Home Style Dark</a></li>
-                                                    <li><a href="index-25.html">Home Style White</a></li>
+                                                    <li><a href="{{ Route('index') }}">Home Style Dark</a></li>
+                                                    <li><a href="{{ Route('index') }}">Home Style White</a></li>
                                                 </ul>
                                             </li>
                                     </ul>
@@ -160,8 +160,8 @@
                                     </li>
                                     <li><a href="#">Property</a>
                                         <ul>
-                                            <li><a href="single-property-1.html">Single Property 1</a></li>
-                                            <li><a href="single-property-2.html">Single Property 2</a></li>
+                                            <li><a href="{{Route('single-property')}}">Single Property 1</a></li>
+                                            <li><a href="{{Route('single-property')}}">Single Property 2</a></li>
                                             <li><a href="single-property-3.html">Single Property 3</a></li>
                                             <li><a href="single-property-4.html">Single Property 4</a></li>
                                             <li><a href="single-property-5.html">Single Property 5</a></li>
@@ -182,13 +182,13 @@
                                             <li><a href="#">User Panel</a>
                                                 <ul>
                                                     <li><a href="dashboard.html">Dashboard</a></li>
-                                                    <li><a href="user-profile.html">User Profile</a></li>
+                                                    <li><a href="{{Route('user-profile')}}">User Profile</a></li>
                                                     <li><a href="my-listings.html">My Properties</a></li>
                                                     <li><a href="favorited-listings.html">Favorited Properties</a></li>
-                                                    <li><a href="add-property.html">Add Property</a></li>
-                                                    <li><a href="payment-method.html">Payment Method</a></li>
+                                                    <li><a href="{{Route('add_properties')}}">Add Property</a></li>
+                                                    <li><a href="{{Route('payment-method')}}">Payment Method</a></li>
                                                     <li><a href="invoice.html">Invoice</a></li>
-                                                    <li><a href="change-password.html">Change Password</a></li>
+                                                    <li><a href="{{Route('change-password')}}">Change Password</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="about.html">About Us</a></li>
@@ -213,16 +213,16 @@
                                             <li><a href="#">List Layout</a>
                                                 <ul>
                                                     <li><a href="blog-full-list.html">Full List</a></li>
-                                                    <li><a href="blog-list-sidebar.html">With Sidebar</a></li>
+                                                    <li><a href="{{ Route('blog-list') }}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="blog-details.html">Blog Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact-us.html">Contact</a></li>
+                                    <li><a href="{{ Route('contact-us') }}">Contact</a></li>
                                     <li class="d-none d-xl-none d-block d-lg-block"><a href="login.html">Login</a></li>
                                     <li class="d-none d-xl-none d-block d-lg-block"><a href="register.html">Register</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0"><a href="add-property.html" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a></li>
+                                    <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0"><a href="{{Route('add_properties')}}" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a></li>
                             </ul>
                             </nav>
                             <div class="clearfix"></div>
@@ -235,10 +235,10 @@
                                 <span><img src="images/testimonials/ts-1.jpg" alt=""></span>Hi, Mary!
                             </div>
                             <ul>
-                                <li><a href="user-profile.html"> Edit profile</a></li>
-                                <li><a href="add-property.html"> Add Property</a></li>
-                                <li><a href="payment-method.html">  Payments</a></li>
-                                <li><a href="change-password.html"> Change Password</a></li>
+                                <li><a href="{{Route('user-profile')}}"> Edit profile</a></li>
+                                <li><a href="{{Route('add_properties')}}"> Add Property</a></li>
+                                <li><a href="{{Route('payment-method')}}">  Payments</a></li>
+                                <li><a href="{{Route('change-password')}}"> Change Password</a></li>
                                 <li><a href="#">Log Out</a></li>
                             </ul>
                         </div>
@@ -272,7 +272,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="user-profile.html">
+                                        <a href="{{Route('user-profile')}}">
                                             <i class="fa fa-user"></i>Profile
                                         </a>
                                     </li>
@@ -287,12 +287,12 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="add-property.html">
+                                        <a href="{{Route('add_properties')}}">
                                             <i class="fa fa-list" aria-hidden="true"></i>Add Property
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="payment-method.html">
+                                        <a href="{{Route('payment-method')}}">
                                             <i class="fas fa-credit-card"></i>Payments
                                         </a>
                                     </li>
@@ -302,12 +302,12 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="active" href="change-password.html">
+                                        <a class="active" href="{{Route('change-password')}}">
                                             <i class="fa fa-lock"></i>Change Password
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="index-2.html">
+                                        <a href="{{ Route('index') }}">
                                             <i class="fas fa-sign-out-alt"></i>Log Out
                                         </a>
                                     </li>
@@ -327,7 +327,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="user-profile.html">
+                                            <a href="{{Route('user-profile')}}">
                                                 <i class="fa fa-user mr-3"></i>Profile
                                             </a>
                                         </li>
@@ -342,12 +342,12 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="add-property.html">
+                                            <a href="{{Route('add_properties')}}">
                                                 <i class="fa fa-list mr-3" aria-hidden="true"></i>Add Property
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="payment-method.html">
+                                            <a href="{{Route('payment-method')}}">
                                                 <i class="fas fa-credit-card mr-3"></i>Payments
                                             </a>
                                         </li>
@@ -357,12 +357,12 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="active" href="change-password.html">
+                                            <a class="active" href="{{Route('change-password')}}">
                                                 <i class="fa fa-lock mr-3"></i>Change Password
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="index-2.html">
+                                            <a href="{{ Route('index') }}">
                                                 <i class="fas fa-sign-out-alt mr-3"></i>Log Out
                                             </a>
                                         </li>
@@ -475,5 +475,5 @@
 </body>
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/change-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:52:47 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/{{Route('change-password')}} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:52:47 GMT -->
 </html>

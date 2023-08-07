@@ -16,4 +16,32 @@ class HomeController extends Controller
             return view('login');
         }
     }
+
+    public function contact_us(){
+        return view('contact-us');
+    }
+
+    public function blog_list(){
+        return view('blog-list-sidebar');
+    }
+
+    public function user_profile(){
+        return view('user-profile');
+    }
+
+    public function payment_method(){
+        return view('payment-method');
+    }
+
+    public function change_password(){
+        return view('change-password');
+    }
+
+    public function single_property(){
+        return view('single-property-1');
+    }
+
+    public function properties_details(){
+        return view('properties-details');
+    }
 }
