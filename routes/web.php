@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PropertyAdminController;
@@ -38,4 +38,4 @@ Route::get('issues',[PropertyAdminController::class, 'issues'])->name('issues');
 
 
 // home
-Route::get('add_properties',[Homecontroller::class,'add_properties'])->name('add_properties');
+Route::get('add_properties',[HomeController::class,'add_properties'])->name('add_properties');

@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Property extends Model
+class PropertyUnapproved extends Model
 {
     use HasFactory;
-    protected $table = 'properties';
+    protected $table = "property_unapproveds";
 }
