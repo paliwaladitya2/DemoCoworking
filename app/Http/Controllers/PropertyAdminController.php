@@ -16,6 +16,7 @@ class PropertyAdminController extends Controller
             ->addColumn('action',function($row){
                 // $btn = '<a href="javascript:void(0);" id="'.$row->id.'" class="it btn btn-primary">Property Admin</a>';
                 $btn = '<select id="changerole" data-id="'.$row->id.'" class="form-select changerole">
+                            <option value="">Select Role</option>
                             <option value="itTeam">IT Team</option>
                             <option value="facilityTeam">Facility Team</option>
                             <option value="client">Client</option>

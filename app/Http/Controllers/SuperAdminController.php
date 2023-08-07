@@ -17,7 +17,11 @@ class SuperAdminController extends Controller
             return Datatables::of($data)
             ->addIndexColumn()
             ->addColumn('action',function($row){
-                $btn = '<a href="javascript:void(0);" id="'.$row->id.'" class="change btn btn-primary">Property Admin</a>';
+                $btn = '<select id="change" data-id="'.$row->id.'" class="form-select change">
+                            <option value="">Select Role</option>
+                            <option value="propertyadmin">Property Admin</option>
+                            <option value="user">User</option>
+                        </select> ';
                 return $btn;
             })
             ->rawColumns(['action'])

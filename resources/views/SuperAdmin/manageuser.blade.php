@@ -74,9 +74,9 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
     <script type="text/javascript">
-        $(document).on('click','.change',function(){
-            var row_id = $(this).attr('id');
-          
+        $(document).on('change','.change',function(){
+            var role = $(this).val();
+            var user_id = $(this).closest('select').attr('data-id');
             var url = "{{ route('changerole') }}";
             swal.fire({
                 title: "Are you Sure?",
@@ -92,8 +92,8 @@
                         type: 'GET',
                         url: url,
                         data: {
-                            id: row_id,
-                            role: 'propertyadmin',
+                            id: user_id,
+                            role: role,
                         },
                         success: function(data){
                             swal.fire({
@@ -109,5 +109,5 @@
                 }
             })
         });
-    </script>
+    </script>
 @endsection

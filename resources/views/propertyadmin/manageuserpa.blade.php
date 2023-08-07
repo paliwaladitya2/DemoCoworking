@@ -86,8 +86,6 @@
         $(document).on('change','.changerole',function(){
             var role = $(this).val();
             var user_id = $(this).closest('select').attr('data-id');
-            console.log(role);
-            console.log(user_id);
             var url = "{{ route('changerole_propertyadmin') }}";
             swal.fire({
                 title: "Are you Sure?",
