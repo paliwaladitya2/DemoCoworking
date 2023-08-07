@@ -17,7 +17,7 @@ use App\Http\Controllers\SuperAdminController;
 */
 
 Route::get('/', function () {
-    return view('main/index-11');
+    return view('mainweb/index-11');
 })->name('index');
 Route::get('register',[LoginController::class,'register'])->name('register');
 Route::post('saveregister',[LoginController::class,'saveregister'])->name('saveregister');
