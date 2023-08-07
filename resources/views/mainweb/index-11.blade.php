@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/index-7.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:51:54 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/{{ Route('index') }} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:51:54 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,7 +50,7 @@
                     <div class="left-side">
                         <!-- Logo -->
                         <div id="logo">
-                            <a href="index-2.html"><img src="images/logo-red.svg" alt=""></a>
+                            <a href="{{ Route('index') }}"><img src="images/logo-red.svg" alt=""></a>
                         </div>
                         <!-- Mobile Navigation -->
                         <div class="mmenu-trigger">
@@ -65,8 +65,8 @@
                             <ul id="responsive">
                                 <li><a href="{{ Route('index') }}">Home</a></li>
                                 <li><a href="#">About Us</a></li>
-                                <li><a href="blog-list-sidebar.html">Blog</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><a href="{{ Route('blog-list') }}">Blog</a></li>
+                                <li><a href="{{ Route('contact-us') }}">Contact</a></li>
                             </ul>
                         </nav>
                         <!-- Main Navigation / End -->
@@ -90,11 +90,11 @@
                             <span></span>Hi, {{ Session::get('user')->name }}
                         </div>
                         <ul>
-                            <li><a href="user-profile.html"> Edit profile</a></li>
-                            <li><a href="add-property.html"> Add Property</a></li>
-                            <li><a href="payment-method.html">  Payments</a></li>
-                            <li><a href="change-password.html"> Change Password</a></li>
-                            <li><a href="#">Log Out</a></li>
+                            <li><a href="{{Route('user-profile')}}"> Edit profile</a></li>
+                            <li><a href="{{Route('add_properties')}}"> Add Property</a></li>
+                            <li><a href="{{Route('payment-method')}}">  Payments</a></li>
+                            <li><a href="{{Route('change-password')}}"> Change Password</a></li>
+                            <li><a href="{{ Route('logout') }}">Log Out</a></li>
                         </ul>
                     </div>
                     @else
@@ -210,24 +210,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -248,7 +248,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 350,000</a>
+                                                <a href="{{Route('single-property')}}">$ 350,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -272,23 +272,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Rent</div>
                                                 <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -309,7 +309,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -333,23 +333,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-1.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -370,7 +370,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 350,000</a>
+                                                <a href="{{Route('single-property')}}">$ 350,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -394,24 +394,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Rent</div>
                                                 <img src="images/feature-properties/fp-10.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="properties-details.html">
+                                            <a href="{{Route('properties-details')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -432,7 +432,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -456,23 +456,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/feature-properties/fp-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -493,7 +493,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 350,000</a>
+                                                <a href="{{Route('single-property')}}">$ 350,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -517,23 +517,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Rent</div>
                                                 <img src="images/feature-properties/fp-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -554,7 +554,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -578,24 +578,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -616,7 +616,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 350,000</a>
+                                                <a href="{{Route('single-property')}}">$ 350,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -640,23 +640,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Rent</div>
                                                 <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -677,7 +677,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -848,24 +848,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -886,7 +886,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -910,23 +910,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -947,7 +947,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -971,23 +971,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-1.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1008,7 +1008,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1032,24 +1032,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <img src="images/feature-properties/fp-10.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="properties-details.html">
+                                            <a href="{{Route('properties-details')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1070,7 +1070,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1094,23 +1094,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/feature-properties/fp-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1131,7 +1131,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1155,23 +1155,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <img src="images/feature-properties/fp-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1192,7 +1192,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1216,24 +1216,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1254,7 +1254,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1278,23 +1278,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="{{Route('single-property')}}" class="homes-img">
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="{{Route('single-property')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1315,7 +1315,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.html">$ 123,000</a>
+                                                <a href="{{Route('single-property')}}">$ 123,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1474,7 +1474,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
                             <div class="netabout">
-                                <a href="index-2.html" class="logo">
+                                <a href="{{ Route('index') }}" class="logo">
                                     <img src="images/logo-footer.svg" alt="netcom">
                                 </a>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
@@ -1507,10 +1507,10 @@
                                 <h3>Navigation</h3>
                                 <div class="nav-footer">
                                     <ul>
-                                        <li><a href="index-2.html">Home One</a></li>
+                                        <li><a href="{{ Route('index') }}">Home One</a></li>
                                         <li><a href="properties-right-sidebar.html">Properties Right</a></li>
                                         <li><a href="properties-full-list.html">Properties List</a></li>
-                                        <li><a href="properties-details.html">Property Details</a></li>
+                                        <li><a href="{{Route('properties-details')}}">Property Details</a></li>
                                         <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
                                     </ul>
                                     <ul class="nav-right">
@@ -1518,7 +1518,7 @@
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="blog.html">Blog Default</a></li>
                                         <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li class="no-mgb"><a href="contact-us.html">Contact Us</a></li>
+                                        <li class="no-mgb"><a href="{{ Route('contact-us') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1807,5 +1807,5 @@
 </body>
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/index-7.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:51:56 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/{{ Route('index') }} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:51:56 GMT -->
 </html>
