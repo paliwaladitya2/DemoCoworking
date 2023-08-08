@@ -153,8 +153,8 @@
                                     </li>
                                     <li><a href="#">Property</a>
                                         <ul>
-                                            <li><a href="{{Route('single-property')}}">Single Property 1</a></li>
-                                            <li><a href="{{Route('single-property')}}">Single Property 2</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 1</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 2</a></li>
                                             <li><a href="single-property-3.html">Single Property 3</a></li>
                                             <li><a href="single-property-4.html">Single Property 4</a></li>
                                             <li><a href="single-property-5.html">Single Property 5</a></li>
@@ -184,7 +184,7 @@
                                                     <li><a href="{{Route('change-password')}}">Change Password</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="{{ Route('about') }}">About Us</a></li>
                                             <li><a href="faq.html">Faq</a></li>
                                             <li><a href="pricing-table.html">Pricing Tables</a></li>
                                             <li><a href="404.html">Page 404</a></li>
@@ -209,7 +209,7 @@
                                                     <li><a href="{{ Route('blog-list') }}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ Route('contact-us') }}">Contact</a></li>
@@ -417,7 +417,7 @@
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <p class="in-p">+456 875 369 208</p>
+                                            <p class="in-p">+91 9691565883</p>
                                         </div>
                                     </li>
                                     <li>
@@ -435,16 +435,16 @@
                                 <div class="nav-footer">
                                     <ul>
                                         <li><a href="{{ Route('index') }}">Home One</a></li>
-                                        <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                        <li><a href="properties-full-list.html">Properties List</a></li>
+                                        <li><a href="{{ Route('properties-grid') }}">Properties Right</a></li>
+                                        <li><a href="{{ Route('properties-grid') }}">Properties List</a></li>
                                         <li><a href="{{Route('properties-details')}}">Property Details</a></li>
                                         <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
                                     </ul>
                                     <ul class="nav-right">
                                         <li><a href="agent-details.html">Agents Details</a></li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="{{ Route('about') }}">About Us</a></li>
                                         <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         <li class="no-mgb"><a href="{{ Route('contact-us') }}">Contact Us</a></li>
                                     </ul>
                                 </div>

@@ -158,8 +158,8 @@
                                     </li>
                                     <li><a href="#">Property</a>
                                         <ul>
-                                            <li><a href="{{Route('single-property')}}">Single Property 1</a></li>
-                                            <li><a href="{{Route('single-property')}}">Single Property 2</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 1</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 2</a></li>
                                             <li><a href="single-property-3.html">Single Property 3</a></li>
                                             <li><a href="single-property-4.html">Single Property 4</a></li>
                                             <li><a href="single-property-5.html">Single Property 5</a></li>
@@ -189,7 +189,7 @@
                                                     <li><a href="{{Route('change-password')}}">Change Password</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="{{ Route('about') }}">About Us</a></li>
                                             <li><a href="faq.html">Faq</a></li>
                                             <li><a href="pricing-table.html">Pricing Tables</a></li>
                                             <li><a href="404.html">Page 404</a></li>
@@ -214,7 +214,7 @@
                                                     <li><a href="{{ Route('blog-list') }}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ Route('contact-us') }}">Contact</a></li>
@@ -301,29 +301,38 @@
                     <div class="divider-fade"></div>
                     <div id="map-contact" class="contact-map"></div>
                 </div>
+                @if(Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="row">
                     <div class="col-lg-8 col-md-12">
                         <h3 class="mb-4">Contact Us</h3>
-                        <form id="contactform" class="contact-form" name="contactform" method="post" novalidate>
-                            <div id="success" class="successform">
-                                <p class="alert alert-success font-weight-bold" role="alert">Your message was sent successfully!</p>
-                            </div>
-                            <div id="error" class="errorform">
-                                <p>Something went wrong, try refreshing and submitting the form again.</p>
+                        <form name="contactform" action="{{ Route('save-general-query') }}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name">
                             </div>
                             <div class="form-group">
-                                <input type="text" required class="form-control input-custom input-full" name="name" placeholder="First Name">
+                                <input type="text" class="form-control" name="email" placeholder="Email">
                             </div>
                             <div class="form-group">
-                                <input type="text" required class="form-control input-custom input-full" name="lastname" placeholder="Last Name">
+                                <input oninput="validateInput(event)" type="text" class="form-control" name="phone" placeholder="Mobile Number">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control input-custom input-full" name="email" placeholder="Email">
+                                <textarea class="form-control" name="message" rows="8" placeholder="Message"></textarea>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control textarea-custom input-full" id="ccomment" name="message" required rows="8" placeholder="Message"></textarea>
-                            </div>
-                            <button type="submit" id="submit-contact" class="btn btn-primary btn-lg">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                         </form>
                     </div>
                     <div class="col-lg-4 col-md-12 bgc">
@@ -334,25 +343,25 @@
                                 <li>
                                     <div class="info">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <p class="in-p">95 South Park Ave, USA</p>
+                                        <p class="in-p">NRK Business Park, Indore</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="info">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <p class="in-p">+456 875 369 208</p>
+                                        <p class="in-p">+91 9691565883</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="info">
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                                        <p class="in-p ti">support@findhouses.com</p>
+                                        <p class="in-p ti">intouchsoftware.co.in</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="info cll">
                                         <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                        <p class="in-p ti">8:00 a.m - 9:00 p.m</p>
+                                        <p class="in-p ti">9:00 a.m - 9:00 p.m</p>
                                     </div>
                                 </li>
                             </ul>
@@ -386,7 +395,7 @@
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <p class="in-p">+456 875 369 208</p>
+                                            <p class="in-p">+91 9691565883</p>
                                         </div>
                                     </li>
                                     <li>
@@ -404,16 +413,16 @@
                                 <div class="nav-footer">
                                     <ul>
                                         <li><a href="{{ Route('index') }}">Home One</a></li>
-                                        <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                        <li><a href="properties-full-list.html">Properties List</a></li>
+                                        <li><a href="{{ Route('properties-grid') }}">Properties Right</a></li>
+                                        <li><a href="{{ Route('properties-grid') }}">Properties List</a></li>
                                         <li><a href="{{Route('properties-details')}}">Property Details</a></li>
                                         <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
                                     </ul>
                                     <ul class="nav-right">
                                         <li><a href="agent-details.html">Agents Details</a></li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="{{ Route('about') }}">About Us</a></li>
                                         <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         <li class="no-mgb"><a href="{{ Route('contact-us') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
@@ -570,6 +579,13 @@
         <script src="js/map-single.js"></script>
         <script src="js/color-switcher.js"></script>
         <script src="js/inner.js"></script>
+        <script>
+            function validateInput(event) {
+              const input = event.target;
+              const sanitizedValue = input.value.replace(/[^0-9]/g, ''); 
+              input.value = sanitizedValue;
+            }
+        </script>
 
     </div>
     <!-- Wrapper / End -->

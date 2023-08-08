@@ -164,10 +164,12 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Manage Property Admin</span>
+							<span class="nav-text">Manage Properties</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href='#'>Dashboard</a></li>
+							<li><a href="{{ Route('manage_approved_properties') }}">Approved Properties</a></li>
+							<li><a href="{{ Route('manage_unapproved_properties') }}">UnApproved Properties</a></li>
+
 							
 						</ul>
                     </li>

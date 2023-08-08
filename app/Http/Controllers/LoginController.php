@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\PropertyApproved;
 use Illuminate\Support\Facades\Hash;
 // use DataTables;
 use Yajra\DataTables\DataTables as Datatables;

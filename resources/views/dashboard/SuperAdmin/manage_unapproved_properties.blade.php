@@ -9,17 +9,18 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>Manage user content</h2>
+                    <h2>Manage UnApproved Properties</h2>
                 </div>    
                 <div class="card-body">
                     <table class="table table-striped table-bordered yajra_datatable">
                         <thead>
                             <th>ID</th>
-                            <th>Name</th>
+                            <th>Property Name</th>
+                            <th>Admin</th>
                             <th>Email</th>
-                            <th>Role</th>
                             <th>Number</th>
-                            <th>Change Role</th>
+                            <th>Assign Admin</th>
+                            <th>Action</th>
                         </thead>
                         <tbody>
                         </tbody>
@@ -41,30 +42,34 @@
             var table = $('.yajra_datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{  route('manageuser_superadmin') }}",
+                ajax: "{{  route('manage_unapproved_properties') }}",
                 columns: [{
                     data: 'id',
                     name: 'id'
                 },
                 {
-                    data: 'name',
-                    name: 'name'
+                    data: 'title',
+                    name: 'title'
+                },
+                {
+                    data: 'admin',
+                    name: 'admin'
                 },
                 {
                     data: 'email',
                     name: 'email'
                 },
                 {
-                    data: 'role',
-                    name: 'role'
-                },
-                {
                     data: 'phone',
                     name: 'phone'
                 },
                 {
-                    data: 'action',
-                    name: 'action',
+                    data: 'action1',
+                    name: 'action1'
+                },
+                {
+                    data: 'action2',
+                    name: 'action2',
                     orderable: false,
                     searchable: false
                 },
@@ -74,18 +79,18 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
     <script type="text/javascript">
-        $(document).on('change','.change',function(){
-            var role = $(this).val();
+        $(document).on('change','.assign',function(){
+            var admin = $(this).val();
             var user_id = $(this).closest('select').attr('data-id');
-            var url = "{{ route('changerole') }}";
+            var url = "{{ route('assignadmin') }}";
             swal.fire({
                 title: "Are you Sure?",
-                text: "You want to change the Role?",
+                text: "You want to assign this user as property admin?",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, Change it!'
+                confirmButtonText: 'Yes, Assign it!'
             }).then((result) =>{
                 if(result.isConfirmed){
                     $.ajax({
@@ -93,12 +98,48 @@
                         url: url,
                         data: {
                             id: user_id,
-                            role: role,
+                            admin: admin,
                         },
                         success: function(data){
                             swal.fire({
-                                title: 'Updated!',
-                                text: 'Your Role has been Updated.',
+                                title: 'Assigned!',
+                                text: 'Property Admin has been Assigned.',
+                                icon: 'success',
+                                confirmButtonText: 'OK'
+                            }).then((result)=>{
+                                window.location.reload();
+                            });
+                        }
+                    });
+                }
+            })
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).on('click','.approve',function(){
+            var row_id = $(this).attr('id');
+            var table_row = $(this).closest('tr');
+            var url = "{{ route('approve') }}";
+            swal.fire({
+                title: "Are you Sure?",
+                text: "You want to approve this property?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Approve it!'
+            }).then((result) =>{
+                if(result.isConfirmed){
+                    $.ajax({
+                        type: 'GET',
+                        url: url,
+                        data: {
+                            id: row_id,
+                        },
+                        success: function(data){
+                            swal.fire({
+                                title: 'Approved!',
+                                text: 'Property has been Approved.',
                                 icon: 'success',
                                 confirmButtonText: 'OK'
                             }).then((result)=>{

@@ -160,8 +160,8 @@
                                     </li>
                                     <li><a href="#">Property</a>
                                         <ul>
-                                            <li><a href="{{Route('single-property')}}">Single Property 1</a></li>
-                                            <li><a href="{{Route('single-property')}}">Single Property 2</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 1</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 2</a></li>
                                             <li><a href="single-property-3.html">Single Property 3</a></li>
                                             <li><a href="single-property-4.html">Single Property 4</a></li>
                                             <li><a href="single-property-5.html">Single Property 5</a></li>
@@ -191,7 +191,7 @@
                                                     <li><a href="{{Route('change-password')}}">Change Password</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="{{ Route('about') }}">About Us</a></li>
                                             <li><a href="faq.html">Faq</a></li>
                                             <li><a href="pricing-table.html">Pricing Tables</a></li>
                                             <li><a href="404.html">Page 404</a></li>
@@ -216,7 +216,7 @@
                                                     <li><a href="{{ Route('blog-list') }}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ Route('contact-us') }}">Contact</a></li>
@@ -370,7 +370,21 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="" method="post">
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{ Session::get('success') }}
+                            </div>
+                        @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <form action="{{ Route('save-property') }}" method="post" enctype="multipart/form-data">
                             @csrf
                         <div class="single-add-property">
                             <h3>Property description and price</h3>
@@ -380,7 +394,7 @@
                                         <div class="col-md-12">
                                             <p>
                                                 <label for="title">Property Title</label>
-                                                <input type="text" name="title" id="title" placeholder="Enter your property title">
+                                                <input value="{{ old('title') }}" type="text" name="title" id="title" placeholder="Enter your property title">
                                             </p>
                                         </div>
                                     </div>
@@ -388,7 +402,7 @@
                                         <div class="col-md-12">
                                             <p>
                                                 <label for="description">Property Description</label>
-                                                <textarea id="description" name="description" placeholder="Describe about your property"></textarea>
+                                                <textarea value="{{ old('description') }}" id="description" name="description" placeholder="Describe about your property"></textarea>
                                             </p>
                                         </div>
                                     </div>
@@ -397,13 +411,13 @@
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb">
                                                 <label for="price">Price</label>
-                                                <input type="text" name="price" placeholder="INR" id="price">
+                                                <input type="text" value="{{ old('price') }}" name="price" placeholder="INR" id="price">
                                             </p>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p class="no-mb last">
                                                 <label for="area">No. of seats</label>
-                                                <input type="text" name="no_of_seats" placeholder="No. of seats" id="area">
+                                                <input type="text" value="{{ old('no_of_seats') }}" name="no_of_seats" placeholder="No. of seats" id="area">
                                             </p>
                                         </div>
                                     </div>
@@ -452,13 +466,13 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="address">Address</label>
-                                            <input type="text" name="address" placeholder="Enter Your Address" id="address">
+                                            <input type="text" value="{{ old('address') }}" name="address" placeholder="Enter Your Address" id="address">
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="city">City</label>
-                                            <input type="text" name="city" placeholder="Enter Your City" id="city">
+                                            <input type="text" value="{{ old('city') }}" name="city" placeholder="Enter Your City" id="city">
                                         </p>
                                     </div>
                                 </div>
@@ -466,13 +480,13 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="state">State</label>
-                                            <input type="text" name="state" placeholder="Enter Your State" id="state">
+                                            <input type="text" value="{{ old('state') }}" name="state" placeholder="Enter Your State" id="state">
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="country">Country</label>
-                                            <input type="text" name="country" placeholder="Enter Your Country" id="country">
+                                            <input type="text" value="{{ old('country') }}" name="country" placeholder="Enter Your Country" id="country">
                                         </p>
                                     </div>
                                 </div>
@@ -569,16 +583,16 @@
                                             <li class="fl-wrap filter-tags clearfix">
                                                 <div class="checkboxes float-left">
                                                     <div class="filter-tags-wrap">
-                                                        <input id="check-k" type="checkbox" name="locker">
-                                                        <label for="check-k">Locker</label>
+                                                        <input id="check-l" type="checkbox" name="locker">
+                                                        <label for="check-l">Locker</label>
                                                     </div>
                                                 </div>
                                             </li>
                                             <li class="fl-wrap filter-tags clearfix">
                                                 <div class="checkboxes float-left">
                                                     <div class="filter-tags-wrap">
-                                                        <input id="check-k" type="checkbox" name="24*7">
-                                                        <label for="check-k">24X7</label>
+                                                        <input id="check-m" type="checkbox" name="_24x7">
+                                                        <label for="check-m">24X7</label>
                                                     </div>
                                                 </div>
                                             </li>
@@ -595,13 +609,13 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="con-name">Name</label>
-                                            <input type="text" placeholder="Enter Your Name" id="con-name" name="name">
+                                            <input type="text" value="{{ old('name') }}" placeholder="Enter Your Name" id="con-name" name="name">
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <p>
                                             <label for="con-user">Username</label>
-                                            <input type="text" placeholder="Enter Your Username" id="con-user" name="username">
+                                            <input type="text" value="{{ old('username') }}" placeholder="Enter Your Username" id="con-user" name="username">
                                         </p>
                                     </div>
                                 </div>
@@ -609,13 +623,13 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p class="no-mb first">
                                             <label for="con-email">Email</label>
-                                            <input type="email" placeholder="Enter Your Email" id="con-email" name="email">
+                                            <input type="email" value="{{ old('email') }}" placeholder="Enter Your Email" id="con-email" name="email">
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <p class="no-mb last">
                                             <label for="con-phn">Phone</label>
-                                            <input type="text" placeholder="Enter Your Phone Number" id="con-phn" name="phone">
+                                            <input type="text" value="{{ old('phone') }}" oninput="validateInput(event)" placeholder="Enter Your Phone Number" id="con-phn" name="phone">
                                         </p>
                                     </div>
                                 </div>
@@ -690,6 +704,13 @@
         <script src="js/forms-2.js"></script>
         <script src="js/color-switcher.js"></script>
         <script src="js/dropzone.js"></script>
+        <script>
+            function validateInput(event) {
+              const input = event.target;
+              const sanitizedValue = input.value.replace(/[^0-9]/g, ''); 
+              input.value = sanitizedValue;
+            }
+        </script>
 
         <!-- MAIN JS -->
         <script src="js/script.js"></script>

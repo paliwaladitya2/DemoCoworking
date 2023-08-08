@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/{{Route('single-property')}} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:52:34 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/{{Route('properties-grid')}} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:52:34 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,32 +11,32 @@
     <meta name="author" content="">
     <title>Property Details</title>
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:500,600,800" rel="stylesheet">
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="font/flaticon.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/fontawesome-5-all.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="../font/flaticon.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome-5-all.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
     <!-- LEAFLET MAP -->
-    <link rel="stylesheet" href="css/leaflet.css">
-    <link rel="stylesheet" href="css/leaflet-gesture-handling.min.css">
-    <link rel="stylesheet" href="css/leaflet.markercluster.css">
-    <link rel="stylesheet" href="css/leaflet.markercluster.default.css">
+    <link rel="stylesheet" href="../css/leaflet.css">
+    <link rel="stylesheet" href="../css/leaflet-gesture-handling.min.css">
+    <link rel="stylesheet" href="../css/leaflet.markercluster.css">
+    <link rel="stylesheet" href="../css/leaflet.markercluster.default.css">
     <!-- ARCHIVES CSS -->
-    <link rel="stylesheet" href="css/timedropper.css">
-    <link rel="stylesheet" href="css/datedropper.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/lightcase.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" id="color" href="css/default.css">
+    <link rel="stylesheet" href="../css/timedropper.css">
+    <link rel="stylesheet" href="../css/datedropper.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/lightcase.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" id="color" href="../css/default.css">
 </head>
 
 <body class="inner-pages sin-1 homepage-4 hd-white">
@@ -53,7 +53,7 @@
                     <div class="left-side">
                         <!-- Logo -->
                         <div id="logo">
-                            <a href="{{ Route('index') }}"><img src="images/logo-red.svg" alt=""></a>
+                            <a href="{{ Route('index') }}"><img src="../images/logo-red.svg" alt=""></a>
                         </div>
                         <!-- Mobile Navigation -->
                         <div class="mmenu-trigger">
@@ -164,8 +164,8 @@
                                     </li>
                                     <li><a href="#">Property</a>
                                         <ul>
-                                            <li><a href="{{Route('single-property')}}">Single Property 1</a></li>
-                                            <li><a href="{{Route('single-property')}}">Single Property 2</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 1</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 2</a></li>
                                             <li><a href="single-property-3.html">Single Property 3</a></li>
                                             <li><a href="single-property-4.html">Single Property 4</a></li>
                                             <li><a href="single-property-5.html">Single Property 5</a></li>
@@ -195,7 +195,7 @@
                                                     <li><a href="{{Route('change-password')}}">Change Password</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="{{ Route('about') }}">About Us</a></li>
                                             <li><a href="faq.html">Faq</a></li>
                                             <li><a href="pricing-table.html">Pricing Tables</a></li>
                                             <li><a href="404.html">Page 404</a></li>
@@ -220,7 +220,7 @@
                                                     <li><a href="{{ Route('blog-list') }}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ Route('contact-us') }}">Contact</a></li>
@@ -246,7 +246,7 @@
                     <!-- Right Side Content / End -->
                     <div class="header-user-menu user-menu add">
                         <div class="header-user-name">
-                            <span><img src="images/testimonials/ts-1.jpg" alt=""></span>Hi, Mary!
+                            <span><img src="../images/testimonials/ts-1.jpg" alt=""></span>Hi, Mary!
                         </div>
                         <ul>
                             <li><a href="{{Route('user-profile')}}"> Edit profile</a></li>
@@ -297,14 +297,18 @@
                     <div class="col-lg-8 col-md-12 blog-pots">
                         <div class="row">
                             <div class="col-md-12">
+                                <?php
+                                    $property = DB::table('property_approveds')->where('id',$id)->first();
+                                ?>
+
                                 <section class="headings-2 pt-0">
                                     <div class="pro-wrapper">
                                         <div class="detail-wrapper-body">
                                             <div class="listing-title-bar">
-                                                <h3>Luxury Villa House <span class="mrg-l-5 category-tag">For Sale</span></h3>
+                                                <h3>{{ $property->title }}<span class="mrg-l-5 category-tag">For Rent</span></h3>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
-                                                        <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>77 - Central Park South, NYC
+                                                        <i class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>{{ $property->address }}
                                                     </a>
                                                 </div>
                                             </div>
@@ -312,10 +316,10 @@
                                         <div class="single detail-wrapper mr-2">
                                             <div class="detail-wrapper-body">
                                                 <div class="listing-title-bar">
-                                                    <h4>$ 230,000</h4>
+                                                    <h4>{{ $property->price }}</h4>
                                                     <div class="mt-0">
                                                         <a href="#listing-location" class="listing-address">
-                                                            <p>$ 1,200 / sq ft</p>
+                                                            <p>{{ $property->price }}</p>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -328,21 +332,38 @@
                                     <h5 class="mb-4">Gallery</h5>
                                     <div class="carousel-inner">
                                         <div class="active item carousel-item" data-slide-number="0">
-                                            <img src="images/single-property/s-1.jpg" class="img-fluid" alt="slider-listing">
+                                            <img src="../PropertyImages/{{ $property->image1 }}" class="img-fluid" alt="slider-listing">
                                         </div>
+                                        @if($property->image2)
                                         <div class="item carousel-item" data-slide-number="1">
-                                            <img src="images/single-property/s-2.jpg" class="img-fluid" alt="slider-listing">
+                                            <img src="../PropertyImages/{{ $property->image2 }}" class="img-fluid" alt="slider-listing">
                                         </div>
+                                        @endif
+                                        @if($property->image3)
                                         <div class="item carousel-item" data-slide-number="2">
-                                            <img src="images/single-property/s-3.jpg" class="img-fluid" alt="slider-listing">
+                                            <img src="../PropertyImages/{{ $property->image3 }}" class="img-fluid" alt="slider-listing">
                                         </div>
+                                        @endif
+                                        @if($property->image4)
+                                        <div class="item carousel-item" data-slide-number="3">
+                                            <img src="../PropertyImages/{{ $property->image4 }}" class="img-fluid" alt="slider-listing">
+                                        </div>
+                                        @endif
+                                        @if($property->image5)
                                         <div class="item carousel-item" data-slide-number="4">
-                                            <img src="images/single-property/s-4.jpg" class="img-fluid" alt="slider-listing">
+                                            <img src="../PropertyImages/{{ $property->image5 }}" class="img-fluid" alt="slider-listing">
                                         </div>
+                                        @endif
+                                        @if($property->image6)
                                         <div class="item carousel-item" data-slide-number="5">
-                                            <img src="images/single-property/s-5.jpg" class="img-fluid" alt="slider-listing">
+                                            <img src="../PropertyImages/{{ $property->image6 }}" class="img-fluid" alt="slider-listing">
                                         </div>
-
+                                        @endif
+                                        @if($property->image7)
+                                        <div class="item carousel-item" data-slide-number="6">
+                                            <img src="../PropertyImages/{{ $property->image7 }}" class="img-fluid" alt="slider-listing">
+                                        </div>
+                                        @endif
                                         <a class="carousel-control left" href="#listingDetailsSlider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
                                         <a class="carousel-control right" href="#listingDetailsSlider" data-slide="next"><i class="fa fa-angle-right"></i></a>
 
@@ -351,37 +372,57 @@
                                     <ul class="carousel-indicators smail-listing list-inline">
                                         <li class="list-inline-item active">
                                             <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#listingDetailsSlider">
-                                                <img src="images/single-property/s-1.jpg" class="img-fluid" alt="listing-small">
+                                                <img src="../PropertyImages/{{ $property->image1 }}" class="img-fluid" alt="listing-small">
                                             </a>
                                         </li>
+                                        @if($property->image2)
                                         <li class="list-inline-item">
                                             <a id="carousel-selector-1" data-slide-to="1" data-target="#listingDetailsSlider">
-                                                <img src="images/single-property/s-2.jpg" class="img-fluid" alt="listing-small">
+                                                <img src="../PropertyImages/{{ $property->image2 }}" class="img-fluid" alt="listing-small">
                                             </a>
                                         </li>
+                                        @endif
+                                        @if($property->image3)
                                         <li class="list-inline-item">
                                             <a id="carousel-selector-2" data-slide-to="2" data-target="#listingDetailsSlider">
-                                                <img src="images/single-property/s-3.jpg" class="img-fluid" alt="listing-small">
+                                                <img src="../PropertyImages/{{ $property->image3 }}" class="img-fluid" alt="listing-small">
                                             </a>
                                         </li>
+                                        @endif
+                                        @if($property->image4)
                                         <li class="list-inline-item">
                                             <a id="carousel-selector-3" data-slide-to="3" data-target="#listingDetailsSlider">
-                                                <img src="images/single-property/s-4.jpg" class="img-fluid" alt="listing-small">
+                                                <img src="../PropertyImages/{{ $property->image4 }}" class="img-fluid" alt="listing-small">
                                             </a>
                                         </li>
+                                        @endif
+                                        @if($property->image5)
                                         <li class="list-inline-item">
                                             <a id="carousel-selector-4" data-slide-to="4" data-target="#listingDetailsSlider">
-                                                <img src="images/single-property/s-5.jpg" class="img-fluid" alt="listing-small">
+                                                <img src="../PropertyImages/{{ $property->image5 }}" class="img-fluid" alt="listing-small">
                                             </a>
                                         </li>
+                                        @endif
+                                        @if($property->image6)
+                                        <li class="list-inline-item">
+                                            <a id="carousel-selector-5" data-slide-to="5" data-target="#listingDetailsSlider">
+                                                <img src="../PropertyImages/{{ $property->image6 }}" class="img-fluid" alt="listing-small">
+                                            </a>
+                                        </li>
+                                        @endif
+                                        @if($property->image7)
+                                        <li class="list-inline-item">
+                                            <a id="carousel-selector-6" data-slide-to="6" data-target="#listingDetailsSlider">
+                                                <img src="../PropertyImages/{{ $property->image7 }}" class="img-fluid" alt="listing-small">
+                                            </a>
+                                        </li>
+                                        @endif
                                     </ul>
                                     <!-- main slider carousel items -->
                                 </div>
                                 <div class="blog-info details mb-30">
                                     <h5 class="mb-4">Description</h5>
-                                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
-                                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
-                                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
+                                    <p>{{ $property->description }}</p>
                                 </div>
                             </div>
                         </div>
@@ -403,7 +444,7 @@
                                 </li>
                                 <li>
                                     <span class="font-weight-bold mr-1">Property Price:</span>
-                                    <span class="det">$230,000</span>
+                                    <span class="det">{{ $property->price }}</span>
                                 </li>
                                 <li>
                                     <span class="font-weight-bold mr-1">Rooms:</span>
@@ -470,7 +511,7 @@
                         </div>
                         <div class="floor-plan property wprt-image-video w50 pro">
                             <h5>Floor Plans</h5>
-                            <img alt="image" src="images/bg/floor-plan-1.png">
+                            <img alt="image" src="../images/bg/floor-plan-1.png">
                         </div>
                         <div class="floor-plan property wprt-image-video w50 pro">
                             <h5>What's Nearby</h5>
@@ -609,7 +650,7 @@
                         </div>
                         <div class="property wprt-image-video w50 pro">
                             <h5>Property Video</h5>
-                            <img alt="image" src="images/slider/home-slider-4.jpg">
+                            <img alt="image" src="../images/slider/home-slider-4.jpg">
                             <a class="icon-wrap popup-video popup-youtube" href="https://www.youtube.com/watch?v=14semTlwyUY">
                                 <i class="fa fa-play"></i>
                             </a>
@@ -631,7 +672,7 @@
                                 <ul class="col-12 commented pl-0">
                                     <li class="comm-inf">
                                         <div class="col-md-2">
-                                            <img src="images/testimonials/ts-5.jpg" class="img-fluid" alt="">
+                                            <img src="../images/testimonials/ts-5.jpg" class="img-fluid" alt="">
                                         </div>
                                         <div class="col-md-10 comments-info">
                                             <div class="conra">
@@ -648,7 +689,7 @@
                                             </div>
                                             <p class="mb-4">May 30 2020</p>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
-                                            <div class="rest"><img src="images/single-property/s-1.jpg" class="img-fluid" alt=""></div>
+                                            <div class="rest"><img src="../images/single-property/s-1.jpg" class="img-fluid" alt=""></div>
                                         </div>
                                     </li>
 
@@ -658,7 +699,7 @@
                                 <ul class="col-12 commented pl-0">
                                     <li class="comm-inf">
                                         <div class="col-md-2">
-                                            <img src="images/testimonials/ts-4.jpg" class="img-fluid" alt="">
+                                            <img src="../images/testimonials/ts-4.jpg" class="img-fluid" alt="">
                                         </div>
                                         <div class="col-md-10 comments-info">
                                             <div class="conra">
@@ -684,7 +725,7 @@
                                 <ul class="col-12 commented mb-0 pl-0">
                                     <li class="comm-inf">
                                         <div class="col-md-2">
-                                            <img src="images/testimonials/ts-3.jpg" class="img-fluid" alt="">
+                                            <img src="../images/testimonials/ts-3.jpg" class="img-fluid" alt="">
                                         </div>
                                         <div class="col-md-10 comments-info">
                                             <div class="conra">
@@ -702,8 +743,8 @@
                                             <p class="mb-4">jul 12 2020</p>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
                                             <div class="resti">
-                                                <div class="rest"><img src="images/single-property/s-2.jpg" class="img-fluid" alt=""></div>
-                                                <div class="rest"><img src="images/single-property/s-3.jpg" class="img-fluid" alt=""></div>
+                                                <div class="rest"><img src="../images/single-property/s-2.jpg" class="img-fluid" alt=""></div>
+                                                <div class="rest"><img src="../images/single-property/s-3.jpg" class="img-fluid" alt=""></div>
                                             </div>
                                         </div>
                                     </li>
@@ -773,8 +814,8 @@
                                 </div>
                             </div>
                         </section>
-                        <!-- End Add Review -->
                     </div>
+                        <!-- End Add Review -->
                     <aside class="col-lg-4 col-md-12 car">
                         <div class="single widget">
                             <!-- Start: Schedule a Tour -->
@@ -838,7 +879,7 @@
                                     <div class="widget-boxed-body">
                                         <div class="sidebar-widget author-widget2">
                                             <div class="author-box clearfix">
-                                                <img src="images/testimonials/ts-1.jpg" alt="author-image" class="author__img">
+                                                <img src="../images/testimonials/ts-1.jpg" alt="author-image" class="author__img">
                                                 <h4 class="author__title">Lisa Clark</h4>
                                                 <p class="author__meta">Agent of Property</p>
                                             </div>
@@ -869,28 +910,28 @@
                                             <div class="recent-post">
                                                 <div class="recent-main">
                                                     <div class="recent-img">
-                                                        <a href="blog-details.html"><img src="images/feature-properties/fp-1.jpg" alt=""></a>
+                                                        <a href="{{ Route('blog-details') }}"><img src="../images/feature-properties/fp-1.jpg" alt=""></a>
                                                     </div>
                                                     <div class="info-img">
-                                                        <a href="blog-details.html"><h6>Family Home</h6></a>
+                                                        <a href="{{ Route('blog-details') }}"><h6>Family Home</h6></a>
                                                         <p>$230,000</p>
                                                     </div>
                                                 </div>
                                                 <div class="recent-main my-4">
                                                     <div class="recent-img">
-                                                        <a href="blog-details.html"><img src="images/feature-properties/fp-2.jpg" alt=""></a>
+                                                        <a href="{{ Route('blog-details') }}"><img src="../images/feature-properties/fp-2.jpg" alt=""></a>
                                                     </div>
                                                     <div class="info-img">
-                                                        <a href="blog-details.html"><h6>Family Home</h6></a>
+                                                        <a href="{{ Route('blog-details') }}"><h6>Family Home</h6></a>
                                                         <p>$230,000</p>
                                                     </div>
                                                 </div>
                                                 <div class="recent-main">
                                                     <div class="recent-img">
-                                                        <a href="blog-details.html"><img src="images/feature-properties/fp-3.jpg" alt=""></a>
+                                                        <a href="{{ Route('blog-details') }}"><img src="../images/feature-properties/fp-3.jpg" alt=""></a>
                                                     </div>
                                                     <div class="info-img">
-                                                        <a href="blog-details.html"><h6>Family Home</h6></a>
+                                                        <a href="{{ Route('blog-details') }}"><h6>Family Home</h6></a>
                                                         <p>$230,000</p>
                                                     </div>
                                                 </div>
@@ -919,7 +960,7 @@
                                                                     <li>Baths <span>3</span></li>
                                                                 </ul>
                                                             </div>
-                                                            <img src="images/feature-properties/fp-1.jpg" alt="">
+                                                            <img src="../images/feature-properties/fp-1.jpg" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -939,7 +980,7 @@
                                                                     <li>Baths <span>3</span></li>
                                                                 </ul>
                                                             </div>
-                                                            <img src="images/feature-properties/fp-2.jpg" alt="">
+                                                            <img src="../images/feature-properties/fp-2.jpg" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -959,7 +1000,7 @@
                                                                     <li>Baths <span>3</span></li>
                                                                 </ul>
                                                             </div>
-                                                            <img src="images/feature-properties/fp-3.jpg" alt="">
+                                                            <img src="../images/feature-properties/fp-3.jpg" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -979,7 +1020,7 @@
                                                                     <li>Baths <span>3</span></li>
                                                                 </ul>
                                                             </div>
-                                                            <img src="images/feature-properties/fp-4.jpg" alt="">
+                                                            <img src="../images/feature-properties/fp-4.jpg" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -999,7 +1040,7 @@
                                                                     <li>Baths <span>3</span></li>
                                                                 </ul>
                                                             </div>
-                                                            <img src="images/feature-properties/fp-5.jpg" alt="">
+                                                            <img src="../images/feature-properties/fp-5.jpg" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1019,7 +1060,7 @@
                                                                     <li>Baths <span>3</span></li>
                                                                 </ul>
                                                             </div>
-                                                            <img src="images/feature-properties/fp-6.jpg" alt="">
+                                                            <img src="../images/feature-properties/fp-6.jpg" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1032,7 +1073,7 @@
                                             <h4>Specials of the day</h4>
                                         </div>
                                         <div class="widget-boxed-body">
-                                            <div class="banner"><img src="images/single-property/banner.jpg" alt=""></div>
+                                            <div class="banner"><img src="../images/single-property/banner.jpg" alt=""></div>
                                         </div>
                                     </div>
                                     <!-- End: Specials offer -->
@@ -1080,25 +1121,25 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="{{Route('single-property')}}" class="homes-img">
+                                            <a href="{{Route('properties-grid')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <div class="homes-price">$9,000/mo</div>
-                                                <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
+                                                <img src="../images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('properties-grid')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('properties-grid')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('properties-grid')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="{{Route('single-property')}}">
+                                            <a href="{{Route('properties-grid')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1123,7 +1164,7 @@
                                         </ul>
                                         <div class="footer">
                                             <a href="agent-details.html">
-                                                <img src="images/testimonials/ts-1.jpg" alt="" class="mr-2"> Lisa Jhonson
+                                                <img src="../images/testimonials/ts-1.jpg" alt="" class="mr-2"> Lisa Jhonson
                                             </a>
                                             <span>2 months ago</span>
                                         </div>
@@ -1135,24 +1176,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="{{Route('single-property')}}" class="homes-img">
+                                            <a href="{{Route('properties-grid')}}" class="homes-img">
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <div class="homes-price">$3,000/mo</div>
-                                                <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
+                                                <img src="../images/blog/b-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('properties-grid')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('properties-grid')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('properties-grid')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="{{Route('single-property')}}">
+                                            <a href="{{Route('properties-grid')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1177,7 +1218,7 @@
                                         </ul>
                                         <div class="footer">
                                             <a href="agent-details.html">
-                                                <img src="images/testimonials/ts-2.jpg" alt="" class="mr-2"> Karl Smith
+                                                <img src="../images/testimonials/ts-2.jpg" alt="" class="mr-2"> Karl Smith
                                             </a>
                                             <span>2 months ago</span>
                                         </div>
@@ -1189,24 +1230,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="{{Route('single-property')}}" class="homes-img">
+                                            <a href="{{Route('properties-grid')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <div class="homes-price">$9,000/mo</div>
-                                                <img src="images/blog/b-1.jpg" alt="home-1" class="img-responsive">
+                                                <img src="../images/blog/b-1.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="{{Route('single-property')}}" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{Route('properties-grid')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="{{Route('single-property')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{Route('properties-grid')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="{{Route('single-property')}}">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{Route('properties-grid')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="{{Route('single-property')}}">
+                                            <a href="{{Route('properties-grid')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1231,7 +1272,7 @@
                                         </ul>
                                         <div class="footer">
                                             <a href="agent-details.html">
-                                                <img src="images/testimonials/ts-3.jpg" alt="" class="mr-2"> katy Teddy
+                                                <img src="../images/testimonials/ts-3.jpg" alt="" class="mr-2"> katy Teddy
                                             </a>
                                             <span>2 months ago</span>
                                         </div>
@@ -1254,7 +1295,7 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="netabout">
                                 <a href="{{ Route('index') }}" class="logo">
-                                    <img src="images/logo-footer.svg" alt="netcom">
+                                    <img src="../images/logo-footer.svg" alt="netcom">
                                 </a>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
                             </div>
@@ -1269,7 +1310,7 @@
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <p class="in-p">+456 875 369 208</p>
+                                            <p class="in-p">+91 9691565883</p>
                                         </div>
                                     </li>
                                     <li>
@@ -1287,16 +1328,16 @@
                                 <div class="nav-footer">
                                     <ul>
                                         <li><a href="{{ Route('index') }}">Home One</a></li>
-                                        <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                        <li><a href="properties-full-list.html">Properties List</a></li>
+                                        <li><a href="{{ Route('properties-grid') }}">Properties Right</a></li>
+                                        <li><a href="{{ Route('properties-grid') }}">Properties List</a></li>
                                         <li><a href="{{Route('properties-details')}}">Property Details</a></li>
                                         <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
                                     </ul>
                                     <ul class="nav-right">
                                         <li><a href="agent-details.html">Agents Details</a></li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="{{ Route('about') }}">About Us</a></li>
                                         <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         <li class="no-mgb"><a href="{{ Route('contact-us') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
@@ -1434,32 +1475,32 @@
         <!--register form end -->
 
         <!-- ARCHIVES JS -->
-        <script src="js/jquery-3.5.1.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/range-slider.js"></script>
-        <script src="js/tether.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/mmenu.min.js"></script>
-        <script src="js/mmenu.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/slick4.js"></script>
-        <script src="js/fitvids.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/popup.js"></script>
-        <script src="js/ajaxchimp.min.js"></script>
-        <script src="js/newsletter.js"></script>
-        <script src="js/timedropper.js"></script>
-        <script src="js/datedropper.js"></script>
-        <script src="js/jqueryadd-count.js"></script>
-        <script src="js/leaflet.js"></script>
-        <script src="js/leaflet-gesture-handling.min.js"></script>
-        <script src="js/leaflet-providers.js"></script>
-        <script src="js/leaflet.markercluster.js"></script>
-        <script src="js/map-single.js"></script>
-        <script src="js/color-switcher.js"></script>
-        <script src="js/inner.js"></script>
+        <script src="../js/jquery-3.5.1.min.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+        <script src="../js/range-slider.js"></script>
+        <script src="../js/tether.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/mmenu.min.js"></script>
+        <script src="../js/mmenu.js"></script>
+        <script src="../js/slick.min.js"></script>
+        <script src="../js/slick4.js"></script>
+        <script src="../js/fitvids.js"></script>
+        <script src="../js/smooth-scroll.min.js"></script>
+        <script src="../js/jquery.magnific-popup.min.js"></script>
+        <script src="../js/popup.js"></script>
+        <script src="../js/ajaxchimp.min.js"></script>
+        <script src="../js/newsletter.js"></script>
+        <script src="../js/timedropper.js"></script>
+        <script src="../js/datedropper.js"></script>
+        <script src="../js/jqueryadd-count.js"></script>
+        <script src="../js/leaflet.js"></script>
+        <script src="../js/leaflet-gesture-handling.min.js"></script>
+        <script src="../js/leaflet-providers.js"></script>
+        <script src="../js/leaflet.markercluster.js"></script>
+        <script src="../js/map-single.js"></script>
+        <script src="../js/color-switcher.js"></script>
+        <script src="../js/inner.js"></script>
 
         <!-- Date Dropper Script-->
         <script>
@@ -1518,5 +1559,5 @@
 </body>
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/{{Route('single-property')}} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:52:36 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/{{Route('properties-grid')}} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Aug 2023 05:52:36 GMT -->
 </html>

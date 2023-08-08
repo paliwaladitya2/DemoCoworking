@@ -157,8 +157,8 @@
                                     </li>
                                     <li><a href="#">Property</a>
                                         <ul>
-                                            <li><a href="{{Route('single-property')}}">Single Property 1</a></li>
-                                            <li><a href="{{Route('single-property')}}">Single Property 2</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 1</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 2</a></li>
                                             <li><a href="single-property-3.html">Single Property 3</a></li>
                                             <li><a href="single-property-4.html">Single Property 4</a></li>
                                             <li><a href="single-property-5.html">Single Property 5</a></li>
@@ -188,7 +188,7 @@
                                                     <li><a href="{{Route('change-password')}}">Change Password</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="{{ Route('about') }}">About Us</a></li>
                                             <li><a href="faq.html">Faq</a></li>
                                             <li><a href="pricing-table.html">Pricing Tables</a></li>
                                             <li><a href="404.html">Page 404</a></li>
@@ -213,7 +213,7 @@
                                                     <li><a href="{{ Route('blog-list') }}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ Route('contact-us') }}">Contact</a></li>
@@ -328,7 +328,7 @@
                         </section>
                         <div class="row portfolio-items">
                             <div class="item col-lg-6 col-md-6 col-xs-12 landscapes sale">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-1.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -340,7 +340,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 col-xs-12 people rent">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-2.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -352,7 +352,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 col-xs-12 people landscapes sale">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-3.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -364,7 +364,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 col-xs-12 people landscapes rent h-17 no-pb">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-4.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -376,7 +376,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 col-xs-12 people landscapes sale">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-5.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -388,7 +388,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 col-xs-12 people landscapes rent h-17 no-pb">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-1.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -400,7 +400,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 col-xs-12 people landscapes sale">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-2.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -412,7 +412,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 col-xs-12 people landscapes rent h-17 no-pb">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-3.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -424,7 +424,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 col-xs-12 people sale h-177 no-pb">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/interior/p-4.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -436,7 +436,7 @@
                                 </a>
                             </div>
                             <div class="item col-lg-6 col-md-6 it2 col-xs-12 web rent ho17-thelast no-pb">
-                                <a href="{{Route('single-property')}}" class="recent-16" data-aos="fade-up">
+                                <a href="{{Route('properties-grid')}}" class="recent-16" data-aos="fade-up">
                                     <div class="recent-img16 img-center" style="background-image: url(images/single-property/s-1.jpg);"></div>
                                     <div class="recent-content"></div>
                                     <div class="recent-details">
@@ -743,28 +743,28 @@
                                     <div class="recent-post">
                                         <div class="recent-main">
                                             <div class="recent-img">
-                                                <a href="blog-details.html"><img src="images/feature-properties/fp-1.jpg" alt=""></a>
+                                                <a href="{{ Route('blog-details') }}"><img src="images/feature-properties/fp-1.jpg" alt=""></a>
                                             </div>
                                             <div class="info-img">
-                                                <a href="blog-details.html"><h6>Family Modern Home</h6></a>
+                                                <a href="{{ Route('blog-details') }}"><h6>Family Modern Home</h6></a>
                                                 <p>$230,000</p>
                                             </div>
                                         </div>
                                         <div class="recent-main my-4">
                                             <div class="recent-img">
-                                                <a href="blog-details.html"><img src="images/feature-properties/fp-2.jpg" alt=""></a>
+                                                <a href="{{ Route('blog-details') }}"><img src="images/feature-properties/fp-2.jpg" alt=""></a>
                                             </div>
                                             <div class="info-img">
-                                                <a href="blog-details.html"><h6>Luxury Villa House</h6></a>
+                                                <a href="{{ Route('blog-details') }}"><h6>Luxury Villa House</h6></a>
                                                 <p>$120,000</p>
                                             </div>
                                         </div>
                                         <div class="recent-main">
                                             <div class="recent-img">
-                                                <a href="blog-details.html"><img src="images/feature-properties/fp-3.jpg" alt=""></a>
+                                                <a href="{{ Route('blog-details') }}"><img src="images/feature-properties/fp-3.jpg" alt=""></a>
                                             </div>
                                             <div class="info-img">
-                                                <a href="blog-details.html"><h6>Luxury Family Home</h6></a>
+                                                <a href="{{ Route('blog-details') }}"><h6>Luxury Family Home</h6></a>
                                                 <p>$150,000</p>
                                             </div>
                                         </div>
@@ -847,7 +847,7 @@
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <p class="in-p">+456 875 369 208</p>
+                                            <p class="in-p">+91 9691565883</p>
                                         </div>
                                     </li>
                                     <li>
@@ -865,16 +865,16 @@
                                 <div class="nav-footer">
                                     <ul>
                                         <li><a href="{{ Route('index') }}">Home One</a></li>
-                                        <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                        <li><a href="properties-full-list.html">Properties List</a></li>
+                                        <li><a href="{{ Route('properties-grid') }}">Properties Right</a></li>
+                                        <li><a href="{{ Route('properties-grid') }}">Properties List</a></li>
                                         <li><a href="{{Route('properties-details')}}">Property Details</a></li>
                                         <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
                                     </ul>
                                     <ul class="nav-right">
                                         <li><a href="agent-details.html">Agents Details</a></li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="{{ Route('about') }}">About Us</a></li>
                                         <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         <li class="no-mgb"><a href="{{ Route('contact-us') }}">Contact Us</a></li>
                                     </ul>
                                 </div>

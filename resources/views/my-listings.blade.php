@@ -160,8 +160,8 @@
                                     </li>
                                     <li><a href="#">Property</a>
                                         <ul>
-                                            <li><a href="{{Route('single-property')}}">Single Property 1</a></li>
-                                            <li><a href="{{Route('single-property')}}">Single Property 2</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 1</a></li>
+                                            <li><a href="{{Route('properties-grid')}}">Single Property 2</a></li>
                                             <li><a href="single-property-3.html">Single Property 3</a></li>
                                             <li><a href="single-property-4.html">Single Property 4</a></li>
                                             <li><a href="single-property-5.html">Single Property 5</a></li>
@@ -191,7 +191,7 @@
                                                     <li><a href="{{Route('change-password')}}">Change Password</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="{{ Route('about') }}">About Us</a></li>
                                             <li><a href="faq.html">Faq</a></li>
                                             <li><a href="pricing-table.html">Pricing Tables</a></li>
                                             <li><a href="404.html">Page 404</a></li>
@@ -216,7 +216,7 @@
                                                     <li><a href="{{ Route('blog-list') }}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ Route('contact-us') }}">Contact</a></li>
@@ -384,11 +384,11 @@
                                 <tbody>
                                     <tr>
                                         <td class="image myelist">
-                                            <a href="{{Route('single-property')}}"><img alt="my-properties-3" src="images/feature-properties/fp-1.jpg" class="img-fluid"></a>
+                                            <a href="{{Route('properties-grid')}}"><img alt="my-properties-3" src="images/feature-properties/fp-1.jpg" class="img-fluid"></a>
                                         </td>
                                         <td>
                                             <div class="inner">
-                                                <a href="{{Route('single-property')}}"><h2>Luxury Villa House</h2></a>
+                                                <a href="{{Route('properties-grid')}}"><h2>Luxury Villa House</h2></a>
                                                 <figure><i class="lni-map-marker"></i> Est St, 77 - Central Park South, NYC</figure>
                                                 <ul class="starts text-left mb-0">
                                                     <li class="mb-0"><i class="fa fa-star"></i>
@@ -414,11 +414,11 @@
                                     </tr>
                                     <tr>
                                         <td class="image">
-                                            <a href="{{Route('single-property')}}"><img alt="my-properties-3" src="images/feature-properties/fp-2.jpg" class="img-fluid"></a>
+                                            <a href="{{Route('properties-grid')}}"><img alt="my-properties-3" src="images/feature-properties/fp-2.jpg" class="img-fluid"></a>
                                         </td>
                                         <td>
                                             <div class="inner">
-                                                <a href="{{Route('single-property')}}"><h2>Luxury Villa House</h2></a>
+                                                <a href="{{Route('properties-grid')}}"><h2>Luxury Villa House</h2></a>
                                                 <figure><i class="lni-map-marker"></i> Est St, 77 - Central Park South, NYC</figure>
                                                 <ul class="starts text-left mb-0">
                                                     <li class="mb-0"><i class="fa fa-star"></i>
@@ -444,11 +444,11 @@
                                     </tr>
                                     <tr>
                                         <td class="image">
-                                            <a href="{{Route('single-property')}}"><img alt="my-properties-3" src="images/feature-properties/fp-3.jpg" class="img-fluid"></a>
+                                            <a href="{{Route('properties-grid')}}"><img alt="my-properties-3" src="images/feature-properties/fp-3.jpg" class="img-fluid"></a>
                                         </td>
                                         <td>
                                             <div class="inner">
-                                                <a href="{{Route('single-property')}}"><h2>Luxury Villa House</h2></a>
+                                                <a href="{{Route('properties-grid')}}"><h2>Luxury Villa House</h2></a>
                                                 <figure><i class="lni-map-marker"></i> Est St, 77 - Central Park South, NYC</figure>
                                                 <ul class="starts text-left mb-0">
                                                     <li class="mb-0"><i class="fa fa-star"></i>
@@ -474,11 +474,11 @@
                                     </tr>
                                     <tr>
                                         <td class="image">
-                                            <a href="{{Route('single-property')}}"><img alt="my-properties-3" src="images/feature-properties/fp-4.jpg" class="img-fluid"></a>
+                                            <a href="{{Route('properties-grid')}}"><img alt="my-properties-3" src="images/feature-properties/fp-4.jpg" class="img-fluid"></a>
                                         </td>
                                         <td>
                                             <div class="inner">
-                                                <a href="{{Route('single-property')}}"><h2>Luxury Villa House</h2></a>
+                                                <a href="{{Route('properties-grid')}}"><h2>Luxury Villa House</h2></a>
                                                 <figure><i class="lni-map-marker"></i> Est St, 77 - Central Park South, NYC</figure>
                                                 <ul class="starts text-left mb-0">
                                                     <li class="mb-0"><i class="fa fa-star"></i>
@@ -504,11 +504,11 @@
                                     </tr>
                                     <tr>
                                         <td class="image">
-                                            <a href="{{Route('single-property')}}"><img alt="my-properties-3" src="images/feature-properties/fp-5.jpg" class="img-fluid"></a>
+                                            <a href="{{Route('properties-grid')}}"><img alt="my-properties-3" src="images/feature-properties/fp-5.jpg" class="img-fluid"></a>
                                         </td>
                                         <td>
                                             <div class="inner">
-                                                <a href="{{Route('single-property')}}"><h2>Luxury Villa House</h2></a>
+                                                <a href="{{Route('properties-grid')}}"><h2>Luxury Villa House</h2></a>
                                                 <figure><i class="lni-map-marker"></i> Est St, 77 - Central Park South, NYC</figure>
                                                 <ul class="starts text-left mb-0">
                                                     <li class="mb-0"><i class="fa fa-star"></i>
@@ -534,11 +534,11 @@
                                     </tr>
                                     <tr>
                                         <td class="image">
-                                            <a href="{{Route('single-property')}}"><img alt="my-properties-3" src="images/feature-properties/fp-6.jpg" class="img-fluid"></a>
+                                            <a href="{{Route('properties-grid')}}"><img alt="my-properties-3" src="images/feature-properties/fp-6.jpg" class="img-fluid"></a>
                                         </td>
                                         <td>
                                             <div class="inner">
-                                                <a href="{{Route('single-property')}}"><h2>Luxury Villa House</h2></a>
+                                                <a href="{{Route('properties-grid')}}"><h2>Luxury Villa House</h2></a>
                                                 <figure><i class="lni-map-marker"></i> Est St, 77 - Central Park South, NYC</figure>
                                                 <ul class="starts text-left mb-0">
                                                     <li class="mb-0"><i class="fa fa-star"></i>
