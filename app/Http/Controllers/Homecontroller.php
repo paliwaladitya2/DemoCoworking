@@ -12,44 +12,44 @@ class HomeController extends Controller
     //
     public function add_properties(){
         if(Session::has('user')){
-            return view('add-property');
+            return view('mainweb.add-property');
 
         }
         else{
-            return view('login');
+            return view('mainweb.loginindex');
         }
     }
 
     public function contact_us(){
-        return view('contact-us');
+        return view('mainweb.contact-us');
     }
 
     public function about(){
-        return view('about');
+        return view('mainweb.about');
     }
 
     public function blog_list(){
-        return view('blog-list-sidebar');
+        return view('mainweb.blog-list-sidebar');
     }
 
     public function blog_details(){
-        return view('blog-details');
+        return view('mainweb.blog-details');
     }
 
     public function user_profile(){
-        return view('user-profile');
+        return view('mainweb.user-profile');
     }
 
     public function payment_method(){
-        return view('payment-method');
+        return view('mainweb.payment-method');
     }
 
     public function change_password(){
-        return view('change-password');
+        return view('mainweb.change-password');
     }
 
     public function single_property($id){
-        return view('single-property-1',compact('id'));
+        return view('mainweb.single-property-1',compact('id'));
     }
 
     public function properties_details(){
@@ -57,7 +57,7 @@ class HomeController extends Controller
     }
 
     public function properties_grid(){
-        return view('properties-grid-2');
+        return view('mainweb.properties-grid-2');
     }
 
     public function save_general_query(Request $request){

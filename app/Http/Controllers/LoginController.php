@@ -43,7 +43,7 @@ class LoginController extends Controller
     }
 
     public function login(){
-        return view('loginindex');
+        return view('mainweb.loginindex');
     }
 
     public function logincheck(Request $request){
