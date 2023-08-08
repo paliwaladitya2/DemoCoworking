@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2023 at 03:33 PM
+-- Generation Time: Aug 08, 2023 at 02:27 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -35,6 +35,22 @@ CREATE TABLE `failed_jobs` (
   `payload` longtext NOT NULL,
   `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `general_queries`
+--
+
+CREATE TABLE `general_queries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `message` longtext NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -89,7 +105,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2023_08_04_110306_create_issue_portals_table', 3),
 (7, '2023_08_04_114934_create_issues_table', 3),
 (8, '2023_08_04_133211_create_properties_table', 3),
-(9, '2023_08_07_130711_create_property_unapproveds_table', 4);
+(9, '2023_08_07_130711_create_property_unapproveds_table', 4),
+(10, '2023_08_08_050957_create_general_queries_table', 5),
+(11, '2023_08_08_095407_create_property_approveds_table', 6);
 
 -- --------------------------------------------------------
 
@@ -138,45 +156,104 @@ CREATE TABLE `properties` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `property_unapproveds`
+-- Table structure for table `property_approveds`
 --
 
-CREATE TABLE `property_unapproveds` (
+CREATE TABLE `property_approveds` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
+  `admin` varchar(255) NOT NULL,
   `description` longtext NOT NULL,
   `price` int(10) UNSIGNED NOT NULL,
   `no_of_seats` int(10) UNSIGNED NOT NULL,
   `image1` varchar(255) NOT NULL,
-  `image2` varchar(255) NOT NULL,
-  `image3` varchar(255) NOT NULL,
-  `image4` varchar(255) NOT NULL,
-  `image5` varchar(255) NOT NULL,
-  `image6` varchar(255) NOT NULL,
-  `image7` varchar(255) NOT NULL,
+  `image2` varchar(255) DEFAULT NULL,
+  `image3` varchar(255) DEFAULT NULL,
+  `image4` varchar(255) DEFAULT NULL,
+  `image5` varchar(255) DEFAULT NULL,
+  `image6` varchar(255) DEFAULT NULL,
+  `image7` varchar(255) DEFAULT NULL,
   `address` longtext NOT NULL,
   `city` varchar(255) NOT NULL,
   `state` varchar(255) NOT NULL,
   `country` varchar(255) NOT NULL,
-  `coworking` tinyint(1) NOT NULL,
-  `cabin` tinyint(1) NOT NULL,
-  `meetingrooms` tinyint(1) NOT NULL,
-  `trainingrooms` tinyint(1) NOT NULL,
-  `wifi` tinyint(1) NOT NULL,
-  `parking` tinyint(1) NOT NULL,
-  `lounge` tinyint(1) NOT NULL,
-  `cafeteria` tinyint(1) NOT NULL,
-  `air_conditioning` tinyint(1) NOT NULL,
-  `it_support` tinyint(1) NOT NULL,
-  `locker` tinyint(1) NOT NULL,
-  `24*7` tinyint(1) NOT NULL,
+  `coworking` tinyint(1) DEFAULT NULL,
+  `cabin` tinyint(1) DEFAULT NULL,
+  `meetingrooms` tinyint(1) DEFAULT NULL,
+  `trainingrooms` tinyint(1) DEFAULT NULL,
+  `wifi` tinyint(1) DEFAULT NULL,
+  `parking` tinyint(1) DEFAULT NULL,
+  `lounge` tinyint(1) DEFAULT NULL,
+  `cafeteria` tinyint(1) DEFAULT NULL,
+  `air_conditioning` tinyint(1) DEFAULT NULL,
+  `it_support` tinyint(1) DEFAULT NULL,
+  `locker` tinyint(1) DEFAULT NULL,
+  `_24x7` tinyint(1) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
-  `username` varchar(255) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_approveds`
+--
+
+INSERT INTO `property_approveds` (`id`, `title`, `admin`, `description`, `price`, `no_of_seats`, `image1`, `image2`, `image3`, `image4`, `image5`, `image6`, `image7`, `address`, `city`, `state`, `country`, `coworking`, `cabin`, `meetingrooms`, `trainingrooms`, `wifi`, `parking`, `lounge`, `cafeteria`, `air_conditioning`, `it_support`, `locker`, `_24x7`, `name`, `username`, `email`, `phone`, `created_at`, `updated_at`) VALUES
+(1, 'Zero Gravito', 'Kanishk Purohit', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-08 05:27:51', '2023-08-08 05:27:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_unapproveds`
+--
+
+CREATE TABLE `property_unapproveds` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `admin` varchar(255) DEFAULT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `price` int(10) UNSIGNED NOT NULL,
+  `no_of_seats` int(10) UNSIGNED NOT NULL,
+  `image1` varchar(255) NOT NULL,
+  `image2` varchar(255) DEFAULT NULL,
+  `image3` varchar(255) DEFAULT NULL,
+  `image4` varchar(255) DEFAULT NULL,
+  `image5` varchar(255) DEFAULT NULL,
+  `image6` varchar(255) DEFAULT NULL,
+  `image7` varchar(255) DEFAULT NULL,
+  `address` longtext NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `country` varchar(255) NOT NULL,
+  `coworking` tinyint(1) DEFAULT NULL,
+  `cabin` tinyint(1) DEFAULT NULL,
+  `meetingrooms` tinyint(1) DEFAULT NULL,
+  `trainingrooms` tinyint(1) DEFAULT NULL,
+  `wifi` tinyint(1) DEFAULT NULL,
+  `parking` tinyint(1) DEFAULT NULL,
+  `lounge` tinyint(1) DEFAULT NULL,
+  `cafeteria` tinyint(1) DEFAULT NULL,
+  `air_conditioning` tinyint(1) DEFAULT NULL,
+  `it_support` tinyint(1) DEFAULT NULL,
+  `locker` tinyint(1) DEFAULT NULL,
+  `_24x7` tinyint(1) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_unapproveds`
+--
+
+INSERT INTO `property_unapproveds` (`id`, `admin`, `title`, `description`, `price`, `no_of_seats`, `image1`, `image2`, `image3`, `image4`, `image5`, `image6`, `image7`, `address`, `city`, `state`, `country`, `coworking`, `cabin`, `meetingrooms`, `trainingrooms`, `wifi`, `parking`, `lounge`, `cafeteria`, `air_conditioning`, `it_support`, `locker`, `_24x7`, `name`, `username`, `email`, `phone`, `created_at`, `updated_at`) VALUES
+(1, 'Kanishk Purohit', 'Zero Gravito', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-08 03:30:19', '2023-08-08 04:50:14');
 
 -- --------------------------------------------------------
 
@@ -222,6 +299,12 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `general_queries`
+--
+ALTER TABLE `general_queries`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `issues`
 --
 ALTER TABLE `issues`
@@ -260,6 +343,12 @@ ALTER TABLE `properties`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `property_approveds`
+--
+ALTER TABLE `property_approveds`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `property_unapproveds`
 --
 ALTER TABLE `property_unapproveds`
@@ -283,6 +372,12 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `general_queries`
+--
+ALTER TABLE `general_queries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `issues`
 --
 ALTER TABLE `issues`
@@ -298,7 +393,7 @@ ALTER TABLE `issue_portals`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -313,10 +408,16 @@ ALTER TABLE `properties`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `property_approveds`
+--
+ALTER TABLE `property_approveds`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `property_unapproveds`
 --
 ALTER TABLE `property_unapproveds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
