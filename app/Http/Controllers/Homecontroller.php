@@ -51,8 +51,10 @@ class HomeController extends Controller
 
     public function single_property($id){
         $properties = PropertyApproved::latest()->take(3)->get();
-        return view('mainweb.single-property-1',compact('id', 'properties'));
+        $reviews = Reviews::latest()->get();
+        return view('mainweb.single-property-1',compact('id', 'properties','reviews'));
     }
+
 
     public function properties_details(){
         return view('properties-details');
@@ -205,6 +207,7 @@ class HomeController extends Controller
             'message'=> 'required'
         ]);
         $review = new Reviews;
+        $review->fid=$request->fid;
         $review->name=$validated['name'];
         $review->phone=$validated['phone'];
         $review->email=$validated['email'];

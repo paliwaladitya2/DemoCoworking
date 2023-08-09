@@ -224,243 +224,42 @@
                             <h5>Floor Plans</h5>
                             <img alt="image" src="../images/bg/floor-plan-1.png">
                         </div>
-                        <!-- <div class="floor-plan property wprt-image-video w50 pro">
-                            <h5>What's Nearby</h5>
-                            <div class="property-nearby">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="nearby-info mb-4">
-                                            <span class="nearby-title mb-3 d-block text-info">
-                                               <i class="fas fa-graduation-cap mr-2"></i><b class="title">Education</b>
-                                            </span>
-                                            <div class="nearby-list">
-                                                <ul class="property-list list-unstyled mb-0">
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">Education Mandarin</h6>
-                                                        <span>(15.61 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">Marry's Education</h6>
-                                                        <span>(15.23 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">The Kaplan</h6>
-                                                        <span>(15.16 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="nearby-info mb-4">
-                                            <span class="nearby-title mb-3 d-block text-success">
-                                              <i class="fas fa-user-md mr-2"></i><b class="title">Health & Medical</b>
-                                            </span>
-                                            <div class="nearby-list">
-                                                <ul class="property-list list-unstyled mb-0">
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">Natural Market</h6>
-                                                        <span>(13.20 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">Food For Health</h6>
-                                                        <span>(13.22 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">A Matter of Health</h6>
-                                                        <span>(13.34 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="nearby-info">
-                                            <span class="nearby-title mb-3 d-block text-danger">
-                                                <i class="fas fa-car mr-2"></i><b class="title">Transportation</b>
-                                            </span>
-                                            <div class="nearby-list">
-                                                <ul class="property-list list-unstyled mb-0">
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">Airport Transportation</h6>
-                                                        <span>(11.36 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">NYC Executive Limo</h6>
-                                                        <span>(11.87 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="d-flex">
-                                                        <h6 class="mb-3 mr-2">Empire Limousine</h6>
-                                                        <span>(11.52 miles)</span>
-                                                        <ul class="list-unstyled list-inline ml-auto">
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                            <li class="list-inline-item m-0 text-warning"><i class="far fa-star fa-xs"></i></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="property wprt-image-video w50 pro">
-                            <h5>Property Video</h5>
-                            <img alt="image" src="../images/slider/home-slider-4.jpg">
-                            <a class="icon-wrap popup-video popup-youtube" href="https://www.youtube.com/watch?v=14semTlwyUY">
-                                <i class="fa fa-play"></i>
-                            </a>
-                            <div class="iq-waves">
-                                <div class="waves wave-1"></div>
-                                <div class="waves wave-2"></div>
-                                <div class="waves wave-3"></div>
-                            </div>
-                        </div> -->
+               
                         <div class="property-location map">
                             <h5>Location</h5>
                             <div class="divider-fade"></div>
                             <div id="map-contact" class="contact-map"></div>
                         </div>
                         <!-- Star Reviews -->
+                        
                         <section class="reviews comments">
-                            <h3 class="mb-5">3 Reviews</h3>
+                            <h3 class="mb-5">Reviews</h3>
+                            @foreach ($reviews as $review )
+                            @if ($id==$review->fid)
                             <div class="row mb-5">
                                 <ul class="col-12 commented pl-0">
+                                   
+                                    <?php
+                                        $date = explode(' ',$review->created_at);
+                                        $d = $date[0];
+                                        ?>
                                     <li class="comm-inf">
-                                        <div class="col-md-2">
-                                            <img src="../images/testimonials/ts-5.jpg" class="img-fluid" alt="">
-                                        </div>
                                         <div class="col-md-10 comments-info">
                                             <div class="conra">
-                                                <h5 class="mb-2">Mary Smith</h5>
-                                                <div class="rating-box">
-                                                    <div class="detail-list-rating mr-0">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                    </div>
-                                                </div>
+                                                <h5 class="mb-2">{{$review->name}}</h5>
+                                                
                                             </div>
-                                            <p class="mb-4">May 30 2020</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
-                                            <div class="rest"><img src="../images/single-property/s-1.jpg" class="img-fluid" alt=""></div>
+                                            <p class="mb-4">{{$d}}</p>
+                                            <p>{{$review->message}}</p>
+                                        
                                         </div>
                                     </li>
-
+                                    
                                 </ul>
                             </div>
-                            <div class="row">
-                                <ul class="col-12 commented pl-0">
-                                    <li class="comm-inf">
-                                        <div class="col-md-2">
-                                            <img src="../images/testimonials/ts-4.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-md-10 comments-info">
-                                            <div class="conra">
-                                                <h5 class="mb-2">Abraham Tyron</h5>
-                                                <div class="rating-box">
-                                                    <div class="detail-list-rating mr-0">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="mb-4">june 1 2020</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div class="row mt-5">
-                                <ul class="col-12 commented mb-0 pl-0">
-                                    <li class="comm-inf">
-                                        <div class="col-md-2">
-                                            <img src="../images/testimonials/ts-3.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-md-10 comments-info">
-                                            <div class="conra">
-                                                <h5 class="mb-2">Lisa Williams</h5>
-                                                <div class="rating-box">
-                                                    <div class="detail-list-rating mr-0">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="mb-4">jul 12 2020</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
-                                            <div class="resti">
-                                                <div class="rest"><img src="../images/single-property/s-2.jpg" class="img-fluid" alt=""></div>
-                                                <div class="rest"><img src="../images/single-property/s-3.jpg" class="img-fluid" alt=""></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            @endif
+                            @endforeach
+                            
                         </section>
                         <!-- End Reviews -->
                         <!-- Star Add Review -->
@@ -468,7 +267,7 @@
                             <div id="add-review" class="add-review-box">
                                 <!-- Add Review -->
                                 <h3 class="listing-desc-headline margin-bottom-20 mb-4">Add Review</h3>
-                                <span class="leave-rating-title">Your rating for this listing</span>
+                            
                                 <!-- Rating / Upload Button -->
                                @if (Session('success'))
                                    <script>
@@ -488,6 +287,7 @@
                                     <div class="col-md-12 data">
                                         <form action="{{Route('savereview')}}" method="post">
                                             @csrf
+                                            <input type="hidden" name="fid" value="{{$id}}">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" name="name" class="form-control" placeholder=" Name" required>
@@ -605,176 +405,31 @@
                                         <div class="widget-boxed-header">
                                             <h4>Recent Properties</h4>
                                         </div>
+                                        @foreach($properties as $property)
                                         <div class="widget-boxed-body">
                                             <div class="recent-post">
                                                 <div class="recent-main">
                                                     <div class="recent-img">
-                                                        <a href="{{ Route('blog-details') }}"><img src="../images/feature-properties/fp-1.jpg" alt=""></a>
+                                                        <a href="{{Route('single-property', ['id'=>$property->id])}}" class="homes-img" style="color: #666">
+                                                
+                                                            <img src="../PropertyImages/{{$property->image1}}" alt="home-1" class="img-responsive">
+                                                            <div class="homes-price">INR. {{$property->price}}/mo</div>
+                                                        </a>
                                                     </div>
-                                                    <div class="info-img">
-                                                        <a href="{{ Route('blog-details') }}"><h6>Family Home</h6></a>
-                                                        <p>$230,000</p>
-                                                    </div>
-                                                </div>
-                                                <div class="recent-main my-4">
-                                                    <div class="recent-img">
-                                                        <a href="{{ Route('blog-details') }}"><img src="../images/feature-properties/fp-2.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="info-img">
-                                                        <a href="{{ Route('blog-details') }}"><h6>Family Home</h6></a>
-                                                        <p>$230,000</p>
+                                                    <div class="info-img" >
+                                                        <h3 style="color: black"><a style="color: black" href="{{Route('single-property', ['id'=>$property->id])}}">{{ $property->title }}</a></h3>
+                                                        
                                                     </div>
                                                 </div>
-                                                <div class="recent-main">
-                                                    <div class="recent-img">
-                                                        <a href="{{ Route('blog-details') }}"><img src="../images/feature-properties/fp-3.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="info-img">
-                                                        <a href="{{ Route('blog-details') }}"><h6>Family Home</h6></a>
-                                                        <p>$230,000</p>
-                                                    </div>
-                                                </div>
+                                               
+                                               
                                             </div>
                                         </div>
+                                        @endforeach
                                     </div>
-                                    <div class="widget-boxed mt-5">
-                                        <div class="widget-boxed-header mb-5">
-                                            <h4>Feature Properties</h4>
-                                        </div>
-                                        <div class="widget-boxed-body">
-                                            <div class="slick-lancers">
-                                                <div class="agents-grid mr-0">
-                                                    <div class="listing-item compact">
-                                                        <a href="{{Route('properties-details')}}" class="listing-img-container">
-                                                            <div class="listing-badges">
-                                                                <span class="featured">$ 230,000</span>
-                                                                <span>For Sale</span>
-                                                            </div>
-                                                            <div class="listing-img-content">
-                                                                <span class="listing-compact-title">House Luxury <i>New York</i></span>
-                                                                <ul class="listing-hidden-content">
-                                                                    <li>Area <span>720 sq ft</span></li>
-                                                                    <li>Rooms <span>6</span></li>
-                                                                    <li>Beds <span>2</span></li>
-                                                                    <li>Baths <span>3</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <img src="../images/feature-properties/fp-1.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="agents-grid mr-0">
-                                                    <div class="listing-item compact">
-                                                        <a href="{{Route('properties-details')}}" class="listing-img-container">
-                                                            <div class="listing-badges">
-                                                                <span class="featured">$ 6,500</span>
-                                                                <span class="rent">For Rent</span>
-                                                            </div>
-                                                            <div class="listing-img-content">
-                                                                <span class="listing-compact-title">House Luxury <i>Los Angles</i></span>
-                                                                <ul class="listing-hidden-content">
-                                                                    <li>Area <span>720 sq ft</span></li>
-                                                                    <li>Rooms <span>6</span></li>
-                                                                    <li>Beds <span>2</span></li>
-                                                                    <li>Baths <span>3</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <img src="../images/feature-properties/fp-2.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="agents-grid mr-0">
-                                                    <div class="listing-item compact">
-                                                        <a href="{{Route('properties-details')}}" class="listing-img-container">
-                                                            <div class="listing-badges">
-                                                                <span class="featured">$ 230,000</span>
-                                                                <span>For Sale</span>
-                                                            </div>
-                                                            <div class="listing-img-content">
-                                                                <span class="listing-compact-title">House Luxury <i>San Francisco</i></span>
-                                                                <ul class="listing-hidden-content">
-                                                                    <li>Area <span>720 sq ft</span></li>
-                                                                    <li>Rooms <span>6</span></li>
-                                                                    <li>Beds <span>2</span></li>
-                                                                    <li>Baths <span>3</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <img src="../images/feature-properties/fp-3.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="agents-grid mr-0">
-                                                    <div class="listing-item compact">
-                                                        <a href="{{Route('properties-details')}}" class="listing-img-container">
-                                                            <div class="listing-badges">
-                                                                <span class="featured">$ 6,500</span>
-                                                                <span class="rent">For Rent</span>
-                                                            </div>
-                                                            <div class="listing-img-content">
-                                                                <span class="listing-compact-title">House Luxury <i>Miami FL</i></span>
-                                                                <ul class="listing-hidden-content">
-                                                                    <li>Area <span>720 sq ft</span></li>
-                                                                    <li>Rooms <span>6</span></li>
-                                                                    <li>Beds <span>2</span></li>
-                                                                    <li>Baths <span>3</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <img src="../images/feature-properties/fp-4.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="agents-grid mr-0">
-                                                    <div class="listing-item compact">
-                                                        <a href="{{Route('properties-details')}}" class="listing-img-container">
-                                                            <div class="listing-badges">
-                                                                <span class="featured">$ 230,000</span>
-                                                                <span>For Sale</span>
-                                                            </div>
-                                                            <div class="listing-img-content">
-                                                                <span class="listing-compact-title">House Luxury <i>Chicago IL</i></span>
-                                                                <ul class="listing-hidden-content">
-                                                                    <li>Area <span>720 sq ft</span></li>
-                                                                    <li>Rooms <span>6</span></li>
-                                                                    <li>Beds <span>2</span></li>
-                                                                    <li>Baths <span>3</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <img src="../images/feature-properties/fp-5.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="agents-grid mr-0">
-                                                    <div class="listing-item compact">
-                                                        <a href="{{Route('properties-details')}}" class="listing-img-container">
-                                                            <div class="listing-badges">
-                                                                <span class="featured">$ 6,500</span>
-                                                                <span class="rent">For Rent</span>
-                                                            </div>
-                                                            <div class="listing-img-content">
-                                                                <span class="listing-compact-title">House Luxury <i>Toronto CA</i></span>
-                                                                <ul class="listing-hidden-content">
-                                                                    <li>Area <span>720 sq ft</span></li>
-                                                                    <li>Rooms <span>6</span></li>
-                                                                    <li>Beds <span>2</span></li>
-                                                                    <li>Baths <span>3</span></li>
-                                                                </ul>
-                                                            </div>
-                                                            <img src="../images/feature-properties/fp-6.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                  
                                     <!-- Start: Specials offer -->
-                                    <div class="widget-boxed popular mt-5">
-                                        <div class="widget-boxed-header">
-                                            <h4>Specials of the day</h4>
-                                        </div>
-                                        <div class="widget-boxed-body">
-                                            <div class="banner"><img src="../images/single-property/banner.jpg" alt=""></div>
-                                        </div>
-                                    </div>
+                                   
                                     <!-- End: Specials offer -->
                                     <div class="widget-boxed popular mt-5">
                                         <div class="widget-boxed-header">
@@ -822,8 +477,7 @@
                                         <div class="homes">
                                             <!-- homes img -->
                                             <a href="{{Route('single-property', ['id'=>$property->id])}}" class="homes-img">
-                                                <div class="homes-tag button alt featured">Featured</div>
-                                                <div class="homes-tag button alt sale">For Rent</div>
+                                                
                                                 <div class="homes-price">INR. {{$property->price}}/mo</div>
                                                 <img src="../PropertyImages/{{$property->image1}}" alt="home-1" class="img-responsive">
                                             </a>
@@ -862,12 +516,7 @@
                                                 <span>2 Garages</span>
                                             </li>
                                         </ul>
-                                        <div class="footer">
-                                            <a href="agent-details.html">
-                                                <img src="../images/testimonials/ts-1.jpg" alt="" class="mr-2"> Lisa Jhonson
-                                            </a>
-                                            <span>2 months ago</span>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 09, 2023 at 09:40 AM
+-- Generation Time: Aug 09, 2023 at 11:54 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -108,7 +108,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (9, '2023_08_07_130711_create_property_unapproveds_table', 4),
 (10, '2023_08_08_050957_create_general_queries_table', 5),
 (11, '2023_08_08_095407_create_property_approveds_table', 6),
-(12, '2023_08_09_072215_create_reviews_table', 7);
+(12, '2023_08_09_072215_create_reviews_table', 7),
+(13, '2023_08_09_093352_add_column_to_reviews_table', 8);
 
 -- --------------------------------------------------------
 
@@ -271,16 +272,17 @@ CREATE TABLE `reviews` (
   `email` varchar(255) NOT NULL,
   `message` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `fid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `reviews`
 --
 
-INSERT INTO `reviews` (`id`, `name`, `phone`, `email`, `message`, `created_at`, `updated_at`) VALUES
-(1, 'Kanishk Purohit', '1234567890', 'kpurorit@gmail.com', 'rtyukl;', '2023-08-09 02:00:32', '2023-08-09 02:00:32'),
-(2, 'wertyu', '1234567890', 'kanishk2342@gmail.com', 'dfhm', '2023-08-09 02:04:59', '2023-08-09 02:04:59');
+INSERT INTO `reviews` (`id`, `name`, `phone`, `email`, `message`, `created_at`, `updated_at`, `fid`) VALUES
+(3, 'Kanishk Purohit', '1234567890', 'kpurorit@gmail.com', '12345678ujhgfdxcvhjkmnbfcm,', '2023-08-09 04:09:43', '2023-08-09 04:09:43', 3),
+(4, 'Kanishk Purohit', '2344245645', 'kpurorit@gmail.com', 'tdcbc', '2023-08-09 04:17:09', '2023-08-09 04:17:09', 3);
 
 -- --------------------------------------------------------
 
@@ -426,7 +428,7 @@ ALTER TABLE `issue_portals`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -456,7 +458,7 @@ ALTER TABLE `property_unapproveds`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
