@@ -182,7 +182,7 @@
 							<span class="nav-text">Dashboard</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href='#'>Dashboard</a></li>
+							<li><a href='{{ Route("dashboard") }}'>Dashboard</a></li>
 							
 						</ul>
                     </li>
@@ -191,7 +191,7 @@
 							<span class="nav-text">Manage Property</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="{{ Route('manageproperty_propertyadmin') }}">Dashboard</a></li>
+							<li><a href="{{ Route('manageproperty_propertyadmin') }}">Edit Property</a></li>
 							
 						</ul>
                     </li>

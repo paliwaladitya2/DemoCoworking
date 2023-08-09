@@ -66,6 +66,6 @@ public function deletereviews(Request $request){
 
 }
 public function manageproperty_propertyadmin(){
-    return view('propertyadmin.editproperty')
+    return view('dashboard.propertyadmin.editproperty');
 }
 }

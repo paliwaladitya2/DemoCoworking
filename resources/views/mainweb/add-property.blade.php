@@ -370,6 +370,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                         @if(Session::has('success'))
                             <div class="alert alert-success">
                                 {{ Session::get('success') }}
@@ -645,7 +646,6 @@
                             </div>
                         </div>
                     </form>
-                    </div>
                 </div>
             </div>
         </section>

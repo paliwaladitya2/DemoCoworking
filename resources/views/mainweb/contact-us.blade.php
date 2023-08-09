@@ -90,3 +90,12 @@
         </section>
         <!-- END SECTION CONTACT US -->
         @endsection
+@section('jscontent')
+<script>
+    function validateInput(event){
+        const input = event.target;
+        const sanitizedValue = input.value.replace(/[^0-9]/g, '');
+        input.value =sanitizedValue;
+    }
+</script>
+@endsection 
