@@ -18,7 +18,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>Manage user content</h2>
+                    <h2>Manage Reviews</h2>
                 </div>    
                 <div class="card-body">
                     <table class="table table-striped table-bordered yajra_datatable">
@@ -26,9 +26,9 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Role</th>
                             <th>Number</th>
-                            <th>Change Role</th>
+                            <th>Review</th>
+                            <th>Action</th>
                         </thead>
                         <tbody>
                         </tbody>
@@ -50,7 +50,7 @@
             var table = $('.yajra_datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{  route('manageuser_propertyadmin') }}",
+                ajax: "{{  route('managereviews') }}",
                 columns: [{
                     data: 'id',
                     name: 'id'
@@ -64,12 +64,12 @@
                     name: 'email'
                 },
                 {
-                    data: 'role',
-                    name: 'role'
-                },
-                {
                     data: 'phone',
                     name: 'phone'
+                },
+                {
+                    data: 'message',
+                    name: 'message'
                 },
                 {
                     data: 'action',
@@ -83,10 +83,11 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
     <script type="text/javascript">
-        $(document).on('change','.changerole',function(){
-            var role = $(this).val();
-            var user_id = $(this).closest('select').attr('data-id');
-            var url = "{{ route('changerole_propertyadmin') }}";
+        $(document).on('click','.delete',function(){
+            
+            var user_id = $(this).attr('id');
+            
+            var url = "{{ route('deletereviews') }}";
             swal.fire({
                 title: "Are you Sure?",
                 text: "You want to change the Role?",
@@ -102,7 +103,7 @@
                         url: url,
                         data: {
                             id: user_id,
-                            role: role,
+                            
                         },
                         success: function(data){
                             swal.fire({

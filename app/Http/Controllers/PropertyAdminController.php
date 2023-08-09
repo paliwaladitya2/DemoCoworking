@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reviews;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Yajra\DataTables\DataTables as Datatables;
@@ -40,4 +41,31 @@ class PropertyAdminController extends Controller
     public function issues(){
         return view('dashboard.propertyadmin.issues');
     }
+
+
+    public function managereviews(Request $request){
+        if($request->ajax()){
+            $data = Reviews::get();
+            return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action',function($row){
+                $btn = '<a href="javascript:void(0);" id="'.$row->id.'" class="delete btn btn-danger">Delete</a>';
+               
+                return $btn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+        return view('dashboard.propertyadmin.managereviews');
+    }
+public function deletereviews(Request $request){
+    $review = Reviews::where('id',$request->id)->first();
+    $review->delete();
+    
+    return redirect()->back();
+
+}
+public function manageproperty_propertyadmin(){
+    return view('propertyadmin.editproperty')
+}
 }

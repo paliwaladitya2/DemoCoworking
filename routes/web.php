@@ -39,7 +39,9 @@ Route::get('manage-approved-properties',[SuperAdminController::class,'manage_app
 Route::get('manageuser_propertyadmin',[PropertyAdminController::class,'manageuser'])->name('manageuser_propertyadmin');
 Route::get('changerole_propertyadmin',[PropertyAdminController::class , 'changerole'])->name('changerole_propertyadmin');
 Route::get('issues',[PropertyAdminController::class, 'issues'])->name('issues');
-
+Route::get('managereviews',[PropertyAdminController::class,'managereviews'])->name('managereviews');
+Route::get('deletereviews',[PropertyAdminController::class,'deletereviews'])->name('deletereviews');
+Route::get('manageproperty_propertyadmin',[PropertyAdminController::class,'manageproperty_propertyadmin'])->name('manageproperty_propertyadmin');
 
 // home
 Route::get('add_properties',[HomeController::class,'add_properties'])->name('add_properties');

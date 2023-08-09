@@ -188,6 +188,15 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
+							<span class="nav-text">Manage Property</span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="{{ Route('manageproperty_propertyadmin') }}">Dashboard</a></li>
+							
+						</ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
+							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Manage Users</span>
 						</a>
                         <ul aria-expanded="false">
@@ -195,12 +204,13 @@
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
+                    <li><a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+							<p class="nav-text">Manage Reviews</p>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href='#'>Dashboard</a></li>
+							<li><a href="{{ Route('managereviews') }}">Reviews</a></li>
+							
 							
 						</ul>
                     </li>
