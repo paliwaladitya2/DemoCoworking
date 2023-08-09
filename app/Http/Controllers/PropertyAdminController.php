@@ -58,14 +58,14 @@ class PropertyAdminController extends Controller
         }
         return view('dashboard.propertyadmin.managereviews');
     }
-public function deletereviews(Request $request){
-    $review = Reviews::where('id',$request->id)->first();
-    $review->delete();
-    
-    return redirect()->back();
+    public function deletereviews(Request $request){
+            $review = Reviews::where('id',$request->id)->first();
+            $review->delete();
+            
+            return redirect()->back();
 
-}
-public function manageproperty_propertyadmin(){
-    return view('dashboard.propertyadmin.editproperty');
-}
+    }
+    public function manageproperty_propertyadmin(){
+                return view('dashboard.propertyadmin.editproperty');
+    }
 }

@@ -303,7 +303,7 @@
 						<p class="mb-0">Welcome to ITS CoDesk</p>
 					</div>
                     <br>
-                    <div class="mr-auto d-none d-lg-block">
+                    <div class="mr-auto  d-lg-block">
                         @yield('content')
                     </div>
 					
