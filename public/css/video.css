@@ -2148,7 +2148,7 @@ screen and (max-height:300px) {
         border-radius: 3px;
     }
     .hero-inner2 {
-        margin-top: 550px;
+        margin-top: -220px;
     }
     .header.vid {
         position: relative;
@@ -2196,7 +2196,7 @@ screen and (max-height:300px) {
         display: none;
 	}
     .hero-inner2 {
-        margin-top: 400px;
+        margin-top: 0;
     }
 	.search-2 .hero-inner {
         margin: 70px 0;
@@ -2207,7 +2207,7 @@ screen and (max-height:300px) {
     .dark-overlay h1 {
         font-size: 21px !important;
         line-height: 30px;
-        margin-bottom: 30px;
+        margin-bottom: -30px;
     }
     .dark-overlay .main-search-inner {
         bottom: 80px !important;

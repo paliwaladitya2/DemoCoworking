@@ -10,12 +10,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ITS CoDesk</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
-    <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	<link href="../cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon.png') }}">
+    <link href="{{ asset('vendor/jqvmap/css/jqvmap.min.css') }}" rel="stylesheet">
+	<link rel="stylesheet" href="{{ asset('vendor/chartist/css/chartist.min.css') }}">
+    <link href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	<link href="{{ asset('cdn.lineicons.com/2.0/LineIcons.css') }}" rel="stylesheet">
     @yield('csscontent')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -66,8 +66,8 @@
         <div class="nav-header">
             <a class='brand-logo' href='#'>
                 
-                <img class="logo-compact" src="images/its.png" alt="">
-                <img class="brand-title" src="images/its.png" alt="">
+                <img class="logo-compact" src="{{ asset('images/its.png') }}" alt="">
+                <img class="brand-title" src="{{ asset('images/its.png') }}" alt="">
             </a>
 
             <div class="nav-control">
@@ -111,7 +111,7 @@
 									<div class="header-info">
 										<span>Hello, <strong>{{ Session::get('user')->name }}</strong></span>
 									</div>
-                                    <img src="images/profile/pic1.jpg" width="20" alt=""/>
+                                    <img src="{{ asset('images/profile/pic1.jpg') }}" width="20" alt=""/>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a class='dropdown-item ai-icon' href='#'>
@@ -172,6 +172,15 @@
 
 							
 						</ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
+                        <i class="flaticon-381-networking"></i>
+                        <span class="nav-text">Blogs</span>
+                    </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ Route('manage_blogs') }}">Manage Blogs</a></li>
+                            <li><a href="{{ Route('manage_blog_category') }}">Manage Blogs Category</a></li>
+                        </ul>
                     </li>
 						
 					@endif
@@ -322,12 +331,12 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="vendor/global/global.min.js"></script>
-	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-    <script src="js/custom.min.js"></script>
-    <script src="js/deznav-init.js"></script>
+    <script src="{{ asset('vendor/global/global.min.js') }}"></script>
+	<script src="{{ asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('js/custom.min.js') }}"></script>
+    <script src="{{ asset('js/deznav-init.js') }}"></script>
 	<!-- Dashboard 1 -->
-	<script src="js/dashboard/dashboard-1.js"></script>
+	<script src="{{ asset('js/dashboard/dashboard-1.js') }}"></script>
 	@yield('jscontent')
 	
 </body>

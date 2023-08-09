@@ -64,7 +64,7 @@
                                         
                                         <!-- Form Button -->
                                         <div class="form-group button">
-                                            <button type="submit" style="margin-left: 2rem;" class="btn">Search</button>
+                                            <button type="submit" style="@media only screen and (min-width: 450px) { margin-left: 2rem; }" class="btn">Search</button>
                                         </div>
                                         <!--/ End Form Button -->
                                     </form>
@@ -601,10 +601,10 @@
                         <div class="serv-flex">
                             <div class="art-1 img-13">
                                 <img src="images/icons/icon-4.svg" alt="">
-                                <h3>Wide Renge Of Properties</h3>
+                                <h3>Diverse Workspace Selection</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">Choose from a variety of thoughtfully designed spaces to match your work style, from private offices to collaborative hubs.</p>
                             </div>
                         </div>
                     </article>
@@ -612,10 +612,10 @@
                         <div class="serv-flex">
                             <div class="art-1 img-14">
                                 <img src="images/icons/icon-5.svg" alt="">
-                                <h3>Trusted by thousands</h3>
+                                <h3>Effortless Booking Process</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">Simplify your experience with our user-friendly platform for seamless reservations, saving you time and hassle.</p>
                             </div>
                         </div>
                     </article>
@@ -623,10 +623,10 @@
                         <div class="serv-flex arrow">
                             <div class="art-1 img-15">
                                 <img src="images/icons/icon-6.svg" alt="">
-                                <h3>Financing made easy</h3>
+                                <h3>Productivity Amenities</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">Elevate your work with premium amenities like high-speed internet, ergonomic furnishings, and advanced equipment, ensuring peak efficiency.</p>
                             </div>
                         </div>
                     </article>

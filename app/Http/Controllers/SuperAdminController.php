@@ -45,12 +45,17 @@ class SuperAdminController extends Controller
             $data = PropertyUnapproved::get();
             return Datatables::of($data)
             ->addIndexColumn()
+            ->addColumn('admin',function($row)
+            {
+                $admin = User::where('id',$row->admin)->first();
+                return $admin->name;
+            })
             ->addColumn('action1',function($row){
                 $users = User::where('role','propertyadmin')->get();
                 $btn = '<select id="assign" data-id="'.$row->id.'" class="assign">
                             <option value="">Select Admin</option>';
                 foreach($users as $user){
-                    $btn .= '<option value="' . $user->name . '">' . $user->name . '</option>';
+                    $btn .= '<option value="' . $user->id . '">' . $user->name . '</option>';
                 }
                 $btn .= '</select>' ;
                 return $btn;
@@ -59,7 +64,7 @@ class SuperAdminController extends Controller
                 $btn = '<a href="javascript:void(0);" id="'.$row->id.'" class="approve btn btn-primary ml-3 btn">Approve</a>';
                 return $btn;
             })
-            ->rawColumns(['action1', 'action2'])
+            ->rawColumns(['admin','action1', 'action2'])
             ->make(true);
         }
         return view('dashboard.SuperAdmin.manage_unapproved_properties');

@@ -4,7 +4,8 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PropertyAdminController;
-
+use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SuperAdminController;
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +60,20 @@ Route::post('save-general-query',[HomeController::class,'save_general_query'])->
 Route::post('save-property',[HomeController::class,'save_property'])->name('save-property');
 // reviews
 Route::post('savereview',[HomeController::class,'savereview'])->name('savereview');
+
+//blogcategory
+Route::get('/manage_blog_category',[BlogCategoryController::class,'index'])->name('manage_blog_category');
+Route::get('add_blog_category',[BlogCategoryController::class,'add_blog_category'])->name('add_blog_category');
+Route::post('/save_blog_category',[BlogCategoryController::class,'save_blog_category'])->name('save_blog_category');
+Route::get('/edit_blog_category/{id}',[BlogCategoryController::class,'edit_blog_category'])->name('edit_blog_category');
+Route::post('/update_blog_category',[BlogCategoryController::class,'update_blog_category'])->name('update_blog_category');
+Route::get('/delete_blog_category/{id}',[BlogCategoryController::class,'delete_blog_category'])->name('delete_blog_category');
+
+//blogs
+Route::get('/manage_blogs',[BlogController::class,'index'])->name('manage_blogs');
+Route::get('add_blog',[BlogController::class,'add_blog'])->name('add_blog');
+Route::post('/save_blog',[BlogController::class,'save_blog'])->name('save_blog');
+Route::get('/edit_blog/{id}',[BlogController::class,'edit_blog'])->name('edit_blog');
+Route::post('/update_blog',[BlogController::class,'update_blog'])->name('update_blog');
+Route::get('/delete_blog/{id}',[BlogController::class,'delete_blog'])->name('delete_blog');
+
