@@ -49,7 +49,8 @@ class HomeController extends Controller
     }
 
     public function single_property($id){
-        return view('mainweb.single-property-1',compact('id'));
+        $properties = PropertyApproved::latest()->take(3)->get();
+        return view('mainweb.single-property-1',compact('id', 'properties'));
     }
 
     public function properties_details(){

@@ -154,7 +154,7 @@
                             </div>
                         </div>
                         @endforeach
-                        <div class="agents-grid">
+                        {{-- <div class="agents-grid">
                             <div class="people">
                                 <div class="project-single" data-aos="fade-up" data-aos-delay="250">
                                     <div class="project-inner project-head">
@@ -582,7 +582,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
