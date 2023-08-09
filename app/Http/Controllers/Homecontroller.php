@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\GeneralQuery;
 use App\Models\PropertyUnapproved;
 use App\Models\PropertyApproved;
+use App\Models\Reviews;
 
 class HomeController extends Controller
 {
@@ -194,6 +195,22 @@ class HomeController extends Controller
         }
         $property->save();
         return redirect()->back()->with('success', 'Property Submitted Successfully!!');
+
+    }
+    public function savereview(Request $request){
+        $validated = $request->validate([
+            'name'=> 'required',
+            'phone'=> 'required|digits:10' ,
+            'email'=> 'required|email',
+            'message'=> 'required'
+        ]);
+        $review = new Reviews;
+        $review->name=$validated['name'];
+        $review->phone=$validated['phone'];
+        $review->email=$validated['email'];
+        $review->message=$validated['message'];
+        $review->save();
+        return redirect()->back()->with('success','Review submitted successfully');
 
     }
 }

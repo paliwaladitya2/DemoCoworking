@@ -55,3 +55,5 @@ Route::get('properties-details',[HomeController::class,'properties_details'])->n
 Route::get('properties-grid',[HomeController::class,'properties_grid'])->name('properties-grid');
 Route::post('save-general-query',[HomeController::class,'save_general_query'])->name('save-general-query');
 Route::post('save-property',[HomeController::class,'save_property'])->name('save-property');
+// reviews
+Route::post('savereview',[HomeController::class,'savereview'])->name('savereview');

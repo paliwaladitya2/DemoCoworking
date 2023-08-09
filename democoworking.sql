@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2023 at 02:27 PM
+-- Generation Time: Aug 09, 2023 at 09:40 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -107,7 +107,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2023_08_04_133211_create_properties_table', 3),
 (9, '2023_08_07_130711_create_property_unapproveds_table', 4),
 (10, '2023_08_08_050957_create_general_queries_table', 5),
-(11, '2023_08_08_095407_create_property_approveds_table', 6);
+(11, '2023_08_08_095407_create_property_approveds_table', 6),
+(12, '2023_08_09_072215_create_reviews_table', 7);
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,8 @@ CREATE TABLE `property_approveds` (
 --
 
 INSERT INTO `property_approveds` (`id`, `title`, `admin`, `description`, `price`, `no_of_seats`, `image1`, `image2`, `image3`, `image4`, `image5`, `image6`, `image7`, `address`, `city`, `state`, `country`, `coworking`, `cabin`, `meetingrooms`, `trainingrooms`, `wifi`, `parking`, `lounge`, `cafeteria`, `air_conditioning`, `it_support`, `locker`, `_24x7`, `name`, `username`, `email`, `phone`, `created_at`, `updated_at`) VALUES
-(1, 'Zero Gravito', 'Kanishk Purohit', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-08 05:27:51', '2023-08-08 05:27:51');
+(1, 'Zero Gravito', 'Kanishk Purohit', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-08 05:27:51', '2023-08-08 05:27:51'),
+(3, 'its', 'Kanishk Purohit', 'nothing to describe', 5000, 8, '1691558784_1_.jpg', '1691558784_2_.jpg', '1691558784_3_.jpg', '1691558784_4_.jpg', '1691558784_5_.jpg', '1691558784_6_.jpg', '1691558784_7_.jpg', 'indore', 'indore', 'madhya pradesh', 'india', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'Kanishk Purohit', 'kanishk', 'kpurorit@gmail.com', '8962110823', '2023-08-08 23:56:54', '2023-08-08 23:56:54');
 
 -- --------------------------------------------------------
 
@@ -253,7 +255,32 @@ CREATE TABLE `property_unapproveds` (
 --
 
 INSERT INTO `property_unapproveds` (`id`, `admin`, `title`, `description`, `price`, `no_of_seats`, `image1`, `image2`, `image3`, `image4`, `image5`, `image6`, `image7`, `address`, `city`, `state`, `country`, `coworking`, `cabin`, `meetingrooms`, `trainingrooms`, `wifi`, `parking`, `lounge`, `cafeteria`, `air_conditioning`, `it_support`, `locker`, `_24x7`, `name`, `username`, `email`, `phone`, `created_at`, `updated_at`) VALUES
-(1, 'Kanishk Purohit', 'Zero Gravito', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-08 03:30:19', '2023-08-08 04:50:14');
+(1, 'Kanishk Purohit', 'Zero Gravito', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-08 03:30:19', '2023-08-08 04:50:14'),
+(2, 'Kanishk Purohit', 'its', 'nothing to describe', 5000, 8, '1691558784_1_.jpg', '1691558784_2_.jpg', '1691558784_3_.jpg', '1691558784_4_.jpg', '1691558784_5_.jpg', '1691558784_6_.jpg', '1691558784_7_.jpg', 'indore', 'indore', 'madhya pradesh', 'india', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'Kanishk Purohit', 'kanishk', 'kpurorit@gmail.com', '8962110823', '2023-08-08 23:56:24', '2023-08-08 23:56:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `name`, `phone`, `email`, `message`, `created_at`, `updated_at`) VALUES
+(1, 'Kanishk Purohit', '1234567890', 'kpurorit@gmail.com', 'rtyukl;', '2023-08-09 02:00:32', '2023-08-09 02:00:32'),
+(2, 'wertyu', '1234567890', 'kanishk2342@gmail.com', 'dfhm', '2023-08-09 02:04:59', '2023-08-09 02:04:59');
 
 -- --------------------------------------------------------
 
@@ -355,6 +382,12 @@ ALTER TABLE `property_unapproveds`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -393,7 +426,7 @@ ALTER TABLE `issue_portals`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -411,13 +444,19 @@ ALTER TABLE `properties`
 -- AUTO_INCREMENT for table `property_approveds`
 --
 ALTER TABLE `property_approveds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `property_unapproveds`
 --
 ALTER TABLE `property_unapproveds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`

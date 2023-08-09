@@ -11,29 +11,30 @@
     <meta name="author" content="">
     <title>WorkVista</title>
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="font/flaticon.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/fontawesome-5-all.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('font/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-5-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- ARCHIVES CSS -->
-    <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/aos2.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/lightcase.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/video.css">
-    <link rel="stylesheet" id="color" href="css/colors/pink.css">
+    <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/aos2.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/lightcase.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/video.css') }}">
+    <link rel="stylesheet" id="color" href="{{ asset('css/colors/pink.css') }}">
+    @yield('csscontent')
 </head>
 
 <body class="homepage-9 hp-6 hd-white hmp7 mh">
@@ -52,7 +53,7 @@
                     <div class="left-side">
                         <!-- Logo -->
                         <div id="logo">
-                            <a href="{{ Route('index') }}"><img src="images/logo-red.svg" alt=""></a>
+                            <a href="{{ Route('index') }}"><img src="{{ asset('images/logo-red.svg') }}" alt=""></a>
                         </div>
                         <!-- Mobile Navigation -->
                         <div class="mmenu-trigger">
@@ -133,7 +134,7 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="netabout">
                                 <a href="{{ Route('index') }}" class="logo">
-                                    <img src="images/logo-footer.svg" alt="netcom">
+                                    <img src="{{ asset('images/logo-footer.svg') }}" alt="netcom">
                                 </a>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
                             </div>
@@ -319,47 +320,47 @@
         <!-- END PRELOADER -->
 
         <!-- ARCHIVES JS -->
-        <script src="js/jquery-3.5.1.min.js"></script>
-        <script src="js/rangeSlider.js"></script>
-        <script src="js/tether.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/moment.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/mmenu.min.js"></script>
-        <script src="js/mmenu.js"></script>
-        <script src="js/animate.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="js/aos2.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/fitvids.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/typed.min.js"></script>
-        <script src="js/jquery.counterup.min.js"></script>
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/lightcase.js"></script>
-        <script src="js/search.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/ajaxchimp.min.js"></script>
-        <script src="js/newsletter.js"></script>
-        <script src="js/jquery.form.js"></script>
-        <script src="js/jquery.validate.min.js"></script>
-        <script src="js/searched.js"></script>
-        <script src="js/forms-2.js"></script>
-        <script src="js/leaflet.js"></script>
-        <script src="js/leaflet-gesture-handling.min.js"></script>
-        <script src="js/leaflet-providers.js"></script>
-        <script src="js/leaflet.markercluster.js"></script>
-        <script src="js/map-style2.js"></script>
-        <script src="js/range.js"></script>
-        <script src="js/color-switcher.js"></script>
+        <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ asset('js/rangeSlider.js') }}"></script>
+        <script src="{{ asset('js/tether.min.js') }}"></script>
+        <script src="{{ asset('js/popper.min.js') }}"></script>
+        <script src="{{ asset('js/moment.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/mmenu.min.js') }}"></script>
+        <script src="{{ asset('js/mmenu.js') }}"></script>
+        <script src="{{ asset('js/animate.js') }}"></script>
+        <script src="{{ asset('js/aos.js') }}"></script>
+        <script src="{{ asset('js/aos2.js') }}"></script>
+        <script src="{{ asset('js/slick.min.js') }}"></script>
+        <script src="{{ asset('js/fitvids.js') }}"></script>
+        <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+        <script src="{{ asset('js/typed.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+        <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+        <script src="{{ asset('js/smooth-scroll.min.js') }}"></script>
+        <script src="{{ asset('js/lightcase.js') }}"></script>
+        <script src="{{ asset('js/search.js') }}"></script>
+        <script src="{{ asset('js/owl.carousel.js') }}"></script>
+        <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('js/ajaxchimp.min.js') }}"></script>
+        <script src="{{ asset('js/newsletter.js') }}"></script>
+        <script src="{{ asset('js/jquery.form.js') }}"></script>
+        <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('js/searched.js') }}"></script>
+        <script src="{{ asset('js/forms-2.js') }}"></script>
+        <script src="{{ asset('js/leaflet.js') }}"></script>
+        <script src="{{ asset('js/leaflet-gesture-handling.min.js') }}"></script>
+        <script src="{{ asset('js/leaflet-providers.js') }}"></script>
+        <script src="{{ asset('js/leaflet.markercluster.js') }}"></script>
+        <script src="{{ asset('js/map-style2.js') }}"></script>
+        <script src="{{ asset('js/range.js') }}"></script>
+        <script src="{{ asset('js/color-switcher.js') }}"></script>
 
         <!-- Slider Revolution scripts -->
-        <script src="revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
-        
+        <script src="{{ asset('revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+        <script src="{{ asset('revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+        @yield('jscontent')
         <script>
             var typed = new Typed('.typed', {
                 strings: ["Office Space ^2000", "Working Space ^2000", "Meeting Rooms ^4000", "Training Rooms ^2000"],
@@ -456,7 +457,7 @@
         </script>
 
         <!-- MAIN JS -->
-        <script src="js/script.js"></script>
+        <script src="{{ asset('js/script.js') }}"></script>
 
     </div>
     <!-- Wrapper / End -->

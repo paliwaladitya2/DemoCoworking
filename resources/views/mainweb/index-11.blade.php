@@ -91,7 +91,7 @@
                             $properties = DB::table('property_approveds')->get();
                         ?>
                         @foreach($properties as $property)
-                        <div class="agents-grid" data-aos="fade-up" data-aos-delay="150">
+                        <div class="agents-grid" data-aos="fade-up">
                             <div class="landscapes">
                                 <div class="project-single">
                                     <div class="project-inner project-head">
