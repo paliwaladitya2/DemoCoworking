@@ -136,7 +136,7 @@
                                 <a href="{{ Route('index') }}" class="logo">
                                     <img src="{{ asset('images/logo-footer.svg') }}" alt="netcom">
                                 </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
+                                <p>Footer</p>
                             </div>
                             <div class="contactus">
                                 <ul>
