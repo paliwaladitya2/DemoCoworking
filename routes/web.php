@@ -79,4 +79,6 @@ Route::post('/save_blog',[BlogController::class,'save_blog'])->name('save_blog')
 Route::get('/edit_blog/{id}',[BlogController::class,'edit_blog'])->name('edit_blog');
 Route::post('/update_blog',[BlogController::class,'update_blog'])->name('update_blog');
 Route::get('/delete_blog/{id}',[BlogController::class,'delete_blog'])->name('delete_blog');
+Route::get('/manage_comment/{id}',[BlogController::class,'manage_comment'])->name('manage_comment');
+Route::get('/delete_comment/{id}',[BlogController::class,'delete_comment'])->name('delete_comment');
 

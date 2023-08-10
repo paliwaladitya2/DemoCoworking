@@ -15,14 +15,14 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h2>Manage Blog</h2>
-                    <a href="{{ route('add_blog') }}" class="btn btn-primary float-end">Add Blog</a>
+                    <h2>Manage Comment</h2>
                 </div>    
                 <div class="card-body">
                     <table class="table table-striped table-bordered yajra_datatable">
                         <thead>
                             <th>ID</th>
-                            <th>Title</th>
+                            <th>Name</th>
+                            <th>Email</th>
                             <th>Comments</th>
                             <th>Action</th>
                         </thead>
@@ -46,14 +46,18 @@
             var table = $('.yajra_datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{  route('manage_blogs') }}",
+                ajax: "{{  route('manage_comment',['id'=>$id]) }}",
                 columns: [{
                     data: 'id',
                     name: 'id'
                 },
                 {
-                    data: 'title',
-                    name: 'title'
+                    data: 'name',
+                    name: 'name'
+                },
+                {
+                    data: 'email',
+                    name: 'email'
                 },
                 {
                     data: 'comment',
@@ -74,7 +78,7 @@
         $(document).on('click', '.delete', function() {
             var row_id = $(this).attr('id');
             var table_row = $(this).closest('tr');
-            var url = "{{ route('delete_blog',':id') }}";
+            var url = "{{ route('delete_comment',':id') }}";
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
