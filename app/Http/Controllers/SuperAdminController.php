@@ -48,7 +48,11 @@ class SuperAdminController extends Controller
             ->addColumn('admin',function($row)
             {
                 $admin = User::where('id',$row->admin)->first();
-                return $admin->name;
+                if($admin){
+                    return $admin->name;
+                }else{
+                    return Null;
+                }
             })
             ->addColumn('action1',function($row){
                 $users = User::where('role','propertyadmin')->get();

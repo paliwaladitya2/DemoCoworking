@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PropertyAdminController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
+use App\Models\Blog;
 use App\Http\Controllers\SuperAdminController;
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,8 @@ use App\Http\Controllers\SuperAdminController;
 */
 
 Route::get('/', function () {
-    return view('mainweb/index-11');
+    $blogs = Blog::latest()->take(3)->get();
+    return view('mainweb/index-11',compact('blogs'));
 })->name('index');
 Route::get('register',[LoginController::class,'register'])->name('register');
 Route::post('saveregister',[LoginController::class,'saveregister'])->name('saveregister');
@@ -49,7 +51,7 @@ Route::get('add_properties',[HomeController::class,'add_properties'])->name('add
 Route::get('about',[HomeController::class,'about'])->name('about');
 Route::get('contact-us',[HomeController::class,'contact_us'])->name('contact-us');
 Route::get('blog-list',[HomeController::class,'blog_list'])->name('blog-list');
-Route::get('blog-details',[HomeController::class,'blog_details'])->name('blog-details');
+Route::get('blog-details/{slug}',[HomeController::class,'blog_details'])->name('blog-details');
 Route::get('user-profile',[HomeController::class,'user_profile'])->name('user-profile');
 Route::get('payment-method',[HomeController::class,'payment_method'])->name('payment-method');
 Route::get('change-password',[HomeController::class,'change_password'])->name('change-password');
@@ -58,6 +60,7 @@ Route::get('properties-details',[HomeController::class,'properties_details'])->n
 Route::get('properties-grid',[HomeController::class,'properties_grid'])->name('properties-grid');
 Route::post('save-general-query',[HomeController::class,'save_general_query'])->name('save-general-query');
 Route::post('save-property',[HomeController::class,'save_property'])->name('save-property');
+Route::post('save-comment',[HomeController::class,'savecomment'])->name('savecomment');
 // reviews
 Route::post('savereview',[HomeController::class,'savereview'])->name('savereview');
 

@@ -462,28 +462,28 @@
                                     <div class="recent-post">
                                         <div class="recent-main">
                                             <div class="recent-img">
-                                                <a href="{{ Route('blog-details') }}"><img src="images/feature-properties/fp-1.jpg" alt=""></a>
+                                                <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><img src="images/feature-properties/fp-1.jpg" alt=""></a>
                                             </div>
                                             <div class="info-img">
-                                                <a href="{{ Route('blog-details') }}"><h6>Family Modern Home</h6></a>
+                                                <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><h6>Family Modern Home</h6></a>
                                                 <p>$230,000</p>
                                             </div>
                                         </div>
                                         <div class="recent-main my-4">
                                             <div class="recent-img">
-                                                <a href="{{ Route('blog-details') }}"><img src="images/feature-properties/fp-2.jpg" alt=""></a>
+                                                <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><img src="images/feature-properties/fp-2.jpg" alt=""></a>
                                             </div>
                                             <div class="info-img">
-                                                <a href="{{ Route('blog-details') }}"><h6>Luxury Villa House</h6></a>
+                                                <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><h6>Luxury Villa House</h6></a>
                                                 <p>$120,000</p>
                                             </div>
                                         </div>
                                         <div class="recent-main">
                                             <div class="recent-img">
-                                                <a href="{{ Route('blog-details') }}"><img src="images/feature-properties/fp-3.jpg" alt=""></a>
+                                                <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><img src="images/feature-properties/fp-3.jpg" alt=""></a>
                                             </div>
                                             <div class="info-img">
-                                                <a href="{{ Route('blog-details') }}"><h6>Luxury Family Home</h6></a>
+                                                <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><h6>Luxury Family Home</h6></a>
                                                 <p>$150,000</p>
                                             </div>
                                         </div>

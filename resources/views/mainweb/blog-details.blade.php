@@ -18,15 +18,19 @@
                         <div class="row">
                             <div class="col-md-12 col-xs-12">
                                 <div class="news-item details no-mb2">
-                                    <a href="{{ Route('blog-details') }}" class="news-img-link">
+                                    <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}" class="news-img-link">
                                         <div class="news-item-img">
-                                            <img class="img-responsive" src="images/blog/b-1.jpg" alt="blog image">
+                                            <img class="img-responsive" src="../images/blogs/{{ $blog->image_main }}" alt="blog image">
                                         </div>
                                     </a>
                                     <div class="news-item-text details pb-0">
-                                        <a href="{{ Route('blog-details') }}"><h3>Real Estate News</h3></a>
+                                        <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><h3>{{ $blog->title }}</h3></a>
                                         <div class="dates">
-                                            <span class="date">April 11, 2020 &nbsp;/</span>
+                                            <?php
+                                                $date = explode(' ',$blog->created_at);
+                                                $d = $date[0];
+                                            ?>
+                                            <span class="date">{{ $d }}&nbsp;</span>
                                             <ul class="action-list pl-0">
                                                 <li class="action-item pl-2"><i class="fa fa-heart"></i> <span>306</span></li>
                                                 <li class="action-item"><i class="fa fa-comment"></i> <span>34</span></li>
@@ -34,16 +38,16 @@
                                             </ul>
                                         </div>
                                         <div class="news-item-descr big-news details visib mb-0">
-                                            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, ea? Vitae pariatur ab amet iusto tempore neque a, deserunt eaque recusandae obcaecati eos atque delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi labore vel enim repellendus excepturi autem. Eligendi cum laboriosam exercitationem illum repudiandae quasi sint dicta consectetur porro fuga ea, perspiciatis aut!</p>
-
-                                            <p class="d-none d-sm-none d-lg-block d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, ea? Vitae pariatur ab amet iusto tempore neque a, deserunt eaque recusandae obcaecati eos atque delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi labore vel enim repellendus excepturi autem. Eligendi cum laboriosam exercitationem illum repudiandae quasi sint dicta consectetur porro fuga ea, perspiciatis aut!</p>
+                                            <p class="mb-3">{!! $blog->meta_description !!}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <section class="comments">
-                            <h3 class="mb-5">5 Comments</h3>
+                            <h3 class="mb-5">Comments</h3>
+                            @foreach($comments as $comment)
                             <div class="row mb-4">
                                 <ul class="col-12 commented">
                                     <li class="comm-inf">
@@ -51,64 +55,53 @@
                                             <img src="images/testimonials/ts-4.jpg" class="img-fluid" alt="">
                                         </div>
                                         <div class="col-md-10 comments-info">
-                                            <h5 class="mb-1">Mario Smith</h5>
-                                            <p class="mb-4">Jun 23, 2020</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
+                                            <?php
+                                                $date = explode(' ',$comment->created_at);
+                                                $d = $date[0];
+                                            ?>
+                                            <h5 class="mb-1">{{ $comment->name}}</h5>
+                                            <p class="mb-4">{{ $d }}</p>
+                                            <p>{{ $comment->comment }}</p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="row ml-5">
-                                <ul class="col-12 commented">
-                                    <li class="comm-inf">
-                                        <div class="col-md-2">
-                                            <img src="images/testimonials/ts-5.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-md-10 comments-info">
-                                            <h5 class="mb-1">Mary Tyron</h5>
-                                            <p class="mb-4">Jun 23, 2020</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="row my-4">
-                                <ul class="col-12 commented">
-                                    <li class="comm-inf">
-                                        <div class="col-md-2">
-                                            <img src="images/testimonials/ts-6.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-md-10 comments-info no-mb">
-                                            <h5 class="mb-1">Leo Williams</h5>
-                                            <p class="mb-4">Jun 23, 2020</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam, quam congue dictum luctus, lacus magna congue ante, in finibus dui sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum vestibulum sed.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            @endforeach
                         </section>
                         <section class="leve-comments wpb">
                             <h3 class="mb-5">Leave a Comment</h3>
+                            @if (Session('success'))
+                                <script>
+                                    alert("{{Session('success')}}")
+                                </script>
+                            @endif
+                            @if ($errors->any())
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <script>
+                                            alert("{{$error}}")
+                                        </script>
+                                    @endforeach
+                                </ul>
+                            @endif
                             <div class="row">
                                 <div class="col-md-12 data">
-                                    <form action="#">
+                                    <form action="{{ Route('savecomment') }}" method="post">
+                                        @csrf
                                         <div class="col-md-12">
+                                            <input type="hidden" name="id" class="form-control" value="{{ $blog->id }}">
                                             <div class="form-group">
-                                                <input type="text" name="name" class="form-control" placeholder="First Name" required>
+                                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="text" name="name" class="form-control" placeholder="Last Name" required>
-                                            </div>
-                                        </div>
+                                        
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <input type="email" name="email" class="form-control" placeholder="Email" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12 form-group">
-                                            <textarea class="form-control" id="exampleTextarea" rows="8" placeholder="Message" required></textarea>
+                                            <textarea class="form-control" id="exampleTextarea" name="comment" rows="8" placeholder="Message" required></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-lg mt-2">Submit Comment</button>
                                     </form>
@@ -128,66 +121,68 @@
                             <div class="recent-post py-5">
                                 <h5 class="font-weight-bold">Category</h5>
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>House</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Garages</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Real Estate</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Real Home</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Bath</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Beds</a></li>
+                                <?php
+                                        $categories = DB::table('blog_category')->get();
+                                    ?>
+                                    @foreach($categories as $category)
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>{{ $category->name }}</a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <div class="recent-post">
                                 <h5 class="font-weight-bold mb-4">Popular Tags</h5>
                                 <div class="tags">
-                                    <span><a href="#" class="btn btn-outline-primary">Houses</a></span>
-                                    <span><a href="#" class="btn btn-outline-primary">Real Home</a></span>
+                                    @if($blog->tag1)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag1 }}</a></span>
+                                    @endif
+                                    @if($blog->tag2)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag2 }}</a></span>
+                                    @endif
+                                    @if($blog->tag3)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag3 }}</a></span>
+                                    @endif
+                                    @if($blog->tag4)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag4 }}</a></span>
+                                    @endif
+                                    @if($blog->tag5)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag5 }}</a></span>
+                                    @endif
+                                    @if($blog->tag6)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag6 }}</a></span>
+                                    @endif
+                                    @if($blog->tag7)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag7 }}</a></span>
+                                    @endif
+                                    @if($blog->tag8)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag8 }}</a></span>
+                                    @endif
+                                    @if($blog->tag9)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag9 }}</a></span>
+                                    @endif
+                                    @if($blog->tag10)
+                                    <span><a href="#" style="color:white;" class="btn btn-outline-primary ml-1 mt-2">{{ $blog->tag10 }}</a></span>
+                                    @endif
+                                    
                                 </div>
-                                <div class="tags">
-                                    <span><a href="#" class="btn btn-outline-primary">Baths</a></span>
-                                    <span><a href="#" class="btn btn-outline-primary">Beds</a></span>
-                                </div>
-                                <div class="tags">
-                                    <span><a href="#" class="btn btn-outline-primary">Garages</a></span>
-                                    <span><a href="#" class="btn btn-outline-primary">Family</a></span>
-                                </div>
-                                <div class="tags">
-                                    <span><a href="#" class="btn btn-outline-primary">Real Estates</a></span>
-                                    <span><a href="#" class="btn btn-outline-primary">Properties</a></span>
-                                </div>
-                                <div class="tags">
-                                    <span><a href="#" class="btn btn-outline-primary">Location</a></span>
-                                    <span><a href="#" class="btn btn-outline-primary">Price</a></span>
-                                </div>
+                                
                             </div>
                             <div class="recent-post pt-5">
                                 <h5 class="font-weight-bold mb-4">Recent Posts</h5>
+                                @foreach($blogs as $blog)
+                                <?php
+                                    $date = explode(' ',$blog->created_at);
+                                    $d = $date[0];
+                                ?>
                                 <div class="recent-main">
                                     <div class="recent-img">
-                                        <a href="{{ Route('blog-details') }}"><img src="images/blog/b-1.jpg" alt=""></a>
+                                        <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><img src="../images/blogs/{{ $blog->image_main}}" alt=""></a>
                                     </div>
                                     <div class="info-img">
-                                        <a href="{{ Route('blog-details') }}"><h6>Real Estate</h6></a>
-                                        <p>May 10, 2020</p>
+                                        <a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}"><h6>{{ $blog->title }}</h6></a>
+                                        <p>{{ $d }}</p>
                                     </div>
                                 </div>
-                                <div class="recent-main my-4">
-                                    <div class="recent-img">
-                                        <a href="{{ Route('blog-details') }}"><img src="images/blog/b-2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="info-img">
-                                        <a href="{{ Route('blog-details') }}"><h6>Real Estate</h6></a>
-                                        <p>May 10, 2020</p>
-                                    </div>
-                                </div>
-                                <div class="recent-main no-mb">
-                                    <div class="recent-img">
-                                        <a href="{{ Route('blog-details') }}"><img src="images/blog/b-3.jpg" alt=""></a>
-                                    </div>
-                                    <div class="info-img">
-                                        <a href="{{ Route('blog-details') }}"><h6>Real Estate</h6></a>
-                                        <p>May 10, 2020</p>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </aside>

@@ -287,7 +287,7 @@
                                     <div class="col-md-12 data">
                                         <form action="{{Route('savereview')}}" method="post">
                                             @csrf
-                                            <input type="hidden" name="fid" value="{{$id}}">
+                                            <input type="hidden" class="form-control" name="fid" value="{{ $id }}">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" name="name" class="form-control" placeholder=" Name" required>

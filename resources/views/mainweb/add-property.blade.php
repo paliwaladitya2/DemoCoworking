@@ -216,7 +216,7 @@
                                                     <li><a href="{{ Route('blog-list') }}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="{{ Route('blog-details') }}">Blog Details</a></li>
+                                            <li><a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}">Blog Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ Route('contact-us') }}">Contact</a></li>
@@ -370,7 +370,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                         @if(Session::has('success'))
                             <div class="alert alert-success">
                                 {{ Session::get('success') }}
@@ -646,6 +645,7 @@
                             </div>
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </section>

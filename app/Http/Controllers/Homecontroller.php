@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\BlogComments;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\GeneralQuery;
 use App\Models\PropertyUnapproved;
 use App\Models\PropertyApproved;
 use App\Models\Reviews;
+use App\Models\Blog;
 
 class HomeController extends Controller
 {
@@ -30,11 +32,15 @@ class HomeController extends Controller
     }
 
     public function blog_list(){
-        return view('mainweb.blog-list-sidebar');
+        $blogs = Blog::latest()->get();
+        return view('mainweb.blog-list-sidebar',compact('blogs'));
     }
 
-    public function blog_details(){
-        return view('mainweb.blog-details');
+    public function blog_details($slug){
+        $blogs = Blog::latest()->take(3)->get();
+        $blog = Blog::where('slug',$slug)->first();
+        $comments = BlogComments::where('blog_id', $blog->id)->latest()->take(3)->get();
+        return view('mainweb.blog-details',compact('blog','comments','blogs'));
     }
 
     public function user_profile(){
@@ -215,5 +221,21 @@ class HomeController extends Controller
         $review->save();
         return redirect()->back()->with('success','Review submitted successfully');
 
+    }
+
+    public function savecomment(Request $request){
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'comment' => 'required',
+        ]);
+        $comment = new BlogComments;
+        $comment->name = $validated['name'];
+        $comment->email = $validated['email'];
+        $comment->comment = $validated['comment'];
+        $comment->blog_id = $request->id;
+        $comment->save();
+
+        return redirect()->back()->with('success','Comment Submitted Successfully!!');
     }
 }
