@@ -15,7 +15,7 @@ class SuperAdminController extends Controller
 {
     public function manageuser(Request $request){
         if($request->ajax()){
-            $data = User::where('role','!=','superadmin')->get();
+            $data = User::where('role','propertyadmin')->orwhere('role','user')->get();
             return Datatables::of($data)
             ->addIndexColumn()
             ->addColumn('action',function($row){
@@ -156,7 +156,7 @@ class SuperAdminController extends Controller
             $approved->_24x7 = $unapproved->_24x7;
             }
         $approved->save();
-        $unapproved->save();
+        $unapproved->delete();
         return redirect()->back();
     }
 
@@ -165,11 +165,6 @@ class SuperAdminController extends Controller
             $data = PropertyApproved::get();
             return Datatables::of($data)
             ->addIndexColumn()
-            // ->addColumn('action', function($row){
-            //     $btn = '<a href="javascript:void(0);" id="'.$row->id.'" class="approve btn btn-primary ml-3 btn">Approve</a>';
-            //     return $btn;
-            // })
-            // ->rawColumns(['action1', 'action2'])
             ->make(true);
         }
         return view('dashboard.SuperAdmin.manage_approved_properties');
