@@ -44,7 +44,10 @@ Route::get('changerole_propertyadmin',[PropertyAdminController::class , 'changer
 Route::get('issues',[PropertyAdminController::class, 'issues'])->name('issues');
 Route::get('managereviews',[PropertyAdminController::class,'managereviews'])->name('managereviews');
 Route::get('deletereviews',[PropertyAdminController::class,'deletereviews'])->name('deletereviews');
-Route::get('manageproperty_propertyadmin',[PropertyAdminController::class,'manageproperty_propertyadmin'])->name('manageproperty_propertyadmin');
+Route::get('manage-property',[PropertyAdminController::class,'index'])->name('manageproperty');
+Route::get('editproperty/{id}',[PropertyAdminController::class,'editproperty'])->name('editproperty');
+Route::post('updateproperty',[PropertyAdminController::class,'updateproperty'])->name('updateproperty');
+Route::get('deleteproperty',[PropertyAdminController::class,'deleteproperty'])->name('deleteproperty');
 
 // home
 Route::get('add_properties',[HomeController::class,'add_properties'])->name('add_properties');

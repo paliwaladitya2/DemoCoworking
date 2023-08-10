@@ -1,7 +1,6 @@
 @extends('dashboard.dashboard')
 @section('csscontent')
 <link rel="stylesheet" href="{{asset('css/edit.css')}}">
-crossorigin="anonymous">
 @endsection
 @section('content')
 @if(Session::has('success'))
@@ -18,7 +17,7 @@ crossorigin="anonymous">
                                 </ul>
                             </div>
                         @endif
-                        <form action="{{ Route('save-property') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ Route('updateproperty') }}" method="post" enctype="multipart/form-data">
                             @csrf
                         <div class="main">
                                 <h3>Property description and price</h3>
@@ -26,8 +25,9 @@ crossorigin="anonymous">
                                 <div class="rows" >
                                     <div class="column-12">
                                         <p>
+                                            <input type="hidden" name="id" value="{{ $property->id }}">
                                             <label for="title">Property Title</label>
-                                            <input value="{{ old('title') }}" type="text" name="title" placeholder="Enter your property title">
+                                            <input value="{{ $property->title }}" type="text" name="title">
                                         </p>
                                     </div>
                                 </div>
@@ -35,7 +35,7 @@ crossorigin="anonymous">
                                     <div class="column-12">
                                         <p>
                                             <label for="description">Property Description</label>
-                                            <textarea value="{{ old('description') }}" name="description" placeholder="Describe about your property" ></textarea>
+                                            <textarea name="description">{{ $property->description }}</textarea>
                                         </p>
                                     </div>
                                 </div>
@@ -43,13 +43,13 @@ crossorigin="anonymous">
                                     <div class="column-6 column-12">
                                         <p>
                                             <label for="price">Price</label>
-                                            <input type="text" value="{{ old('price') }}" name="price" placeholder="INR">
+                                            <input type="text" value="{{ $property->price }}" name="price">
                                         </p>
                                     </div>
                                     <div class="column-6 column-12">
                                         <p>
                                             <label for="area">No. of seats</label>
-                                            <input type="text" value="{{ old('no_of_seats') }}" name="no_of_seats" placeholder="No. of seats">
+                                            <input type="text" value="{{ $property->no_of_seats }}" name="no_of_seats">
                                         </p>
                                     </div>
                                 </div>
@@ -98,13 +98,13 @@ crossorigin="anonymous">
 
                                             <p>
                                                 <label for="address">Address</label>
-                                                <input type="text" value="{{ old('address') }}" name="address" placeholder="Enter Your Address">
+                                                <input type="text" value="{{ $property->address }}" name="address">
                                             </p>
                                         </div>
                                         <div class="column-6 column-12">
                                         <p>
                                             <label for="city">City</label>
-                                            <input type="text" value="{{ old('city') }}" name="city" placeholder="Enter Your City">
+                                            <input type="text" value="{{ $property->city }}" name="city">
                                         </p>
                                        </div>
                                     </div>
@@ -115,13 +115,13 @@ crossorigin="anonymous">
                                     <div  class="column-6 column-12">
                                         <p>
                                             <label for="state">State</label>
-                                            <input type="text" value="{{ old('state') }}" name="state" placeholder="Enter Your State">
+                                            <input type="text" value="{{ $property->state }}" name="state">
                                         </p>
                                     </div>
                                     <div  class="column-6 column-12">
                                         <p>
                                             <label for="country">Country</label>
-                                            <input type="text" value="{{ old('country') }}" name="country" placeholder="Enter Your Country">
+                                            <input type="text" value="{{ $property->country }}" name="country">
                                         </p>
                                     </div>
                                 </div>
@@ -261,13 +261,13 @@ crossorigin="anonymous">
                                         <div class="column-6 column-12">
                                         <p>
                                             <label for="con-name">Name</label>
-                                            <input type="text" value="{{ old('name') }}" placeholder="Enter Your Name" name="name">
+                                            <input type="text" value="{{ $property->name }}" placeholder="Enter Your Name" name="name">
                                         </p>
                                         </div>
                                      <div class="column-6 column-12" >
                                         <p>
                                             <label for="con-user">Username</label>
-                                            <input type="text" value="{{ old('username') }}" placeholder="Enter Your Username" name="username">
+                                            <input type="text" value="{{ $property->username }}" placeholder="Enter Your Username" name="username">
                                         </p>
                                      </div>
                                 </div>
@@ -275,20 +275,20 @@ crossorigin="anonymous">
                                     <div class="column-6 column-12">
                                         <p>
                                             <label for="con-email">Email</label>
-                                            <input type="email" value="{{ old('email') }}" placeholder="Enter Your Email" name="email">
+                                            <input type="email" value="{{ $property->email }}" placeholder="Enter Your Email" name="email">
                                         </p>
                                     </div>
                                     <div class="column-6 column-12">
                                         <p>
                                             <label for="con-phn">Phone</label>
-                                            <input type="text" value="{{ old('phone') }}" oninput="validateInput(event)" placeholder="Enter Your Phone Number" name="phone">
+                                            <input type="text" value="{{ $property->phone }}" oninput="validateInput(event)" placeholder="Enter Your Phone Number" name="phone">
                                         </p>
                                     </div>
                                 </div>
                                 <div class="rows">
                                     <div class="column-12">
                                         <div class="btnsubmit">
-                                            <button type="submit">Submit Property</button>
+                                            <button type="submit">Update Property</button>
                                         </div>
                                     </div>
                                 </div>
@@ -296,3 +296,12 @@ crossorigin="anonymous">
                         </form>
                         
 @endsection
+@section('jscontent')
+<script>
+    function validateInput(event){
+        const input = event.target;
+        const sanitizedValue = input.value.replace(/[^0-9]/g, '');
+        input.value =sanitizedValue;
+    }
+</script>
+@endsection 
