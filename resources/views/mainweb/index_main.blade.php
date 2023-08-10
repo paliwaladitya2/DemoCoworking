@@ -174,7 +174,7 @@
                                     <ul class="nav-right">
                                         <li><a href="{{ Route('about') }}">About Us</a></li>
                                         <li><a href="{{Route('blog-list')}}">Blog Default</a></li>
-                                        <li><a href="{{ Route('blog-details', ['slug'=>$blog->slug]) }}">Blog Details</a></li>
+                                        <li><a href="{{ Route('blog-list') }}">Blog Details</a></li>
                                         <li class="no-mgb"><a href="{{ Route('contact-us') }}">Contact Us</a></li>
                                     </ul>
                                 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\BlogCategory;
+use App\Models\BlogComments;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use Image;
@@ -17,12 +18,16 @@ class BlogController extends Controller
             $data = Blog::all();
             return DataTables::of($data)
                     ->addIndexColumn()
+                    ->addColumn('comment',function($row){
+                        $btn = '<a href="'.route('manage_comment',$row->id).'">View Comments</a>';
+                        return $btn;
+                    })
                     ->addColumn('action', function($row){
                         $btn =' <a href="'.route('edit_blog',$row->id).'"><i class="fa fa-pencil"></i></a>';
                         $btn = $btn.' &nbsp;&nbsp;<a href="javascript:void(0);"" id="'.$row->id.'" class="delete"><i class="fa fa-trash"></i></a>';
                         return $btn;
                     })
-                    ->rawColumns(['action'])
+                    ->rawColumns(['action', 'comment'])
                     ->make(true);
         }
         return view('dashboard.SuperAdmin.manage_blogs');
@@ -32,6 +37,9 @@ class BlogController extends Controller
         $categories = BlogCategory::all();
         return view('dashboard.SuperAdmin.add_blog',compact('categories'));
     }
+
+    
+
     public function save_blog(Request $request)
     {
         $request->validate([
@@ -128,7 +136,36 @@ class BlogController extends Controller
     public function delete_blog($id)
     {
         $blog_category = Blog::find($id);
+        $comments = BlogComments::where('blog_id',$id)->get();
+        if($comments){
+            foreach($comments as $comment){
+                $comment->delete();
+            }
+        }
         $blog_category->delete();
         return redirect()->back()->with('success','Blog Deleted Successfully');
+    }
+
+    public function manage_comment($id, Request $request)
+    {
+        if($request->ajax()){
+            $comments = BlogComments::where('blog_id',$id)->get();
+            return DataTables::of($comments)
+            ->addIndexColumn()
+            ->addColumn('action',function($row){
+                $btn = '<a href="javascript:void(0);"" id="'.$row->id.'" class="delete"><i class="fa fa-trash"></i></a>';
+                return $btn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+        return view('dashboard.SuperAdmin.manage_comment',compact('id'));
+    }
+
+    public function delete_comment($id)
+    {
+        $comment = BlogComments::find($id);
+        $comment->delete();
+        return redirect()->back()->with('success','Comment Deleted Successfully');
     }
 }
