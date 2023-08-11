@@ -206,10 +206,10 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Manage Users</span>
+							<span class="nav-text">Manage Property Users</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="{{ Route('manageuser_propertyadmin') }}">Dashboard</a></li>
+							<li><a href="{{ Route('manageuser_propertyadmin') }}">Assign Teams and Clients</a></li>
 							
 						</ul>
                     </li>

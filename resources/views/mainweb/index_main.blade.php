@@ -368,6 +368,7 @@
         <script src="{{ asset('js/map-style2.js') }}"></script>
         <script src="{{ asset('js/range.js') }}"></script>
         <script src="{{ asset('js/color-switcher.js') }}"></script>
+        {{-- <script src="{{ asset('js/map-single.js') }}"></script> --}}
 
         <!-- Slider Revolution scripts -->
         <script src="{{ asset('revolution/js/jquery.themepunch.tools.min.js') }}"></script>
