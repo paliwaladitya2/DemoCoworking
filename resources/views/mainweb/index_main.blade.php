@@ -138,8 +138,9 @@
 
         @yield('content')
 
+        <div class="clearfix"></div>
         <!-- START FOOTER -->
-        <footer class="first-footer">
+        <footer class="first-footer ">
             <div class="top-footer">
                 <div class="container">
                     <div class="row">

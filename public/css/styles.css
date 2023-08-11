@@ -23113,7 +23113,7 @@ form label.error {
 
 input[type="file"] {
   background: white;
-  border: none;
+  /* border: none; */
   padding: 5px 0px 5px 0px;
   width: auto;
   display: inline-block;
