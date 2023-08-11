@@ -1,4 +1,15 @@
 @extends('mainweb\index_main')
+@section('csscontents')
+<style>
+    .owl-item {
+  margin-left: px;
+  justify-content: center;
+}
+.owl-item:first-child {
+  margin-left: 0;
+}
+</style>
+@endsection
 @section('content')
         <!-- STAR HEADER SEARCH -->
         <div id="map-container" class="fullwidth-home-map dark-overlay">
@@ -428,16 +439,16 @@
                     <p>The Companies That Represent Us.</p>
                 </div>
                 <div class="owl-carousel style2">
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/11.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/12.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/13.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/14.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/15.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/16.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/17.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/11.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/12.jpg" alt=""></div>
-                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/13.jpg" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/its.png" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img src="images/partners/cv.png" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img style="background-color:black;" src="images/partners/eki.png" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img  src="images/partners/zerogravito.jpg" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img  src="images/partners/saxon.png" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img  src="images/partners/kotak.png" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img  src="images/partners/betterpeople.png" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img style="height:70px; width:70px;" src="images/partners/betterplanet.png" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img  src="images/partners/persistent.svg" alt=""></div>
+                    <div class="owl-item" data-aos="fade-up"><img  src="images/partners/hiddenbrains.svg" alt=""></div>
                 </div>
             </div>
         </div>

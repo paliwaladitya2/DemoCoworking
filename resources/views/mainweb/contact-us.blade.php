@@ -53,7 +53,7 @@
                             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                         </form>
                     </div>
-                    <div class="col-lg-4 col-md-12 bgc">
+                    <div class="col-lg-4 col-md-12">
                         <div class="call-info">
                             <h3>Contact Details</h3>
                             <p class="mb-5">Please find below contact details and contact us today!</p>
