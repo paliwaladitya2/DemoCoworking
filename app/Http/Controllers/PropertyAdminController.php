@@ -216,6 +216,25 @@ class PropertyAdminController extends Controller
         $property->delete();
         
         return redirect()->back();
+    }
 
-}
+    public function createit(){
+        if(Session::has('user')){
+            $user_id = Session::get('user')->id;
+            $properties = PropertyApproved::where('admin',$user_id)->get();
+            return view('dashboard.propertyadmin.createit',compact('properties'));
+        }else{
+            return redirect()->route('index');
+        }
+    }
+
+    public function saveit(Request $request){
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required',
+            'confirm_password' => 'required|same:password'
+        ]);
+        
+    }
 }

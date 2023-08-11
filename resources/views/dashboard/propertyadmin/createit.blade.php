@@ -15,14 +15,63 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h2>Manage Property</h2>
-                    <a href="{{ route('add_blog') }}" class="btn btn-primary float-end">Add Blog</a>
-                </div>    
+                    <h2>IT Team</h2>
+                    <a href="{{ route('add_blog_category') }}" data-toggle="modal" data-target="#loginModal" class="btn btn-primary float-end">Create IT Team</a>
+                </div> 
+                <div class="modal fade " id="loginModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content pl-5 pr-5">
+                        <form action="{{ Route('saveit') }}" method="post">
+                            @csrf
+                          <div class="modal-header">
+                            <h5 class="modal-title d-flex align-items-center" > <i class="fa fa-user h2 m-2"></i>Register</h5>
+                            <button type="reset" class="close shadow-none text-reset" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="form-group mb-3">
+                              <input type="hidden" value="itTeam" name="role" class="form-control shadow-none">
+                            </div>
+                            <div class="form-group mb-3">
+                                <select name="property" id="property" class="form-control">
+                                    <option value="">Select Property</option>
+                                    @foreach ($properties as $property)
+                                        <option value="{{ $property->id }}">{{ $property->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label >Name</label>
+                                <input type="text" name="name" class="form-control shadow-none">
+                            </div>
+                            <div class="form-group mb-3">
+                              <label >Email address</label>
+                              <input type="email" name="email" class="form-control shadow-none">
+                            </div>
+                            <div class="form-group mb-4">
+                              <label >Password</label>
+                              <input type="password" name="password" class="form-control shadow-none">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label >Confirm Password</label>
+                                <input type="password" name="confirm_password" class="form-control shadow-none">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                              <button type="submit " name="sub" class="btn btn-primary shadow-none">Register</button>
+                            </div>
+                          </div>
+                          
+                          
+                        </form>
+                      </div>
+                    </div>
+                  </div>   
                 <div class="card-body">
                     <table class="table table-striped table-bordered yajra_datatable">
                         <thead>
                             <th>ID</th>
-                            <th>Property Name</th>
+                            <th>Name</th>
                             <th>Action</th>
                         </thead>
                         <tbody>
@@ -45,14 +94,14 @@
             var table = $('.yajra_datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{  route('manageproperty') }}",
+                ajax: "{{  route('manage_blog_category') }}",
                 columns: [{
                     data: 'id',
                     name: 'id'
                 },
                 {
-                    data: 'title',
-                    name: 'title'
+                    data: 'name',
+                    name: 'name'
                 },
                 {
                     data: 'action',
@@ -69,7 +118,7 @@
         $(document).on('click', '.delete', function() {
             var row_id = $(this).attr('id');
             var table_row = $(this).closest('tr');
-            var url = "{{ route('deleteproperty',':id') }}";
+            var url = "{{ route('delete_blog_category',':id') }}";
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -90,7 +139,7 @@
                         success: function(data) {
                             Swal.fire({
                                 title: 'Deleted!',
-                                text: 'Your property has been deleted.',
+                                text: 'Your file has been deleted.',
                                 icon: 'success',
                                 confirmButtonText: 'OK'
                             }).then((result) => {
