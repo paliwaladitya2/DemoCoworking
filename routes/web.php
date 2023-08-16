@@ -43,7 +43,9 @@ Route::get('manage-approved-properties',[SuperAdminController::class,'manage_app
 // property admin 
 Route::get('manageuser_propertyadmin',[PropertyAdminController::class,'manageuser'])->name('manageuser_propertyadmin');
 Route::get('changerole_propertyadmin',[PropertyAdminController::class , 'changerole'])->name('changerole_propertyadmin');
-Route::get('issues',[PropertyAdminController::class, 'issues'])->name('issues');
+Route::get('issues/{id}',[PropertyAdminController::class, 'issues'])->name('issues');
+Route::get('issuelogin',[PropertyAdminController::class, 'issuelogin'])->name('issuelogin');
+Route::post('issuecheck',[PropertyAdminController::class, 'issuecheck'])->name('issuecheck');
 Route::get('managereviews/{id}',[PropertyAdminController::class,'managereviews'])->name('managereviews');
 Route::get('reviews',[PropertyAdminController::class,'reviews'])->name('reviews');
 Route::get('deletereviews',[PropertyAdminController::class,'deletereviews'])->name('deletereviews');
@@ -57,6 +59,9 @@ Route::get('deleteit',[PropertyAdminController::class,'deleteit'])->name('delete
 Route::get('createfacility',[PropertyAdminController::class,'createfacility'])->name('createfacility');
 Route::post('savefacility',[PropertyAdminController::class,'savefacility'])->name('savefacility');
 Route::get('deletefacility',[PropertyAdminController::class,'deletefacility'])->name('deletefacility');
+Route::get('issueportals',[PropertyAdminController::class,'issueportals'])->name('issueportals');
+Route::post('saveportal',[PropertyAdminController::class,'saveportal'])->name('saveportal');
+Route::get('deleteportal',[PropertyAdminController::class,'deleteportal'])->name('deleteportal');
 
 
 // property users
