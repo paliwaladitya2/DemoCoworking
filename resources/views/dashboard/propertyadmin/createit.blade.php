@@ -71,7 +71,7 @@
                     <table class="table table-striped table-bordered yajra_datatable">
                         <thead>
                             <th>ID</th>
-                            <th>Property ID</th>
+                            <th>Property Name</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Action</th>

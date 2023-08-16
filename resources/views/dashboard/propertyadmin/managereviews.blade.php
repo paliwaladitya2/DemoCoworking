@@ -50,7 +50,7 @@
             var table = $('.yajra_datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{  route('managereviews') }}",
+                ajax: "{{  route('managereviews',['id'=>$id]) }}",
                 columns: [{
                     data: 'id',
                     name: 'id'
@@ -90,12 +90,12 @@
             var url = "{{ route('deletereviews') }}";
             swal.fire({
                 title: "Are you Sure?",
-                text: "You want to change the Role?",
+                text: "You won't be able to revert back?",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, Change it!'
+                confirmButtonText: 'Yes, Delete it!'
             }).then((result) =>{
                 if(result.isConfirmed){
                     $.ajax({
@@ -107,8 +107,8 @@
                         },
                         success: function(data){
                             swal.fire({
-                                title: 'Updated!',
-                                text: 'Your Role has been Updated.',
+                                title: 'Deleted!',
+                                text: 'Your Review has been Deleted.',
                                 icon: 'success',
                                 confirmButtonText: 'OK'
                             }).then((result)=>{
