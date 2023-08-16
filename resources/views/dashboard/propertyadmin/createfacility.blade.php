@@ -15,13 +15,13 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h2>IT Team</h2>
-                    <a href="#" data-toggle="modal" data-target="#loginModal" class="btn btn-primary float-end">Create IT Team</a>
+                    <h2>Facility Team</h2>
+                    <a href="#" data-toggle="modal" data-target="#loginModal" class="btn btn-primary float-end">Create Facility Team</a>
                 </div> 
                 <div class="modal fade " id="loginModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content pl-5 pr-5">
-                        <form action="{{ Route('saveit') }}" method="post">
+                        <form action="{{ Route('savefacility') }}" method="post">
                             @csrf
                           <div class="modal-header">
                             <h5 class="modal-title d-flex align-items-center" > <i class="fa fa-user h2 m-2"></i>Register</h5>
@@ -96,7 +96,7 @@
             var table = $('.yajra_datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{  route('createit') }}",
+                ajax: "{{  route('createfacility') }}",
                 columns: [{
                     data: 'id',
                     name: 'id'
@@ -128,7 +128,7 @@
         $(document).on('click', '.delete', function() {
             var row_id = $(this).attr('id');
             var table_row = $(this).closest('tr');
-            var url = "{{ route('deleteit',':id') }}";
+            var url = "{{ route('deletefacility',':id') }}";
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",

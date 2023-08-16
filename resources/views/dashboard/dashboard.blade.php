@@ -210,7 +210,7 @@
 						</a>
                         <ul aria-expanded="false">
 							<li><a href="{{ Route('createit') }}">Create IT Team</a></li>
-							<li><a href="#">Create Facility Team</a></li>
+							<li><a href="{{ Route('createfacility') }}">Create Facility Team</a></li>
 							<li><a href="#">Manage Clients</a></li>
 							
 						</ul>

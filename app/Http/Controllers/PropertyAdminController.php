@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ItTeam;
+use App\Models\FacilityTeam;
 use App\Models\PropertyApproved;
 use App\Models\Reviews;
 use Illuminate\Http\Request;
@@ -218,23 +220,103 @@ class PropertyAdminController extends Controller
         return redirect()->back();
     }
 
-    public function createit(){
+    public function createit(Request $request){
+        if($request->ajax()){
+            $user_id = Session::get('user')->id;
+            $data = ItTeam::where('user_id',$user_id)->get();
+            return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+                // $btn =' <a href="'.route('editproperty',$row->id).'"><i class="fa fa-pencil"></i></a>';
+                $btn = ' &nbsp;&nbsp;<a href="javascript:void(0);"" id="'.$row->id.'" class="delete"><i class="fa fa-trash"></i></a>';
+                return $btn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
         if(Session::has('user')){
             $user_id = Session::get('user')->id;
-            $properties = PropertyApproved::where('admin',$user_id)->get();
-            return view('dashboard.propertyadmin.createit',compact('properties'));
-        }else{
-            return redirect()->route('index');
         }
+        $properties = PropertyApproved::where('admin',$user_id)->get();
+        return view('dashboard.propertyadmin.createit',compact('properties'));
     }
 
     public function saveit(Request $request){
         $validated = $request->validate([
+            'property' => 'required',
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required',
             'confirm_password' => 'required|same:password'
         ]);
+        if(Session::has('user')){
+            $user_id = Session::get('user')->id;
+        }
+        $itteam = new ItTeam;
+        $itteam->user_id = $user_id;
+        $itteam->property_id = $validated['property'];
+        $itteam->name = $validated['name'];
+        $itteam->email = $validated['email'];
+        $itteam->password = bcrypt($validated['password']);
+        $itteam->save();
+        return redirect()->back()->with('success','Team Created Successfully!!');
+
+    }
+
+    public function deleteit(Request $request){
+        $itteam = ItTeam::where('id',$request->id)->first();
+        $itteam->delete();
         
+        return redirect()->back();
+    }
+
+    public function createfacility(Request $request){
+        if($request->ajax()){
+            $user_id = Session::get('user')->id;
+            $data = FacilityTeam::where('user_id',$user_id)->get();
+            return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+                // $btn =' <a href="'.route('editproperty',$row->id).'"><i class="fa fa-pencil"></i></a>';
+                $btn = ' &nbsp;&nbsp;<a href="javascript:void(0);"" id="'.$row->id.'" class="delete"><i class="fa fa-trash"></i></a>';
+                return $btn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+        if(Session::has('user')){
+            $user_id = Session::get('user')->id;
+        }
+        $properties = PropertyApproved::where('admin',$user_id)->get();
+        return view('dashboard.propertyadmin.createfacility',compact('properties'));
+    }
+
+    public function savefacility(Request $request){
+        $validated = $request->validate([
+            'property' => 'required',
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required',
+            'confirm_password' => 'required|same:password'
+        ]);
+        if(Session::has('user')){
+            $user_id = Session::get('user')->id;
+        }
+        $itteam = new FacilityTeam;
+        $itteam->user_id = $user_id;
+        $itteam->property_id = $validated['property'];
+        $itteam->name = $validated['name'];
+        $itteam->email = $validated['email'];
+        $itteam->password = bcrypt($validated['password']);
+        $itteam->save();
+        return redirect()->back()->with('success','Team Created Successfully!!');
+
+    }
+
+    public function deletefacility(Request $request){
+        $itteam = FacilityTeam::where('id',$request->id)->first();
+        $itteam->delete();
+        
+        return redirect()->back();
     }
 }
