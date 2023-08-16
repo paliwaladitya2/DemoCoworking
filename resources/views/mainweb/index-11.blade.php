@@ -27,7 +27,7 @@
                                 <!-- Welcome Text -->
                                 <div class="welcome-text">
                                     <h1 class="h1">Find Your Perfect
-                                    <br class="d-md-none">
+                                    <br class="">
                                     <span class="typed border-bottom" style="text-transform: uppercase;"></span>
                                 </h1>
                                     <p class="mt-4">We Have Over Million Properties For You.</p>
