@@ -220,7 +220,7 @@
 							<p class="nav-text">Manage Reviews</p>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="{{ Route('managereviews') }}">Reviews</a></li>
+							<li><a href="{{ Route('reviews') }}">Reviews</a></li>
 							
 							
 						</ul>

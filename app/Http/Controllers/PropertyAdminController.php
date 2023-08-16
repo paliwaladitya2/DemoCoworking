@@ -11,6 +11,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Session;
 use Yajra\DataTables\DataTables as Datatables;
 
+
 class PropertyAdminController extends Controller
 {
     public function manageuser(Request $request){
@@ -47,9 +48,9 @@ class PropertyAdminController extends Controller
     }
 
 
-    public function managereviews(Request $request){
+    public function managereviews(Request $request,$id){
         if($request->ajax()){
-            $data = Reviews::get();
+            $data = Reviews::where('fid',$id)->get();
             return Datatables::of($data)
             ->addIndexColumn()
             ->addColumn('action',function($row){
@@ -60,7 +61,24 @@ class PropertyAdminController extends Controller
             ->rawColumns(['action'])
             ->make(true);
         }
-        return view('dashboard.propertyadmin.managereviews');
+        return view('dashboard.propertyadmin.managereviews',compact('id'));
+    }
+
+    public function reviews(Request $request){
+        if($request->ajax())
+        {
+            $user_id = Session::get('user')->id;
+            $data = PropertyApproved::where('admin',$user_id)->get();
+            return DataTables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row){
+                        $btn =' <a href="'.route('managereviews',$row->id).'">View Reviews</a>';
+                        return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
+        return view('dashboard.propertyadmin.reviews');
     }
     public function deletereviews(Request $request){
             $review = Reviews::where('id',$request->id)->first();
@@ -226,6 +244,15 @@ class PropertyAdminController extends Controller
             $data = ItTeam::where('user_id',$user_id)->get();
             return Datatables::of($data)
             ->addIndexColumn()
+            ->addColumn('property_id',function($row)
+            {
+                $property = PropertyApproved::where('id',$row->property_id)->first();
+                if($property){
+                    return $property->title;
+                }else{
+                    return Null;
+                }
+            })
             ->addColumn('action', function($row){
                 // $btn =' <a href="'.route('editproperty',$row->id).'"><i class="fa fa-pencil"></i></a>';
                 $btn = ' &nbsp;&nbsp;<a href="javascript:void(0);"" id="'.$row->id.'" class="delete"><i class="fa fa-trash"></i></a>';
@@ -276,6 +303,15 @@ class PropertyAdminController extends Controller
             $data = FacilityTeam::where('user_id',$user_id)->get();
             return Datatables::of($data)
             ->addIndexColumn()
+            ->addColumn('property_id',function($row)
+            {
+                $property = PropertyApproved::where('id',$row->property_id)->first();
+                if($property){
+                    return $property->title;
+                }else{
+                    return Null;
+                }
+            })
             ->addColumn('action', function($row){
                 // $btn =' <a href="'.route('editproperty',$row->id).'"><i class="fa fa-pencil"></i></a>';
                 $btn = ' &nbsp;&nbsp;<a href="javascript:void(0);"" id="'.$row->id.'" class="delete"><i class="fa fa-trash"></i></a>';

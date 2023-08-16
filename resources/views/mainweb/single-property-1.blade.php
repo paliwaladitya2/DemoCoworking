@@ -182,42 +182,78 @@
                             <h5 class="mt-5">Amenities</h5>
                             <!-- cars List -->
                             <ul class="homes-list clearfix">
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Air Cond</span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Balcony</span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Internet</span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Dishwasher</span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Bedding</span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Cable TV</span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Parking</span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Pool</span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <span>Fridge</span>
-                                </li>
+                                @if ($property->coworking)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>CoWorking</span>
+                                    </li>
+                                @endif
+                                @if ($property->cabin)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>Cabin</span>
+                                    </li>
+                                @endif
+                                @if ($property->meetingrooms)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>Meeting Rooms</span>
+                                    </li>
+                                @endif
+                                @if ($property->trainingrooms)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>Training Rooms</span>
+                                    </li>
+                                @endif
+                                @if ($property->wifi)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>WiFi</span>
+                                    </li>
+                                @endif
+                                @if ($property->parking)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>Parking</span>
+                                    </li>
+                                @endif
+                                @if ($property->lounge)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>Lounge</span>
+                                    </li>
+                                @endif
+                                @if ($property->cafeteria)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>Cafeteria</span>
+                                    </li>
+                                @endif
+                                @if ($property->air_conditioning)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>Air Conditioning</span>
+                                    </li>
+                                @endif
+                                @if ($property->it_support)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>IT Support</span>
+                                    </li>
+                                @endif
+                                @if ($property->locker)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>Locker</span>
+                                    </li>
+                                @endif
+                                @if ($property->_24x7)
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>24X7</span>
+                                    </li>
+                                @endif
                             </ul>
                         </div>
                         <div class="floor-plan property wprt-image-video w50 pro">
@@ -325,81 +361,29 @@
                                 <div class="widget-boxed-body">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-12 book">
-                                            <input type="text" id="reservation-date" data-lang="en" data-large-mode="true" data-min-year="2017" data-max-year="2020" data-disabled-days="08/17/2017,08/18/2017" data-id="datedropper-0" data-theme="my-style" class="form-control" readonly="">
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 book2">
-                                            <input type="text" id="reservation-time" class="form-control" readonly="">
-                                        </div>
-                                    </div>
-                                    <div class="row mrg-top-15 mb-3">
-                                        <div class="col-lg-6 col-md-12 mt-4">
-                                            <label class="mb-4">Adult</label>
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-										 <button type="button" class="btn counter-btn theme-cl btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-											 <i class="fa fa-minus"></i>
-										 </button>
-									        </span>
-                                                <input type="text" name="quant[1]" class="border-0 text-center form-control input-number" data-min="0" data-max="10" value="0">
-                                                <span class="input-group-btn">
-											 <button type="button" class="btn counter-btn theme-cl btn-number" data-type="plus" data-field="quant[1]">
-											  <i class="fa fa-plus"></i>
-											 </button>
-									        </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 mt-4">
-                                            <label class="mb-4">Children</label>
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-										 <button type="button" class="btn counter-btn theme-cl btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
-											 <i class="fa fa-minus"></i>
-										 </button>
-									        </span>
-                                                <input type="text" name="quant[2]" class="border-0 text-center form-control input-number" data-min="0" data-max="10" value="0">
-                                                <span class="input-group-btn">
-											 <button type="button" class="btn counter-btn theme-cl btn-number" data-type="plus" data-field="quant[2]">
-											  <i class="fa fa-plus"></i>
-											 </button>
-									        </span>
-                                            </div>
+                                            <form action="#" method="post">
+                                                <div class="form-group">
+                                                    <label for="name">Your Name:</label>
+                                                    <input type="text" class="form-control" id="name" name="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Your Email:</label>
+                                                    <input type="email" class="form-control" id="email" name="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="date">Select Date:</label>
+                                                    <input type="date" class="form-control" id="date" name="date" required>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+                                            </form>
                                         </div>
                                     </div>
-                                    <a href="{{Route('payment-method')}}" class="btn reservation btn-radius theme-btn full-width mrg-top-10">Submit Request</a>
+                                    
                                 </div>
                             </div>
                             <!-- End: Schedule a Tour -->
                             <!-- end author-verified-badge -->
                             <div class="sidebar">
-                                <div class="widget-boxed mt-33 mt-5">
-                                    <div class="widget-boxed-header">
-                                        <h4>Agent Information</h4>
-                                    </div>
-                                    <div class="widget-boxed-body">
-                                        <div class="sidebar-widget author-widget2">
-                                            <div class="author-box clearfix">
-                                                <img src="../images/testimonials/ts-1.jpg" alt="author-image" class="author__img">
-                                                <h4 class="author__title">Lisa Clark</h4>
-                                                <p class="author__meta">Agent of Property</p>
-                                            </div>
-                                            <ul class="author__contact">
-                                                <li><span class="la la-map-marker"><i class="fa fa-map-marker"></i></span>302 Av Park, New York</li>
-                                                <li><span class="la la-phone"><i class="fa fa-phone" aria-hidden="true"></i></span><a href="#">(234) 0200 17813</a></li>
-                                                <li><span class="la la-envelope-o"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#">lisa@gmail.com</a></li>
-                                            </ul>
-                                            <div class="agent-contact-form-sidebar">
-                                                <h4>Request Inquiry</h4>
-                                                <form name="contact_form" method="post" action="https://code-theme.com/html/findhouses/functions.php">
-                                                    <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
-                                                    <input type="number" id="pnumber" name="phone_number" placeholder="Phone Number" required />
-                                                    <input type="email" id="emailid" name="email_address" placeholder="Email Address" required />
-                                                    <textarea placeholder="Message" name="message" required></textarea>
-                                                    <input type="submit" name="sendmessage" class="multiple-send-message" value="Submit Request" />
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="main-search-field-2">
                                     <div class="widget-boxed mt-5">
                                         <div class="widget-boxed-header">
@@ -431,33 +415,27 @@
                                     <!-- Start: Specials offer -->
                                    
                                     <!-- End: Specials offer -->
-                                    <div class="widget-boxed popular mt-5">
-                                        <div class="widget-boxed-header">
-                                            <h4>Popular Tags</h4>
+                                    <div class="recent-post">
+                                        <h5 class="font-weight-bold mb-4">Popular Tags</h5>
+                                        <div class="tags mt-2">
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Coworking</a></span>
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Training Rooms</a></span>
                                         </div>
-                                        <div class="widget-boxed-body">
-                                            <div class="recent-post">
-                                                <div class="tags">
-                                                    <span><a href="#" class="btn btn-outline-primary">Houses</a></span>
-                                                    <span><a href="#" class="btn btn-outline-primary">Real Home</a></span>
-                                                </div>
-                                                <div class="tags">
-                                                    <span><a href="#" class="btn btn-outline-primary">Baths</a></span>
-                                                    <span><a href="#" class="btn btn-outline-primary">Beds</a></span>
-                                                </div>
-                                                <div class="tags">
-                                                    <span><a href="#" class="btn btn-outline-primary">Garages</a></span>
-                                                    <span><a href="#" class="btn btn-outline-primary">Family</a></span>
-                                                </div>
-                                                <div class="tags">
-                                                    <span><a href="#" class="btn btn-outline-primary">Real Estates</a></span>
-                                                    <span><a href="#" class="btn btn-outline-primary">Properties</a></span>
-                                                </div>
-                                                <div class="tags no-mb">
-                                                    <span><a href="#" class="btn btn-outline-primary">Location</a></span>
-                                                    <span><a href="#" class="btn btn-outline-primary">Price</a></span>
-                                                </div>
-                                            </div>
+                                        <div class="tags mt-2">
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Meeting Rooms</a></span>
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Beds</a></span>
+                                        </div>
+                                        <div class="tags mt-2">
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Cabin</a></span>
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Cafeteria</a></span>
+                                        </div>
+                                        <div class="tags mt-2">
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Parking</a></span>
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Wifi</a></span>
+                                        </div>
+                                        <div class="tags mt-2">
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">24x7</a></span>
+                                            <span><a href="#" class="btn btn-outline-primary ml-1" style="color:white;">Price</a></span>
                                         </div>
                                     </div>
                                 </div>
