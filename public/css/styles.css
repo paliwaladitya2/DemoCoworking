@@ -18825,9 +18825,17 @@ body.dashboard-bd {
 .header-user-menu {
   float: right;
   position: relative;
-  top: 10px;
+ 
   margin-left: 0px;
   margin-right: 50px;
+}
+
+@media(max-width:1024px)
+{
+  .header-user-menu {
+    top: 0px;
+  }
+  
 }
 
 .header-user-name {

@@ -2139,6 +2139,9 @@ screen and (max-height:300px) {
 		margin-right: 20px;
         width: 100%;
 	}
+	.hero-inner2 {
+        margin-top: -100px;
+    }
 }
 @media only screen and (max-width: 991px) {	
 	.search-2 .hero-inner {
@@ -2148,15 +2151,18 @@ screen and (max-height:300px) {
         border-radius: 3px;
     }
     .hero-inner2 {
-        margin-top: -220px;
+        margin-top: -100px;
     }
     .header.vid {
         position: relative;
         background: #121B22;
     }
     .dark-overlay h1 {
-        font-size: 40px;
+        font-size: 28px!important;
     }
+	.welcome-text h1,span{
+		/* font-size: 24px; */
+	}
 }
 @media only screen and (max-width: 767px) {
 	.search-2 .welcome-text h1 {
