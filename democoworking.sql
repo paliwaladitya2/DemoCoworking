@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 10, 2023 at 09:16 AM
+-- Generation Time: Aug 16, 2023 at 07:22 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -101,7 +101,24 @@ CREATE TABLE `blog_comments` (
 --
 
 INSERT INTO `blog_comments` (`id`, `blog_id`, `name`, `email`, `comment`, `created_at`, `updated_at`) VALUES
-(1, 2, 'dfg', 'aayushpatidar04@gmail.com', 'asdfdgb', '2023-08-10 01:33:57', '2023-08-10 01:33:57');
+(3, 2, 'dfg', 'aayushpatidar04@gmail.com', 'sdfgbd', '2023-08-10 23:14:43', '2023-08-10 23:14:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `facility_teams`
+--
+
+CREATE TABLE `facility_teams` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -165,6 +182,23 @@ CREATE TABLE `issue_portals` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `it_teams`
+--
+
+CREATE TABLE `it_teams` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -196,7 +230,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (15, '2023_08_09_094151_create_blog_comments_table', 8),
 (16, '2023_08_09_094550_update_blogs_table', 9),
 (17, '2023_08_09_093352_add_column_to_reviews_table', 10),
-(18, '2023_08_10_050852_add_column_to_reviews_table', 11);
+(18, '2023_08_10_050852_add_column_to_reviews_table', 11),
+(19, '2023_08_11_061931_create_property_users_table', 12),
+(20, '2023_08_11_113723_create_it_teams_table', 13),
+(21, '2023_08_16_043828_add_column_to_it_teams_table', 14),
+(22, '2023_08_16_050900_create_facility_teams_table', 15);
 
 -- --------------------------------------------------------
 
@@ -293,7 +331,7 @@ CREATE TABLE `property_approveds` (
 INSERT INTO `property_approveds` (`id`, `title`, `admin`, `description`, `price`, `no_of_seats`, `image1`, `image2`, `image3`, `image4`, `image5`, `image6`, `image7`, `address`, `city`, `state`, `country`, `coworking`, `cabin`, `meetingrooms`, `trainingrooms`, `wifi`, `parking`, `lounge`, `cafeteria`, `air_conditioning`, `it_support`, `locker`, `_24x7`, `name`, `username`, `email`, `phone`, `created_at`, `updated_at`) VALUES
 (1, 'Zero Gravito', 'Kanishk Purohit', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-08 05:27:51', '2023-08-08 05:27:51'),
 (3, 'its', 'Kanishk Purohit', 'nothing to describe', 5000, 8, '1691558784_1_.jpg', '1691558784_2_.jpg', '1691558784_3_.jpg', '1691558784_4_.jpg', '1691558784_5_.jpg', '1691558784_6_.jpg', '1691558784_7_.jpg', 'indore', 'indore', 'madhya pradesh', 'india', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'Kanishk Purohit', 'kanishk', 'kpurorit@gmail.com', '8962110823', '2023-08-08 23:56:54', '2023-08-08 23:56:54'),
-(4, 'Zero Gravito', '2', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-09 06:53:36', '2023-08-09 06:53:36'),
+(4, 'Zero Gravito', '2', 'seat available hai', 15000, 100, '1691662326_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-09 06:53:36', '2023-08-10 04:42:06'),
 (5, 'Test', '2', 'testing', 15000, 100, '1691642456_1_.jpg', '1691642456_2_.jpg', '1691642456_3_.jpg', '1691642456_4_.jpg', '1691642456_5_.jpg', '1691642456_6_.jpg', NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-09 23:16:12', '2023-08-09 23:16:12');
 
 -- --------------------------------------------------------
@@ -352,6 +390,21 @@ INSERT INTO `property_unapproveds` (`id`, `admin`, `title`, `description`, `pric
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `property_users`
+--
+
+CREATE TABLE `property_users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `role` enum('itTeam','facilityTeam','client','user') NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `reviews`
 --
 
@@ -365,6 +418,14 @@ CREATE TABLE `reviews` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `fid`, `name`, `phone`, `email`, `message`, `created_at`, `updated_at`) VALUES
+(1, 5, 'dfg', '9992221114', 'aayushpatidar04@gmail.com', 'test 1', '2023-08-10 04:46:30', '2023-08-10 04:46:30'),
+(2, 4, 'Aman', '0741852963', 'aman@gmail.com', 'test 2', '2023-08-10 04:47:04', '2023-08-10 04:47:04');
 
 -- --------------------------------------------------------
 
@@ -392,9 +453,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `role`, `phone`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Aman', 'superadmin', 1, 'aman@gmail.com', NULL, '$2y$10$mVHxpidWzPoU8yZLurT2L.6Jh45J7O2/M4urk4wLB1w3OseNaFg/e', NULL, '2023-08-03 22:32:58', '2023-08-04 01:47:24'),
 (2, 'Kanishk Purohit', 'propertyadmin', 1, 'kpurorit@gmail.com', NULL, '$2y$10$ZyeTRPFD5jPQIpU0IF2KxurzJsrB0qKekQH0fIFOnASNchL1sWmgm', NULL, '2023-08-03 23:48:48', '2023-08-07 00:12:53'),
-(3, 'aayush', 'itTeam', 1, 'aayush@gmail.com', NULL, '$2y$10$C3qofc23FxUVhDc0UhWO3Oke7i0YGwK9f9J97D7JvjtGtDrbUI1vK', NULL, '2023-08-03 23:49:48', '2023-08-03 23:49:48'),
-(4, 'aditya', 'facilityTeam', 1, 'aditya@gmail.com', NULL, '$2y$10$eRzz5qrOxcTV7CTJtCAip.IIouzxq2utEGahqvHiY0IPrr61GBOzK', NULL, '2023-08-03 23:49:58', '2023-08-03 23:49:58'),
-(5, 'rochak', 'client', 1, 'rochak@gmail.com', NULL, '$2y$10$Kc.nvUhKUXYOeDfqnWwmwOGFdFw4QRrctWqtT56DxD145X8fumzIG', NULL, '2023-08-03 23:50:19', '2023-08-04 01:50:33'),
+(3, 'aayush', 'user', 1, 'aayush@gmail.com', NULL, '$2y$10$C3qofc23FxUVhDc0UhWO3Oke7i0YGwK9f9J97D7JvjtGtDrbUI1vK', NULL, '2023-08-03 23:49:48', '2023-08-11 04:22:05'),
+(4, 'aditya', 'user', 1, 'aditya@gmail.com', NULL, '$2y$10$eRzz5qrOxcTV7CTJtCAip.IIouzxq2utEGahqvHiY0IPrr61GBOzK', NULL, '2023-08-03 23:49:58', '2023-08-11 04:22:12'),
+(5, 'rochak', 'user', 1, 'rochak@gmail.com', NULL, '$2y$10$Kc.nvUhKUXYOeDfqnWwmwOGFdFw4QRrctWqtT56DxD145X8fumzIG', NULL, '2023-08-03 23:50:19', '2023-08-11 04:22:18'),
 (6, 'tanmay', 'propertyadmin', 1, 'tanmay@gmail.com', NULL, '$2y$10$HttQ5/wA0xn9Vyc02/IksuhvtaIaOgVdAT1OqmY1kI8Tz/Nzx/nR.', NULL, '2023-08-03 23:50:29', '2023-08-09 06:57:54'),
 (7, 'u1', 'user', 9638527415, 'u1@gmail.com', NULL, '$2y$10$WoTmO2S4Yqono96ch70EaOhI/AYegPkDaJGOKelkH5vXv/NQ1ccUu', NULL, '2023-08-04 03:15:18', '2023-08-04 03:15:18');
 
@@ -426,6 +487,14 @@ ALTER TABLE `blog_comments`
   ADD KEY `blog_comments_blog_id_foreign` (`blog_id`);
 
 --
+-- Indexes for table `facility_teams`
+--
+ALTER TABLE `facility_teams`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `facility_teams_user_id_foreign` (`user_id`),
+  ADD KEY `facility_teams_property_id_foreign` (`property_id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -449,6 +518,14 @@ ALTER TABLE `issues`
 --
 ALTER TABLE `issue_portals`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `it_teams`
+--
+ALTER TABLE `it_teams`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `it_teams_property_id_foreign` (`property_id`),
+  ADD KEY `it_teams_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `migrations`
@@ -489,6 +566,14 @@ ALTER TABLE `property_unapproveds`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `property_users`
+--
+ALTER TABLE `property_users`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_users_user_id_foreign` (`user_id`),
+  ADD KEY `property_users_property_id_foreign` (`property_id`);
+
+--
 -- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
@@ -522,7 +607,13 @@ ALTER TABLE `blog_category`
 -- AUTO_INCREMENT for table `blog_comments`
 --
 ALTER TABLE `blog_comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `facility_teams`
+--
+ALTER TABLE `facility_teams`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -549,10 +640,16 @@ ALTER TABLE `issue_portals`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `it_teams`
+--
+ALTER TABLE `it_teams`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -579,10 +676,16 @@ ALTER TABLE `property_unapproveds`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `property_users`
+--
+ALTER TABLE `property_users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -605,6 +708,27 @@ ALTER TABLE `blogs`
 --
 ALTER TABLE `blog_comments`
   ADD CONSTRAINT `blog_comments_blog_id_foreign` FOREIGN KEY (`blog_id`) REFERENCES `blogs` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `facility_teams`
+--
+ALTER TABLE `facility_teams`
+  ADD CONSTRAINT `facility_teams_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `property_approveds` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `facility_teams_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `it_teams`
+--
+ALTER TABLE `it_teams`
+  ADD CONSTRAINT `it_teams_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `property_approveds` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `it_teams_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `property_users`
+--
+ALTER TABLE `property_users`
+  ADD CONSTRAINT `property_users_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `property_approveds` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `property_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `reviews`

@@ -209,7 +209,9 @@
 							<span class="nav-text">Manage Property Users</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="{{ Route('manageuser_propertyadmin') }}">Assign Teams and Clients</a></li>
+							<li><a href="{{ Route('createit') }}">Create IT Team</a></li>
+							<li><a href="{{ Route('createfacility') }}">Create Facility Team</a></li>
+							<li><a href="#">Manage Clients</a></li>
 							
 						</ul>
                     </li>

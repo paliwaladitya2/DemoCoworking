@@ -15,8 +15,8 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h2>Manage Property</h2>
-                    {{-- <a href="{{ route('add_blog') }}" class="btn btn-primary float-end">Add Blog</a> --}}
+                    <h2>Manage Blog</h2>
+                    <a href="{{ route('add_blog') }}" class="btn btn-primary float-end">Add Blog</a>
                 </div>    
                 <div class="card-body">
                     <table class="table table-striped table-bordered yajra_datatable">

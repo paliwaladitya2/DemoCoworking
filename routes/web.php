@@ -8,6 +8,8 @@ use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Models\Blog;
 use App\Http\Controllers\SuperAdminController;
+use App\Models\PropertyUsers;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,6 +50,18 @@ Route::get('manage-property',[PropertyAdminController::class,'index'])->name('ma
 Route::get('editproperty/{id}',[PropertyAdminController::class,'editproperty'])->name('editproperty');
 Route::post('updateproperty',[PropertyAdminController::class,'updateproperty'])->name('updateproperty');
 Route::get('deleteproperty',[PropertyAdminController::class,'deleteproperty'])->name('deleteproperty');
+Route::get('createit',[PropertyAdminController::class,'createit'])->name('createit');
+Route::post('saveit',[PropertyAdminController::class,'saveit'])->name('saveit');
+Route::get('deleteit',[PropertyAdminController::class,'deleteit'])->name('deleteit');
+Route::get('createfacility',[PropertyAdminController::class,'createfacility'])->name('createfacility');
+Route::post('savefacility',[PropertyAdminController::class,'savefacility'])->name('savefacility');
+Route::get('deletefacility',[PropertyAdminController::class,'deletefacility'])->name('deletefacility');
+
+
+// property users
+Route::get('manage-team&client',[PropertyUsers::class,'manage_team_client'])->name('manage-team-client');
+
+
 
 // home
 Route::get('add_properties',[HomeController::class,'add_properties'])->name('add_properties');
