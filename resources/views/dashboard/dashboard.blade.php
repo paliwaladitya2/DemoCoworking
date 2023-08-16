@@ -225,6 +225,16 @@
 							
 						</ul>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false" style="display:flex; align-items:center">
+							<i class="flaticon-381-networking"></i>
+							<p class="nav-text">Manage Issue Portal</p>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="{{ Route('issueportals') }}">Create Issue Portal</a></li>
+							
+							
+						</ul>
+                    </li>
 						
 					@endif
 					@if (Session::get('user')->role=='itTeam')

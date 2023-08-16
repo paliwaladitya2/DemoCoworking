@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\ItTeam;
+use App\Models\IssuePortals;
 use App\Models\FacilityTeam;
 use App\Models\PropertyApproved;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Reviews;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -43,8 +45,8 @@ class PropertyAdminController extends Controller
         return redirect()->back();
     }
 
-    public function issues(){
-        return view('dashboard.propertyadmin.issues');
+    public function issues($id){
+        return view('dashboard.propertyadmin.issues',compact('id'));
     }
 
 
@@ -272,7 +274,7 @@ class PropertyAdminController extends Controller
         $validated = $request->validate([
             'property' => 'required',
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:it_teams',
             'password' => 'required',
             'confirm_password' => 'required|same:password'
         ]);
@@ -331,7 +333,7 @@ class PropertyAdminController extends Controller
         $validated = $request->validate([
             'property' => 'required',
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:facility_teams',
             'password' => 'required',
             'confirm_password' => 'required|same:password'
         ]);
@@ -354,5 +356,77 @@ class PropertyAdminController extends Controller
         $itteam->delete();
         
         return redirect()->back();
+    }
+
+    public function issueportals(Request $request){
+        if($request->ajax()){
+            $user_id = Session::get('user')->id;
+            $data = IssuePortals::where('user_id',$user_id)->get();
+            return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('property_id',function($row)
+            {
+                $property = PropertyApproved::where('id',$row->property_id)->first();
+                if($property){
+                    return $property->title;
+                }else{
+                    return Null;
+                }
+            })
+            ->addColumn('action', function($row){
+                // $btn =' <a href="'.route('editproperty',$row->id).'"><i class="fa fa-pencil"></i></a>';
+                $btn = ' &nbsp;&nbsp;<a href="javascript:void(0);"" id="'.$row->id.'" class="delete"><i class="fa fa-trash"></i></a>';
+                return $btn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+        if(Session::has('user')){
+            $user_id = Session::get('user')->id;
+        }
+        $properties = PropertyApproved::where('admin',$user_id)->get();
+        return view('dashboard.propertyadmin.issueportals',compact('properties'));
+    }
+
+    public function saveportal(Request $request){
+        $validated = $request->validate([
+            'property' => 'required',
+            'email' => 'required|email|unique:issue_portals',
+            'password' => 'required',
+            'confirm_password' => 'required|same:password'
+        ]);
+        if(Session::has('user')){
+            $user_id = Session::get('user')->id;
+        }
+        $itteam = new IssuePortals;
+        $itteam->user_id = $user_id;
+        $itteam->property_id = $validated['property'];
+        $itteam->email = $validated['email'];
+        $itteam->password = bcrypt($validated['password']);
+        $itteam->save();
+        return redirect()->back()->with('success','Portal Created Successfully!!');
+
+    }
+
+    public function deleteportal(Request $request){
+        $itteam = IssuePortals::where('id',$request->id)->first();
+        $itteam->delete();
+        
+        return redirect()->back();
+    }
+
+    public function issuelogin(){
+        return view('dashboard.propertyadmin.issuelogin');
+    }
+
+    public function issuecheck(Request $request){
+        $user = IssuePortals::where('email',$request->email)->first();
+        $pid = $user->property_id;
+        if($user && Hash::check($request->password, $user->password) ){
+            Session::put('user',$user);
+            return redirect()->route('issues',['id'=>$pid])->with('success', 'Logged In Successfully!!');
+        }else{
+            return redirect()->route('issuelogin')->with('danger','Credentials are Wrong' );
+        }
     }
 }
