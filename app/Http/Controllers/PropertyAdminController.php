@@ -468,4 +468,32 @@ class PropertyAdminController extends Controller
         $issue->save();
         return redirect()->back()->with('success','Issue Submitted Successfully');
     }
+
+    public function issuerecord(Request $request){
+        if($request->ajax())
+        {
+            $user_id = Session::get('user')->id;
+            $data = PropertyApproved::where('admin',$user_id)->get();
+            return DataTables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row){
+                        $btn =' <a href="'.route('viewissues',$row->id).'">View Issues</a>';
+                        return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
+        return view('dashboard.propertyadmin.issuerecord');
+    }
+
+    public function viewissues(Request $request,$id){
+        if($request->ajax()){
+            $data = Issues::where('property_id',$id)->get();
+            return Datatables::of($data)
+            ->addIndexColumn()
+            ->make(true);
+        }
+        return view('dashboard.propertyadmin.viewissues',compact('id'));
+    }
+
 }

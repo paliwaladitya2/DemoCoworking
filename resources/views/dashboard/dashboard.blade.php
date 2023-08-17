@@ -231,53 +231,34 @@
 						</a>
                         <ul aria-expanded="false">
 							<li><a href="{{ Route('issueportals') }}">Create Issue Portal</a></li>
-							
-							
+							<li><a href="{{ Route('issuerecord') }}">View Issues</a></li>
 						</ul>
                     </li>
 						
 					@endif
-					@if (Session::get('user')->role=='itTeam')
+					@if (Session::get('user')->team=='itTeam')
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Active Queries</span>
+							<span class="nav-text">Issues</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href='#'>Dashboard</a></li>
+							<li><a href="{{ Route('activeissues') }}">Active Issues</a></li>
+							<li><a href="{{ Route('resolvedissues') }}">Resolved Issues</a></li>
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
-							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Resolved Queries</span>
-						</a>
-                        <ul aria-expanded="false">
-							<li><a href='#'>Dashboard</a></li>
-							
-						</ul>
-                    </li>
-						
 					@endif
-					@if (Session::get('user')->role=='facilityTeam')
+					@if (Session::get('user')->team=='facilityTeam')
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Active Queries</span>
+							<span class="nav-text">Issues</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href='#'>Dashboard</a></li>
+							<li><a href="{{ Route('activeissues') }}">Active Issues</a></li>
+							<li><a href="{{ Route('resolvedissues') }}">Resolved Issues</a></li>
 							
 						</ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">
-							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Resolved Queries</span>
-						</a>
-                        <ul aria-expanded="false">
-							<li><a href='#'>Dashboard</a></li>
-							
-						</ul>
-                    </li>
-						
 					@endif
 					@if (Session::get('user')->role=='client')
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="display:flex; align-items:center">

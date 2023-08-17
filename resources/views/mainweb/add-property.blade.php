@@ -17,7 +17,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <form action="{{ Route('updateproperty') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ Route('save-property') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="container">
                                 <div class="main">

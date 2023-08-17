@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2023 at 07:15 AM
+-- Generation Time: Aug 17, 2023 at 10:56 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -117,15 +117,17 @@ CREATE TABLE `facility_teams` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `team` varchar(255) NOT NULL DEFAULT 'facilityTeam'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `facility_teams`
 --
 
-INSERT INTO `facility_teams` (`id`, `user_id`, `property_id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 2, 4, 'facility 1', 'facility1@gmail.com', '$2y$10$03iwgAql4MDN1q5w3Dd51.bFRJJoEunzYM9BftfXiJulVd1wzNkhG', '2023-08-16 04:48:10', '2023-08-16 04:48:10');
+INSERT INTO `facility_teams` (`id`, `user_id`, `property_id`, `name`, `email`, `password`, `created_at`, `updated_at`, `team`) VALUES
+(1, 2, 4, 'facility 1', 'facility1@gmail.com', '$2y$10$03iwgAql4MDN1q5w3Dd51.bFRJJoEunzYM9BftfXiJulVd1wzNkhG', '2023-08-16 04:48:10', '2023-08-16 04:48:10', 'facilityTeam'),
+(2, 6, 6, 'facilitytest', 'facilitytest@gmail.com', '$2y$10$lkp/HsQ5dh9GzdU30s8GKeXTf1L.tq.fPUauxfEZU1Oar08p29v7i', '2023-08-17 02:53:07', '2023-08-17 02:53:07', 'facilityTeam');
 
 -- --------------------------------------------------------
 
@@ -180,6 +182,7 @@ CREATE TABLE `issues` (
   `number` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   `priority` varchar(255) NOT NULL,
+  `status` enum('active','resolved') NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -188,8 +191,10 @@ CREATE TABLE `issues` (
 -- Dumping data for table `issues`
 --
 
-INSERT INTO `issues` (`id`, `property_id`, `company`, `floor`, `name`, `seat`, `department`, `title`, `description`, `email`, `image`, `number`, `date`, `priority`, `created_at`, `updated_at`) VALUES
-(1, 4, 'zero gravito', '8', 'Aayush Patidar', '5', 'itTeam', 'Test', 'Testinggggggggggggggggg', 'aayushpatidar04@gmail.com', '1692248522.jpg', '9992221114', '2023-08-17', 'yes', '2023-08-16 23:32:02', '2023-08-16 23:32:02');
+INSERT INTO `issues` (`id`, `property_id`, `company`, `floor`, `name`, `seat`, `department`, `title`, `description`, `email`, `image`, `number`, `date`, `priority`, `status`, `created_at`, `updated_at`) VALUES
+(1, 4, 'zero gravito', '8', 'Aayush Patidar', '5', 'itTeam', 'Test', 'Testinggggggggggggggggg', 'aayushpatidar04@gmail.com', '1692248522.jpg', '9992221114', '2023-08-17', 'yes', 'resolved', '2023-08-16 23:32:02', '2023-08-17 02:25:07'),
+(2, 6, 'cv', '8', 'Aayush Patidar', '6', 'itTeam', 'Internet', 'Nahi chl rha', 'aayush@gmail.com', NULL, '7418529635', '2023-08-17', 'no', 'resolved', '2023-08-17 02:55:48', '2023-08-17 03:00:30'),
+(3, 6, 'cv', '8', 'Aman', '7', 'facilityTeam', 'seat', 'tut gyi', 'aman@gmail.com', NULL, '7418529635', '2023-08-17', 'yes', 'resolved', '2023-08-17 02:56:16', '2023-08-17 03:11:39');
 
 -- --------------------------------------------------------
 
@@ -213,7 +218,8 @@ CREATE TABLE `issue_portals` (
 
 INSERT INTO `issue_portals` (`id`, `user_id`, `property_id`, `email`, `password`, `created_at`, `updated_at`) VALUES
 (1, 2, 4, 'help@zerogravito.com', '$2y$10$mAdEIQlr7otIatkJL7lVxOwXjSXUVIB.rdun5BNXebv2Bn9Vc5V1y', '2023-08-16 07:01:17', '2023-08-16 07:01:17'),
-(2, 2, 4, 'help2@gmail.com', '$2y$10$praS/otRpDb1mMANvOeMBuaMOFsf7cDlo.a4Ul0oikE0Ab8VxGXE2', '2023-08-16 07:14:46', '2023-08-16 07:14:46');
+(2, 2, 4, 'help2@gmail.com', '$2y$10$praS/otRpDb1mMANvOeMBuaMOFsf7cDlo.a4Ul0oikE0Ab8VxGXE2', '2023-08-16 07:14:46', '2023-08-16 07:14:46'),
+(3, 6, 6, 'issue@test.com', '$2y$10$RPmSbz6.kqJYYIpk.lLHTur5J.5YDILw0CzIWIoAZ9DP9H39VWv0e', '2023-08-17 02:53:40', '2023-08-17 02:53:40');
 
 -- --------------------------------------------------------
 
@@ -229,15 +235,17 @@ CREATE TABLE `it_teams` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `team` varchar(255) NOT NULL DEFAULT 'itTeam'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `it_teams`
 --
 
-INSERT INTO `it_teams` (`id`, `user_id`, `property_id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 2, 4, 'itteam 1', 'itteam1@gmail.com', '$2y$10$q0JJHRwa7dPCf6VKaIZvNeYEANrrVk6D7lH.wsdn16zr.NlDxSoxa', '2023-08-16 04:36:08', '2023-08-16 04:36:08');
+INSERT INTO `it_teams` (`id`, `user_id`, `property_id`, `name`, `email`, `password`, `created_at`, `updated_at`, `team`) VALUES
+(1, 2, 4, 'itteam 1', 'itteam1@gmail.com', '$2y$10$q0JJHRwa7dPCf6VKaIZvNeYEANrrVk6D7lH.wsdn16zr.NlDxSoxa', '2023-08-16 04:36:08', '2023-08-16 04:36:08', 'itTeam'),
+(2, 6, 6, 'iteamtest', 'iteamtest@gmail.com', '$2y$10$1Bzr3J3tJwtlfdmEFxK7VeO3q3XoOxAndsxWtG4dIwwDPlvwu2J7i', '2023-08-17 02:52:34', '2023-08-17 02:52:34', 'itTeam');
 
 -- --------------------------------------------------------
 
@@ -365,7 +373,8 @@ INSERT INTO `property_approveds` (`id`, `title`, `admin`, `description`, `price`
 (1, 'Zero Gravito', 'Kanishk Purohit', 'seat available', 15000, 100, '1691485219_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-08 05:27:51', '2023-08-08 05:27:51'),
 (3, 'its', 'Kanishk Purohit', 'nothing to describe', 5000, 8, '1691558784_1_.jpg', '1691558784_2_.jpg', '1691558784_3_.jpg', '1691558784_4_.jpg', '1691558784_5_.jpg', '1691558784_6_.jpg', '1691558784_7_.jpg', 'indore', 'indore', 'madhya pradesh', 'india', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'Kanishk Purohit', 'kanishk', 'kpurorit@gmail.com', '8962110823', '2023-08-08 23:56:54', '2023-08-08 23:56:54'),
 (4, 'Zero Gravito', '2', 'seat available hai', 15000, 100, '1691662326_1_.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, NULL, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-09 06:53:36', '2023-08-10 04:42:06'),
-(5, 'Test', '2', 'testing', 15000, 100, '1691642456_1_.jpg', '1691642456_2_.jpg', '1691642456_3_.jpg', '1691642456_4_.jpg', '1691642456_5_.jpg', '1691642456_6_.jpg', NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-09 23:16:12', '2023-08-09 23:16:12');
+(5, 'Test', '2', 'testing', 15000, 100, '1691642456_1_.jpg', '1691642456_2_.jpg', '1691642456_3_.jpg', '1691642456_4_.jpg', '1691642456_5_.jpg', '1691642456_6_.jpg', NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-09 23:16:12', '2023-08-09 23:16:12'),
+(6, 'Property Test', '6', 'Seat le lo', 15000, 100, '1692260396_1_.jpg', '1692260396_2_.jpg', '1692260396_3_.jpg', '1692260396_4_.jpg', '1692260396_5_.jpg', NULL, NULL, 'NRK Business Park, Vijay Nagar', 'Indore', 'Madhya Pradesh', 'India', 1, 1, 1, NULL, 1, 1, 1, 1, 1, NULL, 1, 1, 'Aman', NULL, 'aman@gmail.com', '7418529635', '2023-08-17 02:50:58', '2023-08-17 02:50:58');
 
 -- --------------------------------------------------------
 
@@ -643,7 +652,7 @@ ALTER TABLE `blog_comments`
 -- AUTO_INCREMENT for table `facility_teams`
 --
 ALTER TABLE `facility_teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -661,19 +670,19 @@ ALTER TABLE `general_queries`
 -- AUTO_INCREMENT for table `issues`
 --
 ALTER TABLE `issues`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `issue_portals`
 --
 ALTER TABLE `issue_portals`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `it_teams`
 --
 ALTER TABLE `it_teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -691,13 +700,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `property_approveds`
 --
 ALTER TABLE `property_approveds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `property_unapproveds`
 --
 ALTER TABLE `property_unapproveds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `property_users`

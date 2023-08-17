@@ -98,6 +98,7 @@
                     <div class="slick-lancers2">
                         <?php
                             $properties = DB::table('property_approveds')->get();
+                            $properties = $properties->reverse();
                         ?>
                         @foreach($properties as $property)
                         <div class="agents-grid" data-aos="fade-up">
@@ -312,6 +313,7 @@
                     <div class="slick-lancers">
                     <?php
                             $properties = DB::table('property_approveds')->get();
+                            $properties = $properties->reverse();
                         ?>
                         @foreach($properties as $property)
                         <div class="agents-grid" data-aos="fade-up">
