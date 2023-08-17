@@ -79,6 +79,7 @@
                         <nav id="navigation" class="style-1">
                             <ul id="responsive">
                                 <li><a href="{{ Route('index') }}">Home</a></li>
+                                <li><a href="{{ Route('properties-grid') }}">Explore Properties</a></li>
                                 <li><a href="{{ Route('about') }}">About Us</a></li>
                                 <li><a href="{{ Route('blog-list') }}">Blog</a></li>
                                 <li><a href="{{ Route('contact-us') }}">Contact</a></li>

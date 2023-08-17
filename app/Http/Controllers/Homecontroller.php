@@ -67,7 +67,10 @@ class HomeController extends Controller
     }
 
     public function properties_grid(){
-        return view('mainweb.properties-grid-2');
+        $properties = PropertyApproved::all();
+        $ps = PropertyApproved::latest()->take(3)->get();
+        $blogs = Blog::latest()->take(3)->get();
+        return view('mainweb.properties-grid-2',compact(['properties','ps','blogs']));
     }
 
     public function save_general_query(Request $request){
