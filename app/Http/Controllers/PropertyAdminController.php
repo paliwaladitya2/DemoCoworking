@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ItTeam;
+use App\Models\Issues;
 use App\Models\IssuePortals;
 use App\Models\FacilityTeam;
 use App\Models\PropertyApproved;
@@ -428,5 +429,43 @@ class PropertyAdminController extends Controller
         }else{
             return redirect()->route('issuelogin')->with('danger','Credentials are Wrong' );
         }
+    }
+
+    public function saveissue(Request $request){
+        $validated = $request->validate([
+            'cname' => 'required',
+            'floor' => 'required',
+            'name' => 'required',
+            'seat' => 'required',
+            'department' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'date' => 'required',
+            'priority' => 'required',
+        ]);
+        $issue = new Issues;
+        $issue->property_id = $request->property_id;
+        $issue->company = $validated['cname'];
+        $issue->floor = $validated['floor'];
+        $issue->name = $validated['name'];
+        $issue->seat = $validated['seat'];
+        $issue->department = $validated['department'];
+        $issue->title = $validated['title'];
+        $issue->description = $validated['description'];
+        $issue->email = $validated['email'];
+        $issue->number = $validated['phone'];
+        $issue->date = $validated['date'];
+        $issue->priority = $validated['priority'];
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+            $name = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('images/issues');
+            $image->move($destinationPath, $name);
+            $issue->image = $name;
+        }
+        $issue->save();
+        return redirect()->back()->with('success','Issue Submitted Successfully');
     }
 }
