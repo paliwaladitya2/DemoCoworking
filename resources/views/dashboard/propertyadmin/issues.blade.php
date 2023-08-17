@@ -20,12 +20,22 @@
     </nav>
     <div class="container mt-5">
         <h1>Issue Portal</h1>
+        @if(Session::has('errors'))
+        <div class="alert alert-danger">
+            {{ Session::get('errors') }}
+        </div>
+        @endif
+        @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{ Session::get('success') }}
+        </div>
+        @endif
         
         <!-- Issue Submission Form -->
-        <form id="issueForm" method="post" enctype="multipart/form-data">
+        <form action="{{ Route('saveissue') }}" id="issueForm" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <input type="hidden" value="{{ $id }}">
+                <input type="hidden" name="property_id" value="{{ $id }}">
             </div>
             <div class="form-group">
                 <label for="issueTitle">Company Name</label>
@@ -45,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label for="issueTitle">Assign Issue to:</label>
-                <select name="property" id="property" class="form-control">
+                <select name="department" id="property" class="form-control">
                     <option value="">Select Department</option>
                     <option value="itTeam">IT Team</option>
                     <option value="facilityTeam">Facility Team</option>
@@ -53,11 +63,11 @@
             </div>
             <div class="form-group">
                 <label for="issueTitle">Issue Title</label>
-                <input type="text" class="form-control" id="issueTitle" name="issueTitle" required>
+                <input type="text" class="form-control" id="title" name="title" required>
             </div>
             <div class="form-group">
                 <label for="issueDescription">Issue Description</label>
-                <textarea class="form-control" id="issueDescription" name="issueDescription" rows="4" required></textarea>
+                <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
             </div>
             <div class="form-group">
                 <label for="issueTitle">Image</label>
@@ -87,44 +97,9 @@
         
         <hr>
         
-        <!-- Existing Issues -->
-        <div id="issueList"></div>
+        
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script>
-        $(document).ready(function() {
-    const issueForm = $('#issueForm');
-    const issueList = $('#issueList');
-
-    issueForm.submit(function(event) {
-        event.preventDefault();
-
-        const issueTitle = $('#issueTitle').val();
-        const issueDescription = $('#issueDescription').val();
-
-        // You can send the data to a server using AJAX or other methods
-        // For simplicity, we'll just add the issue to the list on the client side
-        const newIssue = `
-            <div class="card mb-2">
-                <div class="card-body">
-                    <h5 class="card-title">${issueTitle}</h5>
-                    <p class="card-text">${issueDescription}</p>
-                </div>
-            </div>
-        `;
-
-        issueList.prepend(newIssue);
-
-        // Show a success alert
-        Swal.fire('Issue Submitted', 'Your issue has been submitted successfully!', 'success');
-
-        // Clear the form
-        issueForm[0].reset();
-    });
-});
-
-    </script>
+    
 </body>
 </html>

@@ -44,6 +44,7 @@ Route::get('manage-approved-properties',[SuperAdminController::class,'manage_app
 Route::get('manageuser_propertyadmin',[PropertyAdminController::class,'manageuser'])->name('manageuser_propertyadmin');
 Route::get('changerole_propertyadmin',[PropertyAdminController::class , 'changerole'])->name('changerole_propertyadmin');
 Route::get('issues/{id}',[PropertyAdminController::class, 'issues'])->name('issues');
+Route::post('saveissue',[PropertyAdminController::class, 'saveissue'])->name('saveissue');
 Route::get('issuelogin',[PropertyAdminController::class, 'issuelogin'])->name('issuelogin');
 Route::post('issuecheck',[PropertyAdminController::class, 'issuecheck'])->name('issuecheck');
 Route::get('managereviews/{id}',[PropertyAdminController::class,'managereviews'])->name('managereviews');
