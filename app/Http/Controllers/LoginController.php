@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FacilityTeam;
+use App\Models\ItTeam;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
@@ -48,9 +50,17 @@ class LoginController extends Controller
 
     public function logincheck(Request $request){
         $user = User::where('email',$request->email)->first();
+        $user1 = ItTeam::where('email',$request->email)->first();
+        $user2 = FacilityTeam::where('email',$request->email)->first();
         if($user && Hash::check($request->password, $user->password) ){
             Session::put('user',$user);
             return redirect()->route('index')->with('success', 'Logged In Successfully!!');
+        }elseif($user1 && Hash::check($request->password, $user1->password)){
+            Session::put('user',$user1);
+            return redirect()->route('dashboard');
+        }elseif($user2 && Hash::check($request->password, $user2->password)){
+            Session::put('user',$user2);
+            return redirect()->route('dashboard');
         }else{
             return redirect()->route('login')->with('danger','Credentials are Wrong' );
         }

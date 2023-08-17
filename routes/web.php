@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PropertyAdminController;
@@ -61,9 +62,16 @@ Route::get('createfacility',[PropertyAdminController::class,'createfacility'])->
 Route::post('savefacility',[PropertyAdminController::class,'savefacility'])->name('savefacility');
 Route::get('deletefacility',[PropertyAdminController::class,'deletefacility'])->name('deletefacility');
 Route::get('issueportals',[PropertyAdminController::class,'issueportals'])->name('issueportals');
+Route::get('issuerecord',[PropertyAdminController::class,'issuerecord'])->name('issuerecord');
+Route::get('viewissues/{id}',[PropertyAdminController::class,'viewissues'])->name('viewissues');
 Route::post('saveportal',[PropertyAdminController::class,'saveportal'])->name('saveportal');
 Route::get('deleteportal',[PropertyAdminController::class,'deleteportal'])->name('deleteportal');
 
+// team controller
+Route::get('activeissues',[TeamController::class,'activeissues'])->name('activeissues');
+Route::get('resolvedissues',[TeamController::class,'resolvedissues'])->name('resolvedissues');
+Route::get('issuedetails/{id}',[TeamController::class,'issuedetails'])->name('issuedetails');
+Route::get('solved',[TeamController::class,'solved'])->name('solved');
 
 // property users
 Route::get('manage-team&client',[PropertyUsers::class,'manage_team_client'])->name('manage-team-client');
